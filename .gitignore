@@ -1,0 +1,10 @@
+.idea
+.directory
+.DS_Store
+__pycache__
+results.txt
+embeddings
+glove.840B.300d.txt
+*.pt
+venv/
+train.sh
