@@ -7,6 +7,36 @@ from torch import nn
 import torch.nn.functional as F
 from pytorch_transformers import BertModel, GPT2Model
 
+class TransformerModel(nn.Module):
+    def __init__(self, device, config, labels=None):
+        super().__init__()
+
+        #if config.model == "BertCased":
+            #self.bert = BertModel.from_pretrained('bert-base-cased')
+        #elif config.model == 'GPT2':
+            #self.bert = GPT2Model.from_pretrained('gpt2')
+        #else:
+        self.bert = BertModel.from_pretrained('bert-base-uncased')
+
+        self.fc = nn.Linear(768, labels).to(device)
+        self.device = device
+
+    def forward(self, x, y):
+
+        x = x.to(self.device)
+        y = y.to(self.device)
+
+        #if self.training:
+            #self.bert.train()
+            #enc = self.bert(x)[0]
+        #else:
+        self.bert.eval()
+        with torch.no_grad():
+            enc = self.bert(x)[0]
+        logits = self.fc(enc).to(self.device)
+        y_hat = logits.argmax(-1)
+        return logits, y, y_hat
+
 
 class Bert(nn.Module):
     def __init__(self, device, config, labels=None):

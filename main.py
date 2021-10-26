@@ -11,8 +11,8 @@ import torch.optim as optim
 import prosody_dataset
 from prosody_dataset import Dataset
 from prosody_dataset import load_embeddings
-from model import Bert, BertLSTM, LSTM, BertRegression, LSTMRegression, WordMajority, ClassEncodings, BertAllLayers
-from transformer import TransformerModel
+from model import Bert, BertLSTM, LSTM, BertRegression, LSTMRegression, WordMajority, ClassEncodings, BertAllLayers, TransformerModel
+#from transformer import TransformerModel
 from argparse import ArgumentParser
 from sklearn.metrics import f1_score
 
