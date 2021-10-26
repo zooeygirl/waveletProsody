@@ -10,7 +10,7 @@ from pytorch_transformers import BertModel, GPT2Model
 
 
 
-class Bert(nn.Module):
+class TransformerModel(nn.Module):
     def __init__(self, device, config, labels=None):
         super().__init__()
 
