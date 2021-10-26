@@ -40,7 +40,7 @@ class TransformerModel(nn.Module):
         y_hat = logits.argmax(-1)
         return logits, y, y_hat
 
-"""
+
 class TransformerModel(nn.Module):
 
     def __init__(self, device, ntoken, d_model, nhead, d_hid, nlayers, config, dropout: float = 0.0, norm_first=True):
@@ -51,7 +51,10 @@ class TransformerModel(nn.Module):
         #elif config.model == 'GPT2':
             #self.bert = GPT2Model.from_pretrained('gpt2')
         #else:
-        self.bert = BertModel.from_pretrained('bert-base-uncased')
+        if config.gpt != 0:
+            self.bert = GPT2Model.from_pretrained('gpt2')
+        else:
+            self.bert = BertModel.from_pretrained('bert-base-uncased')
         self.model_type = 'Transformer'
         self.pos_encoder = PositionalEncoding(d_model, dropout)
         encoder_layers = TransformerEncoderLayer(d_model, nhead, d_hid, dropout)

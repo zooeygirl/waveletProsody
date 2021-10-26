@@ -28,8 +28,11 @@ class Dataset(data.Dataset):
 
 
         self.sents, self.tags_li, self.values_li = sents, tags_li, values_li
-        if self.config.model == 'BertUncased':
-            self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
+        if self.config.model == 'BertUncased' or self.config.model == 'Transformer':
+            if config.gpt != 0:
+                self.tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+            else:
+                self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
         else:
             self.tokenizer = BertTokenizer.from_pretrained('bert-base-cased', do_lower_case=False)
 

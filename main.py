@@ -11,8 +11,8 @@ import torch.optim as optim
 import prosody_dataset
 from prosody_dataset import Dataset
 from prosody_dataset import load_embeddings
-from model import Bert, BertLSTM, LSTM, BertRegression, LSTMRegression, WordMajority, ClassEncodings, BertAllLayers, TransformerModel
-#from transformer import TransformerModel
+from model import Bert, BertLSTM, LSTM, BertRegression, LSTMRegression, WordMajority, ClassEncodings, BertAllLayers #, TransformerModel
+from transformer import TransformerModel
 from argparse import ArgumentParser
 from sklearn.metrics import f1_score
 
@@ -21,6 +21,9 @@ parser = ArgumentParser(description='Prosody prediction')
 parser.add_argument('--datadir',
                     type=str,
                     default='./data')
+parser.add_argument('--gpt',
+                    type=int,
+                    default=0)
 parser.add_argument('--train_set',
                     type=str,
                     choices=['train_100',

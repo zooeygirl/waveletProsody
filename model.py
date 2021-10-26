@@ -7,6 +7,7 @@ from torch import nn
 import torch.nn.functional as F
 from pytorch_transformers import BertModel, GPT2Model
 
+"""
 class TransformerModel(nn.Module):
     def __init__(self, device, config, labels=None):
         super().__init__()
@@ -36,7 +37,7 @@ class TransformerModel(nn.Module):
         logits = self.fc(enc).to(self.device)
         y_hat = logits.argmax(-1)
         return logits, y, y_hat
-
+"""
 
 class Bert(nn.Module):
     def __init__(self, device, config, labels=None):
