@@ -10,7 +10,7 @@ from pytorch_transformers import BertModel, GPT2Model
 
 class TransformerModel(nn.Module):
 
-    def __init__(self, device, ntoken, d_model, nhead, d_hid, nlayers, config, dropout: float = 0.5):
+    def __init__(self, device, ntoken, d_model, nhead, d_hid, nlayers, config, dropout: float = 0.0, norm_first=True):
         super().__init__()
         self.device = device
         if config.model == "BertCased":
@@ -62,14 +62,17 @@ class TransformerModel(nn.Module):
         src = self.pos_encoder(enc.permute(1, 0, 2).to(self.device))
         #src = self.pos_encoder(enc.to(self.device))
         #print('src', src.size())
-        src_mask = generate_square_subsequent_mask(src.size()[0])
+        src_mask = generate_square_subsequent_mask(src.size()[0]).to(self.device)
         #print(src_mask.size())
         output = self.transformer_encoder(src, src_mask)
         output = output.permute(1,0,2)
+        #print('output', output.size())
         logits = self.decoder(output)
+        #print('logits',logits.size())
         y_hat = logits.argmax(-1)
         #print('y', y.size())
         #print('hat', y_hat.size())
+
         return logits, y, y_hat
 
 
