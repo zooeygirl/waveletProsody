@@ -142,4 +142,3 @@ class PositionalEncoding(nn.Module):
 
         x = x + self.pe[:x.size(0)]
         return self.dropout(x)
-"""

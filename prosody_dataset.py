@@ -56,14 +56,16 @@ class Dataset(data.Dataset):
                 tokens = [w]
                 xx = self.convert_tokens_to_emb_ids(tokens)
             else:
-                #if t!='NA' and w!="n't" and w!="'d" and w!="'":
-                    #tokens = self.tokenizer.tokenize(" "+w) if w not in ("[CLS]", "[SEP]") else [w]
-                    #xx = self.tokenizer.convert_tokens_to_ids(tokens)
-                #else:
-                    #tokens = self.tokenizer.tokenize(w) if w not in ("[CLS]", "[SEP]") else [w]
-                    #xx = self.tokenizer.convert_tokens_to_ids(tokens)
-                tokens = self.tokenizer.tokenize(w) if w not in ("[CLS]", "[SEP]") else [w]
-                xx = self.tokenizer.convert_tokens_to_ids(tokens)
+                if self.config.gpt != 0:
+                    if t!='NA' and w!="n't" and w!="'d" and w!="'":
+                        tokens = self.tokenizer.tokenize(" "+w) if w not in ("[CLS]", "[SEP]") else [w]
+                        xx = self.tokenizer.convert_tokens_to_ids(tokens)
+                    else:
+                        tokens = self.tokenizer.tokenize(w) if w not in ("[CLS]", "[SEP]") else [w]
+                        xx = self.tokenizer.convert_tokens_to_ids(tokens)
+                else:
+                    tokens = self.tokenizer.tokenize(w) if w not in ("[CLS]", "[SEP]") else [w]
+                    xx = self.tokenizer.convert_tokens_to_ids(tokens)
 
             t = [t] + ["<pad>"] * (len(tokens) - 1)  # <PAD>: no decision
             yy = [self.tag_to_index[each] for each in t]  # (T,)

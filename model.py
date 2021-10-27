@@ -48,7 +48,10 @@ class Bert(nn.Module):
         #elif config.model == 'GPT2':
             #self.bert = GPT2Model.from_pretrained('gpt2')
         #else:
-        self.bert = BertModel.from_pretrained('bert-base-uncased')
+        if config.gpt != 0:
+          self.bert = GPT2Model.from_pretrained('gpt2')
+        else:
+          self.bert = BertModel.from_pretrained('bert-base-uncased')
 
         self.fc = nn.Linear(768, labels).to(device)
         self.device = device
