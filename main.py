@@ -201,8 +201,8 @@ def main():
     elif config.model == "BertAllLayers":
         model = BertAllLayers(device, config, labels=len(tag_to_index))
     elif config.model == "Transformer":
-        #model = TransformerModel(device, 5, 768, 2, 150, 2, config)
-        model = TransformerModel(device, config, labels=len(tag_to_index))
+        model = TransformerModel(device, 5, 768, 2, 150, 2, config)
+        #model = TransformerModel(device, config, labels=len(tag_to_index))
     else:
         raise NotImplementedError("Model option not supported.")
 
