@@ -6,6 +6,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from pytorch_transformers import BertModel, GPT2Model
+from transformers import GPTJForCausalLM
 
 """
 class TransformerModel(nn.Module):
@@ -48,8 +49,10 @@ class Bert(nn.Module):
         #elif config.model == 'GPT2':
             #self.bert = GPT2Model.from_pretrained('gpt2')
         #else:
-        if config.gpt != 0:
+        if config.gpt == 1:
           self.bert = GPT2Model.from_pretrained('gpt2')
+        elif config.gpt == 2:
+          self.bert = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, output_hidden_states = True, return_dict=True)
         else:
           self.bert = BertModel.from_pretrained('bert-base-uncased')
 
