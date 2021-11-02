@@ -57,7 +57,7 @@ class TransformerModel(nn.Module):
         if config.gpt == 1:
             self.bert = GPT2Model.from_pretrained('gpt2')
         elif config.gpt == 2:
-          self.bert = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, output_hidden_states = True, return_dict=True).to("cuda")
+          self.bert = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, output_hidden_states = True, return_dict=True)#.to("cuda")
         else:
             self.bert = BertModel.from_pretrained('bert-base-uncased')
         self.model_type = 'Transformer'
@@ -96,6 +96,7 @@ class TransformerModel(nn.Module):
         with torch.no_grad():
             if self.config.gpt == 2:
                 enc = self.bert(x).hidden_states[28]
+                enc.to("cuda")
             else:
                 enc = self.bert(x)[0]
 
