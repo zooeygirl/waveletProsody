@@ -53,6 +53,15 @@ class Bert(nn.Module):
         y_hat = logits.argmax(-1)
         return logits, y, y_hat
 
+    def inference(self, x):
+        self.bert.eval()
+        with torch.no_grad():
+            #enc = self.bert(x)[0]
+            enc = self.bert(x).hidden_states[-1]
+            logits = self.fc(enc).to(self.device)
+            y_hat = logits.argmax(-1)
+            return y_hat
+
 
 class BertLSTM(nn.Module):
     def __init__(self, device, config, labels=None):
