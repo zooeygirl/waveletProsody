@@ -6,6 +6,7 @@ from torch.utils import data
 from pytorch_transformers import BertTokenizer, GPT2Tokenizer
 import torch
 import numpy as np
+from transformers import AutoTokenizer
 
 class Dataset(data.Dataset):
     def __init__(self, tagged_sents, tag_to_index, config, word_to_embid=None):
@@ -35,6 +36,7 @@ class Dataset(data.Dataset):
                 self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
         else:
             self.tokenizer = BertTokenizer.from_pretrained('bert-base-cased', do_lower_case=False)
+            #self.tokenizer = AutoTokenizer.from_pretrained('xlm-roberta-base')
 
         self.tag_to_index = tag_to_index
         self.word_to_embid = word_to_embid
