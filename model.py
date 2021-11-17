@@ -17,8 +17,6 @@ class Bert(nn.Module):
 
         #if config.model == "BertCased":
             #self.bert = BertModel.from_pretrained('bert-base-cased')
-        #elif config.model == 'GPT2':
-            #self.bert = GPT2Model.from_pretrained('gpt2')
         #else:
         if config.gpt == 1:
           self.bert = GPT2Model.from_pretrained('gpt2')
@@ -34,21 +32,20 @@ class Bert(nn.Module):
         self.device = device
 
     def forward(self, x, y):
-
+        print(self.training)
         x = x.to(self.device)
         y = y.to(self.device)
 
-        #if self.training:
-            #self.bert.train()
+        if self.training:
+            self.bert.train()
             #enc = self.bert(x)[0]
-        self.bert.train()
-        enc = self.bert(x).hidden_states[-1]
-        #else:
-        """
-        self.bert.eval()
-        with torch.no_grad():
-            enc = self.bert(x)[0]
-        """
+            enc = self.bert(x).hidden_states[-1]
+        else:
+            self.bert.eval()
+            print('not training')
+            with torch.no_grad():
+                enc = self.bert(x)[0]
+
         logits = self.fc(enc).to(self.device)
         y_hat = logits.argmax(-1)
         return logits, y, y_hat
