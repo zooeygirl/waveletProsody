@@ -8,6 +8,7 @@ import torch.nn.functional as F
 from pytorch_transformers import BertModel, GPT2Model
 from transformers import GPTJForCausalLM
 from transformers import AutoConfig, AutoModel
+from transformers import GPTNeoForCausalLM
 
 
 
@@ -21,14 +22,16 @@ class Bert(nn.Module):
         if config.gpt == 1:
           self.bert = GPT2Model.from_pretrained('gpt2')
         elif config.gpt == 2:
-          self.bert = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, output_hidden_states = True, return_dict=True)
+          #self.bert = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, output_hidden_states = True, return_dict=True)
+          self.bert = GPTNeoForCausalLM.from_pretrained("EleutherAI/gpt-neo-1.3B", output_hidden_states = True)
         else:
           #self.bert = BertModel.from_pretrained('bert-base-uncased')
           #config = AutoConfig.from_pretrained('bert-base-uncased', output_hidden_states=True)
           #self.bert = AutoModel.from_config(config)
           self.bert = AutoModel.from_pretrained('bert-base-uncased', output_hidden_states=True)
 
-        self.fc = nn.Linear(768, labels).to(device)
+        #self.fc = nn.Linear(768, labels).to(device)
+        self.fc = nn.Linear(2048, labels).to(device)
         self.device = device
 
     def forward(self, x, y):
