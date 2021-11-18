@@ -6,9 +6,9 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from pytorch_transformers import BertModel, GPT2Model
-from transformers import GPTJForCausalLM
+from transformers import GPTJModel
 from transformers import AutoConfig, AutoModel
-from transformers import GPTNeoForCausalLM
+from transformers import GPTNeoModel
 
 
 
@@ -22,8 +22,14 @@ class Bert(nn.Module):
         if config.gpt == 1:
           self.bert = GPT2Model.from_pretrained('gpt2')
         elif config.gpt == 2:
-          #self.bert = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, output_hidden_states = True, return_dict=True)
-          self.bert = GPTNeoForCausalLM.from_pretrained("EleutherAI/gpt-neo-1.3B", output_hidden_states = True)
+          #self.bert = GPTJModel.from_pretrained("EleutherAI/gpt-j-6B", revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True, output_hidden_states = True, return_dict=True)
+          self.bert = GPTNeoModel.from_pretrained("EleutherAI/gpt-neo-1.3B", output_hidden_states = True)
+          for param in self.bert.parameters():
+              param.requires_grad = False
+          modules = [self.bert.transformer.h[-1]] #Replace 5 by what you want
+          for module in modules:
+              for param in module.parameters():
+                  param.requires_grad = True
         else:
           #self.bert = BertModel.from_pretrained('bert-base-uncased')
           #config = AutoConfig.from_pretrained('bert-base-uncased', output_hidden_states=True)
