@@ -1,3 +1,6 @@
 [submodule "Transformer-Explainability"]
 	path = Transformer-Explainability
 	url = https://github.com/hila-chefer/Transformer-Explainability.git
+[submodule "explainability"]
+	path = explainability
+	url = https://github.com/zooeygirl/explainability.git
