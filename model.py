@@ -26,7 +26,7 @@ class Bert(nn.Module):
           self.bert = GPTNeoModel.from_pretrained("EleutherAI/gpt-neo-1.3B", output_hidden_states = True)
           for param in self.bert.parameters():
               param.requires_grad = False
-          modules = [self.bert.transformer.h[-1]] #Replace 5 by what you want
+          modules = [self.bert.h[-1]] #Replace 5 by what you want
           for module in modules:
               for param in module.parameters():
                   param.requires_grad = True
@@ -41,7 +41,7 @@ class Bert(nn.Module):
         self.device = device
 
     def forward(self, x, y):
-        print(self.training)
+        #print(self.training)
         x = x.to(self.device)
         y = y.to(self.device)
 
