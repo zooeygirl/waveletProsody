@@ -22,8 +22,8 @@ class Generator:
         self.model = model
         self.model.eval()
 
-    def forward(self, input_ids, attention_mask):
-        return self.model(input_ids, attention_mask)
+    def forward(self, input_ids, attention_mask, idx):
+        return self.model(input_ids, attention_mask, idx)
 
     def generate_LRP(self, input_ids, attention_mask,
                      index=None, start_layer=11, idx=1):
