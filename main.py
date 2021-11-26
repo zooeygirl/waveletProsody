@@ -514,6 +514,10 @@ def valid_cont(model, iterator, criterion, index_to_tag, device, config, best_de
             Values.extend(values.cpu().numpy().tolist())
 
     print('Validation loss: {:<.4f}\n'.format(np.mean(dev_losses)))
+    final_snapshot_path = 'final_model_{}_testacc_{}_epoch_{}.pt'.format(config.model,
+                                                                 np.mean(dev_losses), config.epochs)
+    torch.save(model, final_snapshot_path)
+
 
 
 def test_cont(model, iterator, criterion, index_to_tag, device, config):
@@ -564,6 +568,9 @@ def test_cont(model, iterator, criterion, index_to_tag, device, config):
 
     print('Test loss: {:<.4f}\n'.format(np.mean(test_losses)))
     # Correlation is calculated afterwards with a separate script.
+    final_snapshot_path = 'final_model_{}_testacc_{}_epoch_{}.pt'.format(config.model,
+                                                                 np.mean(test_losses), config.epochs)
+    torch.save(model, final_snapshot_path)
 
 
 if __name__ == "__main__":
