@@ -15,6 +15,7 @@ from model import Bert, BertLSTM, LSTM, BertRegression, LSTMRegression, WordMajo
 from transformer import TransformerModel
 from argparse import ArgumentParser
 from sklearn.metrics import f1_score
+from sklearn.metrics import confusion_matrix
 
 parser = ArgumentParser(description='Prosody prediction')
 
@@ -376,6 +377,7 @@ def valid(model, iterator, criterion, index_to_tag, device, config, best_dev_acc
     y_true = np.array(true)
     y_pred = np.array(predictions)
     acc = 100. * (y_true == y_pred).astype(np.int32).sum() / len(y_true)
+    print(confusion_matrix(y_true, y_pred))
 
     if acc > best_dev_acc:
         best_dev_acc = acc
@@ -459,6 +461,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
     print('f1 weighted', f1)
     f1 = f1_score(y_true, y_pred, average='macro')
     print('f1 macro', f1)
+    print(confusion_matrix(y_true, y_pred))
 
     acc = 100. * (y_true == y_pred).astype(np.int32).sum() / len(y_true)
     print('Test accuracy: {:<5.2f}%, Test loss: {:<.4f} after {} epochs.\n'.format(round(acc, 2), np.mean(test_losses),
