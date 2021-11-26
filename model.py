@@ -51,7 +51,7 @@ class Bert(nn.Module):
             enc = self.bert(x).hidden_states[-1]
         else:
             self.bert.eval()
-            print('not training')
+            #print('not training')
             with torch.no_grad():
                 enc = self.bert(x)[0]
 

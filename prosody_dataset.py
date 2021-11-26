@@ -88,9 +88,9 @@ class Dataset(data.Dataset):
 
         if self.config.log_values:
             # Use log-values to remove affects of 0-skewed value distribution
-            values = [np.log(np.log(float(v) + 1)+1) if v not in ['<pad>','NA'] else self.config.invalid_set_to for v in values_li]
+            values = [np.log(np.log(float(v) + 1)+1) if v not in ['<pad>','NA', 'NA\n'] else self.config.invalid_set_to for v in values_li]
         else:
-            values = [float(v) if v not in ['<pad>', 'NA'] else self.config.invalid_set_to for v in values_li]
+            values = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in values_li]
 
         return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to
 
