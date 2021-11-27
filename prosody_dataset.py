@@ -18,7 +18,7 @@ class Dataset(data.Dataset):
             tags = [word_tag[1] for word_tag in sent]
             values = [word_tag[3] for word_tag in sent] #+++HANDE
 
-            if self.config.model != 'LSTM' and self.config.model != 'BiLSTM':
+            if self.config.model != 'LSTM' and self.config.model != 'BiLSTM' and config.gpt == 0:
                 sents.append(["[CLS]"] + words + ["[SEP]"])
                 tags_li.append(["<pad>"] + tags + ["<pad>"])
                 values_li.append(["<pad>"] + values + ["<pad>"])
@@ -109,6 +109,7 @@ def load_dataset(config):
                 lines = lines[0:int(round(slice))]
             sent = []
             for i, line in enumerate(lines):
+                line = line.replace('\n','')
                 split_line = line.split('\t')
                 if i != 0 and split_line[0] != "<file>":
                     word = split_line[0]
