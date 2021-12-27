@@ -181,7 +181,7 @@ def main():
     else:
         raise Exception('Unknown optimization optimizer: "%s"' % config.optimizer)
 
-    splits, tag_to_index, index_to_tag, vocab = prosody_dataset.load_dataset(config)
+    splits, tag_to_index, index_to_tag, vocab, fileDict = prosody_dataset.load_dataset(config)
 
     if config.model == "BertUncased" or config.model == "BertCased":
         model = Bert(device, config, labels=len(tag_to_index))
@@ -202,8 +202,8 @@ def main():
     elif config.model == "BertAllLayers":
         model = BertAllLayers(device, config, labels=len(tag_to_index))
     elif config.model == "Transformer":
-        #model = TransformerModel(device, 5, 768, 2, 150, 2, config)
-        model = TransformerModel(device, 5, 4096, 2, 150, 2, config)
+        model = TransformerModel(device, 5, 768, 2, 150, 2, config)
+        #model = TransformerModel(device, 5, 4096, 2, 150, 2, config)
         #model = TransformerModel(device, config, labels=len(tag_to_index))
     else:
         raise NotImplementedError("Model option not supported.")
@@ -217,9 +217,9 @@ def main():
     else:
         word_to_embid = None
 
-    train_dataset = Dataset(splits["train"], tag_to_index, config, word_to_embid)
-    eval_dataset = Dataset(splits["dev"], tag_to_index, config, word_to_embid)
-    test_dataset = Dataset(splits["test"], tag_to_index, config, word_to_embid)
+    train_dataset = Dataset(splits["train"], fileDict["train"], tag_to_index, config, word_to_embid)
+    eval_dataset = Dataset(splits["dev"], fileDict["dev"], tag_to_index, config, word_to_embid)
+    test_dataset = Dataset(splits["test"], fileDict["test"], tag_to_index, config, word_to_embid)
 
     train_iter = data.DataLoader(dataset=train_dataset,
                                  batch_size=config.batch_size,

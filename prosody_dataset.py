@@ -9,11 +9,13 @@ import numpy as np
 from transformers import AutoTokenizer
 
 class Dataset(data.Dataset):
-    def __init__(self, tagged_sents, tag_to_index, config, word_to_embid=None):
+    #def __init__(self, tagged_sents, tag_to_index, config, word_to_embid=None):
+    def __init__(self, tagged_sents, file_ids, tag_to_index, config, word_to_embid=None):
         sents, tags_li,values_li = [], [], [] # list of lists
         self.config = config
 
-        for sent in tagged_sents:
+        for j, sent in enumerate(tagged_sents):
+            print(file_ids[j])
             words = [word_tag[0] for word_tag in sent]
             tags = [word_tag[1] for word_tag in sent]
             values = [word_tag[3] for word_tag in sent] #+++HANDE
@@ -97,10 +99,12 @@ class Dataset(data.Dataset):
 
 def load_dataset(config):
     splits = dict()
+    fileDict = dict()
     words = []
     all_sents = []
     for split in ['train', 'dev', 'test']:
         tagged_sents = []
+        file_ids = []
         filename = config.train_set if split == 'train' else split
         with open(config.datadir+'/'+filename+'.txt') as f:
             lines = f.readlines()
@@ -127,14 +131,20 @@ def load_dataset(config):
 
                     sent.append((word, tag_prominence, tag_boundary, value_prominance, value_boundary))
                     words.append(word)
-                elif (i != 0 and split_line[0] == "<file>") or i+1 == len(lines):
+                #elif (i != 0 and split_line[0] == "<file>") or i+1 == len(lines):
+                elif (split_line[0] == "<file>") or i+1 == len(lines):
                     tagged_sents.append(sent)
                     sent = []
+                    if i+1 != len(lines):
+                      utt = split_line[1].split('/')[-1][:-4]
+                      book = split_line[1].split('/')[-4]
+                      file_ids.append((book, utt))
 
         if config.shuffle_sentences:
             random.shuffle(tagged_sents)
 
         splits[split] = tagged_sents
+        fileDict[split] = file_ids
         all_sents = all_sents + tagged_sents
 
     vocab = []
@@ -157,7 +167,7 @@ def load_dataset(config):
         random.shuffle(splits["train"])
         splits["train"].sort(key=len)
 
-    return splits, tag_to_index, index_to_tag, vocab
+    return splits, tag_to_index, index_to_tag, vocab, fileDict
 
 
 def pad(batch):
