@@ -40,7 +40,7 @@ class Bert(nn.Module):
         self.fc = nn.Linear(2048, labels).to(device)
         self.device = device
 
-     def forward(self, x, y, lps):
+    def forward(self, x, y, lps):
         #print(self.training)
         x = x.to(self.device)
         y = y.to(self.device)

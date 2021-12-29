@@ -11,7 +11,7 @@ from transformers import AutoTokenizer
 class Dataset(data.Dataset):
     #def __init__(self, tagged_sents, tag_to_index, config, word_to_embid=None):
     def __init__(self, tagged_sents, file_ids, tag_to_index, config, word_to_embid=None):
-        sents, tags_li,values_li, prevSents = [], [], [], [] # list of lists
+        sents, tags_li,values_li, prevSents, prevTags, prevValues = [], [], [], [], [], [] # list of lists
         self.config = config
 
         for j, sent in enumerate(tagged_sents):
@@ -27,10 +27,16 @@ class Dataset(data.Dataset):
                 prevTag = [word_tag[1] for word_tag in tagged_sents[prev]]
                 prevVal = [word_tag[3] for word_tag in tagged_sents[prev]]
                 prevSents.append(prevWord)
+                prevTags.append(prevTag)
+                prevValues.append(prevVal)
               else:
                 prevSents.append(["[CLS]"])
+                prevTags.append(["<pad>"])
+                prevValues.append(["<pad>"])
             else:
               prevSents.append(["[CLS]"])
+              prevTags.append(["<pad>"])
+              prevValues.append(["<pad>"])
             words = [word_tag[0] for word_tag in sent]
             tags = [word_tag[1] for word_tag in sent]
             values = [word_tag[3] for word_tag in sent] #+++HANDE
@@ -45,7 +51,7 @@ class Dataset(data.Dataset):
                 values_li.append(values)
 
 
-        self.sents, self.tags_li, self.values_li, self.prevSents = sents, tags_li, values_li, prevSents
+        self.sents, self.tags_li, self.values_li, self.prevSents, self.prevTags, self.prevValues = sents, tags_li, values_li, prevSents, prevTags, prevValues
         if self.config.model == 'BertUncased' or self.config.model == 'Transformer':
             if config.gpt != 0:
                 self.tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
@@ -66,10 +72,11 @@ class Dataset(data.Dataset):
         return [self.word_to_embid.get(token, UNK_id) for token in tokens]
 
     def __getitem__(self, id):
-        words, tags, values_li, prevSents = self.sents[id], self.tags_li[id], self.values_li[id], self.prevSents[id] # words, tags, values: string list
+        words, tags, values_li, prevSents, prevTags, prevValues = self.sents[id], self.tags_li[id], self.values_li[id], self.prevSents[id], self.prevTags[id], self.prevValues[id] # words, tags, values: string list
 
-        x, y, values, px = [], [], [], [] # list of ids
+        x, y, values, px, pt, pv = [], [], [], [], [], [] # list of ids
         is_main_piece = [] # only score the main piece of each word
+        is_main_piece_prev = []
         for w, t, v in zip(words, tags, values_li):
             if self.config.model in ['LSTM', 'BiLSTM', 'LSTMRegression']:
                 tokens = [w]
@@ -94,10 +101,15 @@ class Dataset(data.Dataset):
             x.extend(xx)
             is_main_piece.extend(head)
             y.extend(yy)
-        for p in prevSents:
+        for p, yt in zip(prevSents, prevTags):
           ptokens = self.tokenizer.tokenize(p) if p not in ("[CLS]", "[SEP]") else [p]
           pxx = self.tokenizer.convert_tokens_to_ids(ptokens)
           px.extend(pxx)
+          yt = [yt] + ["<pad>"] * (len(ptokens) - 1)
+          yyt = [self.tag_to_index[each] for each in yt]
+          pt.extend(yyt)
+          head = [1] + [0]*(len(ptokens) - 1) # identify the main piece of each word
+          is_main_piece_prev.extend(head)
 
 
         assert len(x) == len(y) == len(is_main_piece), "len(x)={}, len(y)={}, len(is_main_piece)={}".format(len(x), len(y), len(is_main_piece))
@@ -106,6 +118,7 @@ class Dataset(data.Dataset):
         prvSeqLen = len(px)
         #print('sl',seqlen)
         #print('psl',prvSeqLen)
+        #print('pt', len(pt))
 
         # to string
         words = " ".join(words)
@@ -116,8 +129,16 @@ class Dataset(data.Dataset):
             values = [np.log(np.log(float(v) + 1)+1) if v not in ['<pad>','NA', 'NA\n'] else self.config.invalid_set_to for v in values_li]
         else:
             values = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in values_li]
+            pv = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in prevValues]
 
-        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen
+        #print('words', self.tokenizer.convert_ids_to_tokens(px))
+        #print('px', px)
+        #print('pt',pt)
+        #print('pv', pv)
+
+        #assert len(px) == len(pt) == len(pv)
+
+        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen, pt, pv, is_main_piece_prev
 
 
 def load_dataset(config):
@@ -206,19 +227,32 @@ def pad(batch):
     seqlens = f(5)
     prevSeq = f(8)
     prvSeqLen = f(9)
+    #print('prevlen', prvSeqLen)
+    pTags = f(10)
+    #print("ptags", [len(p) for p in pTags])
+    #print("pvalues", [len(p) for p in f(11)])
     maxlen = np.array(seqlens).max()
     maxlen = (np.array(seqlens) + np.array(prvSeqLen)).max()
+    #print('ml', maxlen)
     invalid_set_to = f(7)[0]
 
     #f = lambda x, seqlen: [sample[x] + [0] * (seqlen - len(sample[x])) for sample in batch] # 0: <pad>
     f = lambda x, seqlen: [sample[8] + sample[x] + [0] * (seqlen - len(sample[x])-sample[9]) for sample in batch] # 0: <pad>
     x = f(1, maxlen)
-    print(x)
-    f = lambda x, seqlen: [sample[x] + [0] * (seqlen - len(sample[x])) for sample in batch] # 0: <pad>
+    #print("x",x[0])
+    f = lambda x, seqlen: [sample[10] + sample[x]+ [0] * (seqlen - len(sample[x])-sample[9]) for sample in batch] # 0: <pad>
     y = f(4, maxlen)
+    #print("y",y[0])
 
-    f = lambda x, seqlen: [sample[x] + [invalid_set_to] * (seqlen - len(sample[x])) for sample in batch] #invalid values are NA and <pad>
+    #f = lambda x, seqlen: [sample[x] + [invalid_set_to] * (seqlen - len(sample[x])) for sample in batch] #invalid values are NA and <pad>
+    f = lambda x, seqlen: [sample[12] + sample[x] + [invalid_set_to] * (seqlen - len(sample[x])-sample[9]) for sample in batch] #invalid values are NA and <pad>
     values = f(6, maxlen)
+    #print("main",is_main_piece[0])
+    #print("main",len(is_main_piece[0]))
+    #print("values",values[0])
+    #print("curValues", values[0][prvSeqLen[0]:])
+    #print("curValues", len(values[0][prvSeqLen[0]:]))
+    #print(' ')
 
     f = torch.LongTensor
     return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to , prevSeq, prvSeqLen
