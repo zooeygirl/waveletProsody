@@ -11,11 +11,26 @@ from transformers import AutoTokenizer
 class Dataset(data.Dataset):
     #def __init__(self, tagged_sents, tag_to_index, config, word_to_embid=None):
     def __init__(self, tagged_sents, file_ids, tag_to_index, config, word_to_embid=None):
-        sents, tags_li,values_li = [], [], [] # list of lists
+        sents, tags_li,values_li, prevSents = [], [], [], [] # list of lists
         self.config = config
 
         for j, sent in enumerate(tagged_sents):
-            print(file_ids[j])
+            book = file_ids[j][0]
+            if book == "Emma" or book=='SenseAndSensibility' or book=='PrideAndPrejudice':
+              #print(file_ids[j])
+              ch = file_ids[j][1].split('-')[0]
+              ut = str(int(file_ids[j][1].split('-')[1])-1)
+              if ut != '-1':
+                #print(ch+'-'+ut)
+                prev = file_ids.index((book, ch+'-'+ut ))
+                prevWord = [word_tag[0] for word_tag in tagged_sents[prev]]
+                prevTag = [word_tag[1] for word_tag in tagged_sents[prev]]
+                prevVal = [word_tag[3] for word_tag in tagged_sents[prev]]
+                prevSents.append(prevWord)
+              else:
+                prevSents.append(["[CLS]"])
+            else:
+              prevSents.append(["[CLS]"])
             words = [word_tag[0] for word_tag in sent]
             tags = [word_tag[1] for word_tag in sent]
             values = [word_tag[3] for word_tag in sent] #+++HANDE
@@ -30,7 +45,7 @@ class Dataset(data.Dataset):
                 values_li.append(values)
 
 
-        self.sents, self.tags_li, self.values_li = sents, tags_li, values_li
+        self.sents, self.tags_li, self.values_li, self.prevSents = sents, tags_li, values_li, prevSents
         if self.config.model == 'BertUncased' or self.config.model == 'Transformer':
             if config.gpt != 0:
                 self.tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
@@ -51,9 +66,9 @@ class Dataset(data.Dataset):
         return [self.word_to_embid.get(token, UNK_id) for token in tokens]
 
     def __getitem__(self, id):
-        words, tags, values_li = self.sents[id], self.tags_li[id], self.values_li[id] # words, tags, values: string list
+        words, tags, values_li, prevSents = self.sents[id], self.tags_li[id], self.values_li[id], self.prevSents[id] # words, tags, values: string list
 
-        x, y, values = [], [], [] # list of ids
+        x, y, values, px = [], [], [], [] # list of ids
         is_main_piece = [] # only score the main piece of each word
         for w, t, v in zip(words, tags, values_li):
             if self.config.model in ['LSTM', 'BiLSTM', 'LSTMRegression']:
@@ -79,10 +94,18 @@ class Dataset(data.Dataset):
             x.extend(xx)
             is_main_piece.extend(head)
             y.extend(yy)
+        for p in prevSents:
+          ptokens = self.tokenizer.tokenize(p) if p not in ("[CLS]", "[SEP]") else [p]
+          pxx = self.tokenizer.convert_tokens_to_ids(ptokens)
+          px.extend(pxx)
+
 
         assert len(x) == len(y) == len(is_main_piece), "len(x)={}, len(y)={}, len(is_main_piece)={}".format(len(x), len(y), len(is_main_piece))
         # seqlen
         seqlen = len(y)
+        prvSeqLen = len(px)
+        #print('sl',seqlen)
+        #print('psl',prvSeqLen)
 
         # to string
         words = " ".join(words)
@@ -94,7 +117,7 @@ class Dataset(data.Dataset):
         else:
             values = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in values_li]
 
-        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to
+        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen
 
 
 def load_dataset(config):
@@ -137,7 +160,10 @@ def load_dataset(config):
                     sent = []
                     if i+1 != len(lines):
                       utt = split_line[1].split('/')[-1][:-4]
-                      book = split_line[1].split('/')[-4]
+                      try:
+                        book = split_line[1].split('/')[-4]
+                      except:
+                        book = split_line[1]
                       file_ids.append((book, utt))
 
         if config.shuffle_sentences:
@@ -173,22 +199,31 @@ def load_dataset(config):
 def pad(batch):
     # Pad sentences to the longest sample
     f = lambda x: [sample[x] for sample in batch]
+    #words = f(0)
     words = f(0)
     is_main_piece = f(2)
     tags = f(3)
     seqlens = f(5)
+    prevSeq = f(8)
+    prvSeqLen = f(9)
     maxlen = np.array(seqlens).max()
+    maxlen = (np.array(seqlens) + np.array(prvSeqLen)).max()
     invalid_set_to = f(7)[0]
 
-    f = lambda x, seqlen: [sample[x] + [0] * (seqlen - len(sample[x])) for sample in batch] # 0: <pad>
+    #f = lambda x, seqlen: [sample[x] + [0] * (seqlen - len(sample[x])) for sample in batch] # 0: <pad>
+    f = lambda x, seqlen: [sample[8] + sample[x] + [0] * (seqlen - len(sample[x])-sample[9]) for sample in batch] # 0: <pad>
     x = f(1, maxlen)
+    print(x)
+    f = lambda x, seqlen: [sample[x] + [0] * (seqlen - len(sample[x])) for sample in batch] # 0: <pad>
     y = f(4, maxlen)
 
     f = lambda x, seqlen: [sample[x] + [invalid_set_to] * (seqlen - len(sample[x])) for sample in batch] #invalid values are NA and <pad>
     values = f(6, maxlen)
 
     f = torch.LongTensor
-    return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to
+    return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to , prevSeq, prvSeqLen
+
+
 
 
 def load_embeddings(config, vocab):

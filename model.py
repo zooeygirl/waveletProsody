@@ -40,7 +40,7 @@ class Bert(nn.Module):
         self.fc = nn.Linear(2048, labels).to(device)
         self.device = device
 
-    def forward(self, x, y):
+     def forward(self, x, y, lps):
         #print(self.training)
         x = x.to(self.device)
         y = y.to(self.device)
@@ -49,11 +49,12 @@ class Bert(nn.Module):
             self.bert.train()
             #enc = self.bert(x)[0]
             enc = self.bert(x).hidden_states[-1]
+            enc = enc[:,torch.tensor(lps).to(dtype=torch.long, device=self.device):, :]
         else:
             self.bert.eval()
             #print('not training')
             with torch.no_grad():
-                enc = self.bert(x)[0]
+                enc = self.bert(x)[0][lps:]
 
         logits = self.fc(enc).to(self.device)
         y_hat = logits.argmax(-1)

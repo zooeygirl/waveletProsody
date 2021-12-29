@@ -28,7 +28,7 @@ parser.add_argument('--gpt',
 parser.add_argument('--train_set',
                     type=str,
                     choices=['train_100',
-                             'train_360'],
+                             'train_360', 'emma'],
                     default='train_360')
 parser.add_argument('--batch_size',
                     type=int,
@@ -288,7 +288,8 @@ def main():
 def train(model, iterator, optimizer, criterion, device, config):
     model.train()
     for i, batch in enumerate(iterator):
-        words, x, is_main_piece, tags, y, seqlens, _, _ = batch
+        #words, x, is_main_piece, tags, y, seqlens, _, _,  = batch
+        words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps = batch
 
         if config.model == 'WordMajority':
             model.collect_stats(x, y)
@@ -328,7 +329,8 @@ def valid(model, iterator, criterion, index_to_tag, device, config, best_dev_acc
     Words, Is_main_piece, Tags, Y, Y_hat = [], [], [], [], []
     with torch.no_grad():
         for i, batch in enumerate(iterator):
-            words, x, is_main_piece, tags, y, seqlens, _, _ = batch
+            #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
+            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps = batch
             x = x.to(device)
             y = y.to(device)
 
@@ -403,7 +405,8 @@ def test(model, iterator, criterion, index_to_tag, device, config):
     Words, Is_main_piece, Tags, Y, Y_hat = [], [], [], [], []
     with torch.no_grad():
         for i, batch in enumerate(iterator):
-            words, x, is_main_piece, tags, y, seqlens, _, _ = batch
+            #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
+            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps = batch
             x = x.to(device)
             y = y.to(device)
 
