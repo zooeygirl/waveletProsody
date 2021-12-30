@@ -17,11 +17,16 @@ class Dataset(data.Dataset):
         for j, sent in enumerate(tagged_sents):
             book = file_ids[j][0]
             if book == "Emma" or book=='SenseAndSensibility' or book=='PrideAndPrejudice':
-              #print(file_ids[j])
+              #if book =='PrideAndPrejudice':
+                #print(file_ids[j])
               ch = file_ids[j][1].split('-')[0]
               ut = str(int(file_ids[j][1].split('-')[1])-1)
               if ut != '-1':
-                #print(ch+'-'+ut)
+                if book =='PrideAndPrejudice':
+                  if ch+'-'+ut =='001-0' or ch+'-'+ut =='001-1' or ch+'-'+ut =='001-2':
+                    print(ch+'-'+ut)
+                    prev = file_ids.index((book, ch+'-'+ut ))
+                    print([word_tag[0] for word_tag in tagged_sents[prev]])
                 prev = file_ids.index((book, ch+'-'+ut ))
                 prevWord = [word_tag[0] for word_tag in tagged_sents[prev]]
                 prevTag = [word_tag[1] for word_tag in tagged_sents[prev]]
@@ -30,16 +35,22 @@ class Dataset(data.Dataset):
                 prevTags.append(prevTag)
                 prevValues.append(prevVal)
               else:
+                prevWord = []
+                prevTag = []
+                prevVal =[]
                 prevSents.append(["[CLS]"])
                 prevTags.append(["<pad>"])
                 prevValues.append(["<pad>"])
             else:
+              prevWord = []
+              prevTag = []
+              prevVal =[]
               prevSents.append(["[CLS]"])
               prevTags.append(["<pad>"])
               prevValues.append(["<pad>"])
-            words = [word_tag[0] for word_tag in sent]
-            tags = [word_tag[1] for word_tag in sent]
-            values = [word_tag[3] for word_tag in sent] #+++HANDE
+            words = prevWord + [word_tag[0] for word_tag in sent]
+            tags = prevTag + [word_tag[1] for word_tag in sent]
+            values = prevVal + [word_tag[3] for word_tag in sent] #+++HANDE
 
             if self.config.model != 'LSTM' and self.config.model != 'BiLSTM' and config.gpt == 0:
                 sents.append(["[CLS]"] + words + ["[SEP]"])
@@ -112,6 +123,7 @@ class Dataset(data.Dataset):
           is_main_piece_prev.extend(head)
 
 
+
         assert len(x) == len(y) == len(is_main_piece), "len(x)={}, len(y)={}, len(is_main_piece)={}".format(len(x), len(y), len(is_main_piece))
         # seqlen
         seqlen = len(y)
@@ -146,7 +158,7 @@ def load_dataset(config):
     fileDict = dict()
     words = []
     all_sents = []
-    for split in ['train', 'dev', 'test']:
+    for split in ['train', 'dev', 'pAndp']:
         tagged_sents = []
         file_ids = []
         filename = config.train_set if split == 'train' else split
@@ -188,7 +200,8 @@ def load_dataset(config):
                       file_ids.append((book, utt))
 
         if config.shuffle_sentences:
-            random.shuffle(tagged_sents)
+            print('do not shuffle')
+            #random.shuffle(tagged_sents)
 
         splits[split] = tagged_sents
         fileDict[split] = file_ids
@@ -208,7 +221,7 @@ def load_dataset(config):
 
     print('Training sentences: {}'.format(len(splits["train"])))
     print('Dev sentences: {}'.format(len(splits["dev"])))
-    print('Test sentences: {}'.format(len(splits["test"])))
+    print('Test sentences: {}'.format(len(splits["pAndp"])))
 
     if config.sorted_batches:
         random.shuffle(splits["train"])
@@ -236,23 +249,17 @@ def pad(batch):
     #print('ml', maxlen)
     invalid_set_to = f(7)[0]
 
-    #f = lambda x, seqlen: [sample[x] + [0] * (seqlen - len(sample[x])) for sample in batch] # 0: <pad>
-    f = lambda x, seqlen: [sample[8] + sample[x] + [0] * (seqlen - len(sample[x])-sample[9]) for sample in batch] # 0: <pad>
+    f = lambda x, seqlen: [sample[x] + [0] * (seqlen - len(sample[x])) for sample in batch] # 0: <pad>
+    #f = lambda x, seqlen: [sample[8] + sample[x] + [0] * (seqlen - len(sample[x])-sample[9]) for sample in batch] # 0: <pad>
     x = f(1, maxlen)
     #print("x",x[0])
-    f = lambda x, seqlen: [sample[10] + sample[x]+ [0] * (seqlen - len(sample[x])-sample[9]) for sample in batch] # 0: <pad>
+    #f = lambda x, seqlen: [sample[10] + sample[x]+ [0] * (seqlen - len(sample[x])-sample[9]) for sample in batch] # 0: <pad>
     y = f(4, maxlen)
     #print("y",y[0])
 
-    #f = lambda x, seqlen: [sample[x] + [invalid_set_to] * (seqlen - len(sample[x])) for sample in batch] #invalid values are NA and <pad>
-    f = lambda x, seqlen: [sample[12] + sample[x] + [invalid_set_to] * (seqlen - len(sample[x])-sample[9]) for sample in batch] #invalid values are NA and <pad>
+    f = lambda x, seqlen: [sample[x] + [invalid_set_to] * (seqlen - len(sample[x])) for sample in batch] #invalid values are NA and <pad>
+    #f = lambda x, seqlen: [sample[12] + sample[x] + [invalid_set_to] * (seqlen - len(sample[x])-sample[9]) for sample in batch] #invalid values are NA and <pad>
     values = f(6, maxlen)
-    #print("main",is_main_piece[0])
-    #print("main",len(is_main_piece[0]))
-    #print("values",values[0])
-    #print("curValues", values[0][prvSeqLen[0]:])
-    #print("curValues", len(values[0][prvSeqLen[0]:]))
-    #print(' ')
 
     f = torch.LongTensor
     return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to , prevSeq, prvSeqLen

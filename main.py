@@ -440,7 +440,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
                 tagslice = tags.split()[1:-1]
                 predsslice = preds[1:-1]
                 wordslice = words.split()[1:-1]
-                assert len(preds) == len(words.split()) == len(tags.split())
+                #assert len(preds) == len(words.split()) == len(tags.split())
             else:
                 tagslice = tags.split()
                 predsslice = preds
