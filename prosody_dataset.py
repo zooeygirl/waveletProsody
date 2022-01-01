@@ -171,7 +171,7 @@ def load_dataset(config):
             for i, line in enumerate(lines):
                 line = line.replace('\n','')
                 split_line = line.split('\t')
-                if i != 0 and split_line[0] != "<file>":
+                if i != 0 and split_line[0] != "<file>" and i+1 !=len(lines):
                     word = split_line[0]
                     tag_prominence = split_line[1]
                     tag_boundary = split_line[2]
@@ -189,8 +189,9 @@ def load_dataset(config):
                     words.append(word)
                 #elif (i != 0 and split_line[0] == "<file>") or i+1 == len(lines):
                 elif (split_line[0] == "<file>") or i+1 == len(lines):
-                    tagged_sents.append(sent)
-                    sent = []
+                    if i != 0:
+                      tagged_sents.append(sent)
+                      sent = []
                     if i+1 != len(lines):
                       utt = split_line[1].split('/')[-1][:-4]
                       try:
@@ -199,8 +200,16 @@ def load_dataset(config):
                         book = split_line[1]
                       file_ids.append((book, utt))
 
+
+
+        print(config.shuffle_sentences)
         if config.shuffle_sentences:
-            print('do not shuffle')
+            #print('do not shuffle')
+            c = list(zip(tagged_sents, file_ids))
+            random.shuffle(c)
+            tagged_sents, file_ids = zip(*c)
+            tagged_sents = list(tagged_sents)
+            file_ids = list(file_ids)
             #random.shuffle(tagged_sents)
 
         splits[split] = tagged_sents

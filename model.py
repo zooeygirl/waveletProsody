@@ -36,8 +36,8 @@ class Bert(nn.Module):
           #self.bert = AutoModel.from_config(config)
           self.bert = AutoModel.from_pretrained('bert-base-uncased', output_hidden_states=True)
 
-        #self.fc = nn.Linear(768, labels).to(device)
-        self.fc = nn.Linear(2048, labels).to(device)
+        self.fc = nn.Linear(768, labels).to(device)
+        #self.fc = nn.Linear(2048, labels).to(device)
         self.device = device
 
     def forward(self, x, y):
