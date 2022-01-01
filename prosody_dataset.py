@@ -38,16 +38,16 @@ class Dataset(data.Dataset):
                 prevWord = []
                 prevTag = []
                 prevVal =[]
-                prevSents.append(["[CLS]"])
-                prevTags.append(["<pad>"])
-                prevValues.append(["<pad>"])
+                prevSents.append([])
+                prevTags.append([])
+                prevValues.append([])
             else:
               prevWord = []
               prevTag = []
               prevVal =[]
-              prevSents.append(["[CLS]"])
-              prevTags.append(["<pad>"])
-              prevValues.append(["<pad>"])
+              prevSents.append([])
+              prevTags.append([])
+              prevValues.append([])
             words = prevWord + [word_tag[0] for word_tag in sent]
             tags = prevTag + [word_tag[1] for word_tag in sent]
             values = prevVal + [word_tag[3] for word_tag in sent] #+++HANDE
@@ -121,6 +121,10 @@ class Dataset(data.Dataset):
           pt.extend(yyt)
           head = [1] + [0]*(len(ptokens) - 1) # identify the main piece of each word
           is_main_piece_prev.extend(head)
+
+         print(head)
+         head[1:len(prevSents)+1) = 0
+         print(head)
 
 
 

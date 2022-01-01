@@ -111,7 +111,7 @@ parser.add_argument('--weighted_mse',
                     action='store_true',
                     dest='weighted_mse')
 parser.add_argument('--shuffle_sentences',
-                    action='store_false',
+                    action='store_true',
                     dest='shuffle_sentences')
 parser.add_argument('--seed',
                     type=int,
