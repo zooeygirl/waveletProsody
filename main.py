@@ -296,9 +296,12 @@ def train(model, iterator, optimizer, criterion, device, config):
             continue
 
         optimizer.zero_grad()
-        if x.shape[1] >510:
-            x = x[:, -511:].to(device)
-            y = y[:, -511:].to(device)
+        if x.shape[1] >511:
+            print(x.shape)
+            x = torch.cat((x[:, 0:1], x[:, -511:]), 1)
+            y = torch.cat((y[:, 0:1], y[:, -511:]), 1)
+            x = x.to(device)
+            y = y.to(device)
         else:
             x = x.to(device)
             y = y.to(device)
@@ -411,8 +414,15 @@ def test(model, iterator, criterion, index_to_tag, device, config):
         for i, batch in enumerate(iterator):
             #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
             words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps = batch
-            x = x.to(device)
-            y = y.to(device)
+            if x.shape[1] >511:
+                print(x.shape)
+                x = torch.cat((x[:, 0:1], x[:, -511:]), 1)
+                y = torch.cat((y[:, 0:1], y[:, -511:]), 1)
+                x = x.to(device)
+                y = y.to(device)
+            else:
+                x = x.to(device)
+                y = y.to(device)
 
             logits, labels, y_hat = model(x, y)  # y_hat: (N, T)
 

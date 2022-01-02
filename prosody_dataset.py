@@ -246,7 +246,7 @@ def pad(batch):
     #print("ptags", [len(p) for p in pTags])
     #print("pvalues", [len(p) for p in f(11)])
     maxlen = np.array(seqlens).max()
-    maxlen = (np.array(seqlens) + np.array(prvSeqLen)).max()
+    #maxlen = (np.array(seqlens) + np.array(prvSeqLen)).max()
     #print('ml', maxlen)
     invalid_set_to = f(7)[0]
 
