@@ -16,41 +16,36 @@ class Dataset(data.Dataset):
 
         for j, sent in enumerate(tagged_sents):
             book = file_ids[j][0]
+            prevWord = []
+            prevTag = []
+            prevVal = []
             if book == "Emma" or book=='SenseAndSensibility' or book=='PrideAndPrejudice':
-              #if book =='PrideAndPrejudice':
-                #print(file_ids[j])
               ch = file_ids[j][1].split('-')[0]
-              ut = str(int(file_ids[j][1].split('-')[1])-1)
-              if ut != '-1':
-                if book =='PrideAndPrejudice':
-                  if ch+'-'+ut =='001-0' or ch+'-'+ut =='001-1' or ch+'-'+ut =='001-2':
-                    print(ch+'-'+ut)
-                    prev = file_ids.index((book, ch+'-'+ut ))
-                    print([word_tag[0] for word_tag in tagged_sents[prev]])
-                prev = file_ids.index((book, ch+'-'+ut ))
-                prevWord = [word_tag[0] for word_tag in tagged_sents[prev]]
-                prevTag = [word_tag[1] for word_tag in tagged_sents[prev]]
-                prevVal = [word_tag[3] for word_tag in tagged_sents[prev]]
-                prevSents.append(prevWord)
-                prevTags.append(prevTag)
-                prevValues.append(prevVal)
-              else:
-                prevWord = []
-                prevTag = []
-                prevVal =[]
-                prevSents.append([])
-                prevTags.append([])
-                prevValues.append([])
-            else:
-              prevWord = []
-              prevTag = []
-              prevVal =[]
-              prevSents.append([])
-              prevTags.append([])
-              prevValues.append([])
+              numPrev = 2
+              for k in range(1, numPrev):
+                ut = str(int(file_ids[j][1].split('-')[1])-k)
+                if not int(ut) < 0:
+                  if book =='PrideAndPrejudice':
+                    if ch+'-'+ut =='001-0' or ch+'-'+ut =='001-1' or ch+'-'+ut =='001-2':
+                      print(ch+'-'+ut)
+                      prev = file_ids.index((book, ch+'-'+ut ))
+                      print([word_tag[0] for word_tag in tagged_sents[prev]])
+                  prev = file_ids.index((book, ch+'-'+ut ))
+                  prevWord = [word_tag[0] for word_tag in tagged_sents[prev]] + prevWord
+                  prevTag = [word_tag[1] for word_tag in tagged_sents[prev]] + prevTag
+                  prevVal = [word_tag[3] for word_tag in tagged_sents[prev]] + prevVal
+
+            prevSents.append(prevWord)
+            prevTags.append(prevTag)
+            prevValues.append(prevVal)
+
             words = prevWord + [word_tag[0] for word_tag in sent]
             tags = prevTag + [word_tag[1] for word_tag in sent]
             values = prevVal + [word_tag[3] for word_tag in sent] #+++HANDE
+
+            #words = [word_tag[0] for word_tag in sent]
+            #tags =  [word_tag[1] for word_tag in sent]
+            #values = [word_tag[3] for word_tag in sent]
 
             if self.config.model != 'LSTM' and self.config.model != 'BiLSTM' and config.gpt == 0:
                 sents.append(["[CLS]"] + words + ["[SEP]"])
@@ -122,10 +117,9 @@ class Dataset(data.Dataset):
           head = [1] + [0]*(len(ptokens) - 1) # identify the main piece of each word
           is_main_piece_prev.extend(head)
 
-         print(head)
-         head[1:len(prevSents)+1) = 0
-         print(head)
-
+        #print(is_main_piece)
+        #is_main_piece[:len(prevSents)] = [0 for num in range(1,len(prevSents)+1)]
+        #print(is_main_piece)
 
 
         assert len(x) == len(y) == len(is_main_piece), "len(x)={}, len(y)={}, len(is_main_piece)={}".format(len(x), len(y), len(is_main_piece))
@@ -147,12 +141,6 @@ class Dataset(data.Dataset):
             values = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in values_li]
             pv = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in prevValues]
 
-        #print('words', self.tokenizer.convert_ids_to_tokens(px))
-        #print('px', px)
-        #print('pt',pt)
-        #print('pv', pv)
-
-        #assert len(px) == len(pt) == len(pv)
 
         return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen, pt, pv, is_main_piece_prev
 

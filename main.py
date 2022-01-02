@@ -296,8 +296,12 @@ def train(model, iterator, optimizer, criterion, device, config):
             continue
 
         optimizer.zero_grad()
-        x = x.to(device)
-        y = y.to(device)
+        if x.shape[1] >510:
+            x = x[:, -511:].to(device)
+            y = y[:, -511:].to(device)
+        else:
+            x = x.to(device)
+            y = y.to(device)
 
         logits, y, _ = model(x, y) # logits: (N, T, VOCAB), y: (N, T)
 
@@ -441,6 +445,9 @@ def test(model, iterator, criterion, index_to_tag, device, config):
                 predsslice = preds[1:-1]
                 wordslice = words.split()[1:-1]
                 #assert len(preds) == len(words.split()) == len(tags.split())
+                #tagslice = np.array(tags.split())[np.where(np.array(is_main_piece)==1)[0]]
+                #predsslice = np.array(preds)[np.where(np.array(is_main_piece)==1)[0]]
+                #wordslice = np.array(words.split())[np.where(np.array(is_main_piece)==1)[0]]
             else:
                 tagslice = tags.split()
                 predsslice = preds
