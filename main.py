@@ -409,7 +409,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
     model.eval()
     test_losses = []
 
-    Words, Is_main_piece, Tags, Y, Y_hat = [], [], [], [], []
+    Words, Is_main_piece, Tags, Y, Y_hat, prevSeqs = [], [], [], [], [], []
     with torch.no_grad():
         for i, batch in enumerate(iterator):
             #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
@@ -442,18 +442,21 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             Tags.extend(tags)
             Y.extend(y.cpu().numpy().tolist())
             Y_hat.extend(y_hat.cpu().numpy().tolist())
+            prevSeqs.extend(prevSeq)
 
     true = []
     predictions = []
     # gets results and save
     with open(config.save_path, 'w') as results:
-        for words, is_main_piece, tags, y_hat in zip(Words, Is_main_piece, Tags, Y_hat):
+        for words, is_main_piece, tags, y_hat, prevSeq in zip(Words, Is_main_piece, Tags, Y_hat, prevSeqs):
             y_hat = [hat for head, hat in zip(is_main_piece, y_hat) if head == 1]
             preds = [index_to_tag[hat] for hat in y_hat]
             if config.model != 'LSTM' and config.model != 'BiLSTM':
                 tagslice = tags.split()[1:-1]
                 predsslice = preds[1:-1]
                 wordslice = words.split()[1:-1]
+                print(wordslice)
+                print(prevSeq)
                 #assert len(preds) == len(words.split()) == len(tags.split())
                 #tagslice = np.array(tags.split())[np.where(np.array(is_main_piece)==1)[0]]
                 #predsslice = np.array(preds)[np.where(np.array(is_main_piece)==1)[0]]
