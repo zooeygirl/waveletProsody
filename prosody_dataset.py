@@ -197,7 +197,7 @@ def load_dataset(config):
 
 
 
-        print(config.shuffle_sentences)
+        config.shuffle_sentences = True
         if config.shuffle_sentences:
             #print('do not shuffle')
             c = list(zip(tagged_sents, file_ids))
