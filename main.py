@@ -413,7 +413,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
     with torch.no_grad():
         for i, batch in enumerate(iterator):
             #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
-            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps = batch
+            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords = batch
             if x.shape[1] >511:
                 print(x.shape)
                 x = torch.cat((x[:, 0:1], x[:, -511:]), 1)
@@ -442,7 +442,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             Tags.extend(tags)
             Y.extend(y.cpu().numpy().tolist())
             Y_hat.extend(y_hat.cpu().numpy().tolist())
-            prevSeqs.extend(prevSeq)
+            prevSeqs.extend(prevWords)
 
     true = []
     predictions = []
@@ -453,10 +453,12 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             preds = [index_to_tag[hat] for hat in y_hat]
             if config.model != 'LSTM' and config.model != 'BiLSTM':
                 tagslice = tags.split()[1:-1]
+                tagslice = tagslice[len(prevSeq.split()):]
                 predsslice = preds[1:-1]
+                predsslice = predsslice[len(prevSeq.split()):]
                 wordslice = words.split()[1:-1]
-                print(wordslice)
-                print(prevSeq)
+                wordslice = wordslice[len(prevSeq.split()):]
+
                 #assert len(preds) == len(words.split()) == len(tags.split())
                 #tagslice = np.array(tags.split())[np.where(np.array(is_main_piece)==1)[0]]
                 #predsslice = np.array(preds)[np.where(np.array(is_main_piece)==1)[0]]

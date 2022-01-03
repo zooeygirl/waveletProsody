@@ -132,6 +132,9 @@ class Dataset(data.Dataset):
 
         # to string
         words = " ".join(words)
+        #print(words)
+        prevWords = " ".join(prevSents)
+        #print(prevWords)
         tags = " ".join(tags)
 
         if self.config.log_values:
@@ -142,7 +145,7 @@ class Dataset(data.Dataset):
             pv = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in prevValues]
 
 
-        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen, pt, pv, is_main_piece_prev
+        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen, pt, pv, is_main_piece_prev, prevWords
 
 
 def load_dataset(config):
@@ -241,6 +244,7 @@ def pad(batch):
     seqlens = f(5)
     prevSeq = f(8)
     prvSeqLen = f(9)
+    prevWords = f(13)
     #print('prevlen', prvSeqLen)
     pTags = f(10)
     #print("ptags", [len(p) for p in pTags])
@@ -263,7 +267,7 @@ def pad(batch):
     values = f(6, maxlen)
 
     f = torch.LongTensor
-    return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to , prevSeq, prvSeqLen
+    return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to , prevSeq, prvSeqLen, prevWords
 
 
 
