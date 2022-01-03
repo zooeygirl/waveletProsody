@@ -19,7 +19,7 @@ class Dataset(data.Dataset):
             prevWord = []
             prevTag = []
             prevVal = []
-            if book == "Emma" or book=='SenseAndSensibility' or book=='PrideAndPrejudice':
+            if book in ["Emma",'SenseAndSensibility', 'PrideAndPrejudice', 'Persuasion', 'MansfieldPark']:
               ch = file_ids[j][1].split('-')[0]
               numPrev = 2
               for k in range(1, numPrev):
