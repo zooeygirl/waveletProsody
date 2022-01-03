@@ -4090,7 +4090,6 @@ lizzy	1	2	1.130	1.673
 and	1	0	0.741	0.000
 the	0	0	0.000	0.125
 boulanger	2	0	1.231	0.359
- 	NA	NA	NA	NA
 ”	0	1	0.031	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/003/003-9.txt
 and	0	1	0.097	0.960
@@ -4218,7 +4217,6 @@ mrs	0	0	0.146	0.675
 .	NA	NA	NA	NA
 hurst’s	2	2	1.774	1.919
 gown	2	1	2.291	1.050
- 	NA	NA	NA	NA
 ”	1	1	0.646	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/003/003-97.txt
 here	2	0	2.066	0.000
@@ -4524,7 +4522,6 @@ such	0	0	0.010	0.051
 happy	0	0	0.125	0.000
 manners	1	2	0.815	1.346
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 so	2	0	1.922	0.000
 much	0	2	0.083	1.489
 ease	2	0	1.886	0.466
@@ -4563,7 +4560,6 @@ is	0	0	-0.061	0.000
 common	1	0	0.684	0.089
 enough	2	2	1.358	1.513
 ;	NA	NA	NA	NA
- 	NA	NA	NA	NA
 one	2	0	1.470	0.000
 meets	0	0	0.181	0.258
 with	0	0	0.027	0.000
@@ -4579,7 +4575,6 @@ without	2	0	1.335	0.358
 ostentation	1	0	0.634	0.000
 or	0	1	0.000	1.069
 design	2	2	1.597	1.546
- 	NA	NA	NA	NA
 to	0	0	0.057	0.000
 take	1	0	0.856	0.000
 the	0	0	0.175	0.461
@@ -4599,7 +4594,6 @@ nothing	1	0	0.778	0.000
 of	0	0	0.000	0.000
 the	0	1	-0.089	0.855
 bad	2	2	1.414	1.482
- 	NA	NA	NA	NA
 belongs	2	0	1.370	0.687
 to	0	0	0.015	0.000
 you	1	0	0.466	0.207
@@ -5495,7 +5489,6 @@ it	0	2	0.110	1.267
 to	0	0	-0.022	0.000
 be	0	0	0.180	0.068
 so	2	2	1.963	2.054
- 	NA	NA	NA	NA
 but	2	0	1.346	0.409
 still	2	0	1.336	0.211
 they	0	0	0.186	0.414
@@ -5788,26 +5781,22 @@ if	0	0	0.000	0.017
 he	0	0	0.274	0.259
 admired	1	0	0.991	0.327
 her	1	1	0.757	1.138
- 	NA	NA	NA	NA
 indeed	1	0	0.977	0.073
 i	0	0	0.243	0.016
 rather	0	0	0.189	0.162
 believe	0	2	0.048	1.243
 he	0	0	0.214	0.000
 did	2	2	1.992	2.439
- 	NA	NA	NA	NA
 i	2	0	1.553	0.000
 heard	1	0	0.656	0.390
 something	0	0	0.275	0.053
 about	0	0	0.086	0.000
 it	0	1	0.057	0.896
- 	NA	NA	NA	NA
 but	0	0	0.002	0.000
 i	0	0	0.256	0.026
 hardly	2	0	1.725	0.447
 know	0	0	0.060	0.000
 what	1	2	0.721	1.891
- 	NA	NA	NA	NA
 something	1	0	0.979	0.057
 about	0	0	0.208	0.212
 mr	1	0	0.700	0.609
@@ -5894,7 +5883,6 @@ to	0	0	0.390	0.000
 the	0	1	-0.043	0.822
 last	0	0	0.359	0.264
 question	2	2	1.693	1.903
- 	NA	NA	NA	NA
 ‘	NA	NA	NA	NA
 oh	2	1	2.210	1.000
 !	NA	NA	NA	NA
@@ -5933,13 +5921,11 @@ was	0	0	0.019	0.000
 very	0	0	0.354	0.220
 decided	1	0	0.546	0.145
 indeed	1	2	0.845	1.569
- 	NA	NA	NA	NA
 that	0	0	0.285	0.000
 does	2	0	1.412	0.626
 seem	1	0	1.149	0.000
 as	0	0	0.001	0.158
 if	0	1	0.267	1.175
- 	NA	NA	NA	NA
 but	2	2	1.746	1.745
 ,	NA	NA	NA	NA
 however	2	2	1.508	1.558
@@ -5992,11 +5978,9 @@ friend	2	0	1.990	0.400
 is	0	0	0.082	0.000
 he	0	2	0.340	1.797
 ?	NA	NA	NA	NA
- 	NA	NA	NA	NA
 poor	0	0	0.290	0.000
 eliza	2	2	1.615	1.782
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 to	0	0	0.308	0.000
 be	1	0	0.770	0.000
 only	0	0	-0.008	0.000
@@ -6077,7 +6061,6 @@ sure	0	0	-0.102	0.328
 ,	NA	NA	NA	NA
 ma’am	2	2	1.414	1.936
 ?	NA	NA	NA	NA
- 	NA	NA	NA	NA
 is	2	0	1.741	0.176
 not	1	0	0.604	0.342
 there	0	0	0.082	0.000
@@ -6125,7 +6108,6 @@ town	2	1	1.901	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/005/005-30.txt
 “	NA	NA	NA	NA
 aye	1	0	1.096	0.069
- 	NA	NA	NA	NA
 because	0	1	0.370	0.994
 she	0	0	-0.051	0.000
 asked	2	0	2.144	0.235
@@ -6936,7 +6918,6 @@ fixing	1	0	0.623	0.173
 in	0	0	0.007	0.000
 town	0	0	0.173	0.245
 myself	2	2	1.548	2.163
- 	NA	NA	NA	NA
 for	1	0	1.054	0.000
 i	1	0	0.463	0.000
 am	0	0	0.000	0.318
@@ -7282,7 +7263,6 @@ he	2	0	1.310	0.000
 is	0	0	-0.044	0.417
 ,	NA	NA	NA	NA
 indeed	1	0	0.917	0.000
- 	NA	NA	NA	NA
 but	0	2	-0.044	1.342
 ,	NA	NA	NA	NA
 considering	1	0	1.194	0.069
@@ -7412,7 +7392,6 @@ evenings	0	1	0.188	1.189
 in	0	0	0.000	0.204
 this	0	0	0.128	0.035
 manner	2	2	1.221	1.416
- 	NA	NA	NA	NA
 in	2	0	1.418	0.000
 such	0	0	0.228	0.778
 society	2	1	1.588	1.000
@@ -7602,7 +7581,6 @@ such	0	0	0.093	0.000
 a	0	0	0.000	0.369
 favourite	1	2	0.920	1.394
 ?	NA	NA	NA	NA
- 	NA	NA	NA	NA
 and	1	0	0.773	0.529
 pray	2	1	1.803	0.808
 when	1	0	1.185	0.000
@@ -7774,7 +7752,6 @@ can	0	0	0.007	0.000
 all	1	1	0.772	0.850
 begin	2	0	2.261	0.496
 freely	0	2	0.202	1.726
- 	NA	NA	NA	NA
 a	1	0	0.435	0.000
 slight	1	0	0.904	0.155
 preference	0	0	0.111	0.420
@@ -8262,7 +8239,6 @@ been	0	0	0.259	0.616
 also	2	0	1.289	0.289
 spent	0	0	0.347	0.091
 together	1	2	0.897	1.585
- 	NA	NA	NA	NA
 and	0	0	0.344	0.347
 four	0	0	0.162	0.000
 evenings	2	1	1.815	1.072
@@ -8737,7 +8713,6 @@ was	0	0	-0.047	0.000
 perfectly	1	0	1.173	0.349
 unaware	2	2	1.985	2.475
 ;	NA	NA	NA	NA
- 	NA	NA	NA	NA
 to	1	0	0.671	0.181
 her	2	0	2.543	0.634
 he	0	0	0.154	0.000
@@ -9119,7 +9094,6 @@ of	0	0	0.000	0.537
 a	0	0	0.037	0.000
 friend	1	2	0.743	2.239
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 always	2	0	2.272	0.337
 wanting	1	0	0.598	0.000
 me	0	2	-0.007	1.349
@@ -9228,7 +9202,6 @@ of	0	0	0.075	0.231
 course	2	0	1.240	0.216
 familiar	0	0	0.006	0.533
 with	1	2	0.987	1.552
- 	NA	NA	NA	NA
 ‘	NA	NA	NA	NA
 keep	2	0	2.228	0.194
 your	0	0	0.343	0.236
@@ -9239,7 +9212,6 @@ your	0	0	0.241	0.071
 porridge	1	2	0.709	1.285
 ,	NA	NA	NA	NA
 ’	NA	NA	NA	NA
- 	NA	NA	NA	NA
 and	1	0	0.559	0.000
 i	1	0	1.119	0.000
 shall	0	0	-0.040	0.718
@@ -9626,7 +9598,6 @@ of	0	0	0.020	0.521
 the	0	0	-0.037	0.000
 world	2	2	1.570	1.944
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 every	1	0	0.687	0.000
 savage	2	0	1.340	0.650
 can	0	0	0.050	0.000
@@ -10589,7 +10560,6 @@ it	0	1	0.006	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/007/007-25.txt
 “	NA	NA	NA	NA
 yes	2	2	1.200	1.247
- 	NA	NA	NA	NA
 but	0	0	0.002	0.000
 as	2	0	1.316	0.000
 it	0	1	0.040	0.845
@@ -10756,7 +10726,6 @@ coat	0	0	0.242	0.640
 myself	2	0	1.389	0.689
 very	0	0	0.094	0.054
 well	2	2	1.439	2.693
- 	NA	NA	NA	NA
 and	2	0	1.367	0.305
 ,	NA	NA	NA	NA
 indeed	2	1	1.337	0.873
@@ -10998,7 +10967,6 @@ my	1	0	0.967	0.000
 dear	1	0	0.421	0.170
 friend	1	2	0.725	1.852
 ,	NA	NA	NA	NA
-  	NA	NA	NA	NA
 “	NA	NA	NA	NA
 if	1	0	0.966	0.000
 you	0	0	0.104	0.000
@@ -11072,7 +11040,6 @@ with	0	2	-0.104	1.323
 the	0	0	-0.005	0.000
 officers	1	2	1.029	1.743
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 yours	2	0	1.692	0.261
 ever	0	1	0.178	1.000
 ,	NA	NA	NA	NA
@@ -11576,7 +11543,6 @@ my	2	0	1.536	0.086
 dearest	0	0	0.079	0.452
 lizzy	1	2	0.815	1.735
 ,	NA	NA	NA	NA
-  	NA	NA	NA	NA
 “	NA	NA	NA	NA
 i	0	0	0.399	0.015
 find	2	0	1.517	0.247
@@ -11628,7 +11594,6 @@ seeing	1	2	0.719	1.209
 mr	0	0	0.106	0.000
 .	NA	NA	NA	NA
 jones	2	2	1.817	2.127
- 	NA	NA	NA	NA
 therefore	2	0	1.388	0.300
 do	0	0	0.000	0.000
 not	2	0	1.767	0.000
@@ -11644,7 +11609,6 @@ having	0	0	0.309	0.009
 been	2	0	1.288	0.000
 to	0	0	0.000	0.465
 me	1	2	0.494	1.734
- 	NA	NA	NA	NA
 and	1	0	0.758	0.222
 ,	NA	NA	NA	NA
 excepting	2	1	1.692	1.011
@@ -11663,7 +11627,6 @@ matter	1	0	0.998	0.434
 with	0	0	-0.036	0.000
 me	1	2	0.948	1.539
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 yours	2	0	1.622	0.163
 ,	NA	NA	NA	NA
 c	0	1	0.291	1.000
@@ -11701,7 +11664,6 @@ dangerous	2	0	1.364	0.000
 fit	0	2	-0.030	1.257
 of	0	0	0.000	0.176
 illness	2	0	1.584	0.119
- 	NA	NA	NA	NA
 if	1	0	0.794	0.385
 she	0	0	0.118	0.000
 should	0	1	0.081	1.092
@@ -11911,7 +11873,6 @@ fit	0	2	0.034	1.232
 to	0	0	0.081	0.057
 see	0	0	0.292	0.300
 jane	2	2	1.941	1.934
- 	NA	NA	NA	NA
 which	0	0	0.322	0.000
 is	0	0	0.137	0.033
 all	0	0	0.284	0.000
@@ -14459,7 +14420,6 @@ countenance	1	1	0.434	0.893
 such	1	0	0.427	0.016
 manners	1	2	0.951	1.536
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 and	1	0	1.081	0.000
 so	0	0	0.376	0.665
 extremely	2	0	1.424	0.359
@@ -15000,7 +14960,6 @@ oh	2	1	2.853	1.000
 !	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/009/009-105.txt
 yes	2	2	1.608	1.320
- 	NA	NA	NA	NA
 it	0	0	0.375	0.000
 would	0	0	0.059	0.641
 be	0	0	-0.012	0.000
@@ -15493,7 +15452,6 @@ her	1	1	0.516	1.000
 oh	1	0	0.828	0.012
 !	NA	NA	NA	NA
 yes	1	2	0.809	2.026
- 	NA	NA	NA	NA
 i	2	0	1.409	0.000
 understand	1	0	0.838	0.328
 you	0	0	-0.004	0.000
@@ -15929,7 +15887,6 @@ either	0	1	0.097	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/009/009-48.txt
 “	NA	NA	NA	NA
 aye	1	0	0.881	0.133
- 	NA	NA	NA	NA
 that	0	0	0.278	0.000
 is	0	0	0.117	0.603
 because	1	0	1.159	0.427
@@ -16206,7 +16163,6 @@ is	0	0	0.200	0.018
 mr	0	0	0.063	0.364
 .	NA	NA	NA	NA
 bingley	0	0	0.209	0.006
- 	NA	NA	NA	NA
 is	0	0	0.346	0.093
 not	1	1	0.407	1.127
 he	2	1	1.689	1.000
@@ -16381,7 +16337,6 @@ charlotte	1	0	0.721	0.577
 so	0	0	-0.013	0.000
 very	2	0	1.283	0.343
 plain	1	2	0.634	1.626
- 	NA	NA	NA	NA
 but	1	0	0.411	0.000
 then	1	0	1.095	0.093
 she	0	0	0.013	0.388
@@ -16456,7 +16411,6 @@ be	0	0	0.018	0.000
 sure	0	1	0.246	1.100
 ,	NA	NA	NA	NA
 jane	2	2	1.574	2.803
- 	NA	NA	NA	NA
 one	2	0	1.656	0.023
 does	0	1	0.250	0.877
 not	0	0	0.374	0.291
@@ -17600,7 +17554,6 @@ and	0	0	0.107	0.000
 immediately	2	0	1.258	0.454
 said	1	1	0.575	1.000
 ,	NA	NA	NA	NA
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/010/010-124.txt
 “	NA	NA	NA	NA
 this	1	0	0.790	0.576
@@ -17815,7 +17768,6 @@ well	0	1	0.181	1.000
 “	NA	NA	NA	NA
 thank	2	2	2.271	1.656
 you	1	0	1.069	0.000
- 	NA	NA	NA	NA
 but	0	0	-0.007	0.555
 i	1	0	0.617	0.128
 always	0	0	0.395	0.051
@@ -18132,7 +18084,6 @@ time	2	0	1.252	0.130
 to	0	0	0.000	0.584
 express	2	0	1.861	0.124
 them	0	2	0.248	2.178
- 	NA	NA	NA	NA
 by	1	0	0.832	0.000
 which	0	0	0.182	0.213
 means	2	0	1.313	0.453
@@ -18369,7 +18320,6 @@ of	0	0	-0.021	0.288
 compliment	2	0	1.490	0.689
 to	0	0	0.000	0.000
 yourself	1	2	0.709	1.600
- 	NA	NA	NA	NA
 and	1	0	0.880	0.000
 yet	0	0	0.300	0.495
 what	2	0	1.522	0.000
@@ -18589,7 +18539,6 @@ would	1	0	0.623	0.147
 probably	1	0	0.482	0.203
 not	2	0	1.609	0.675
 go	1	2	0.507	1.746
- 	NA	NA	NA	NA
 and	1	0	0.721	0.000
 ,	NA	NA	NA	NA
 at	0	0	0.055	0.203
@@ -18883,9 +18832,7 @@ companion	2	1	1.576	1.000
 to	1	0	0.417	0.107
 yield	1	0	1.144	0.197
 readily	1	1	0.701	0.845
- 	NA	NA	NA	NA
 easily	2	0	1.652	0.125
- 	NA	NA	NA	NA
 to	0	2	0.014	1.562
 the	0	0	0.000	0.015
 persuasion	2	0	1.418	0.088
@@ -19707,7 +19654,6 @@ elizabeth	2	0	1.256	0.015
 said	1	1	0.428	0.888
 to	0	0	-0.051	0.000
 her	1	1	1.097	1.000
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/010/010-93.txt
 “	NA	NA	NA	NA
 do	0	0	0.069	0.000
@@ -19851,7 +19797,6 @@ a	0	0	0.042	0.260
 reel	1	0	0.412	0.000
 at	0	0	0.004	0.321
 all	1	2	0.991	1.751
- 	NA	NA	NA	NA
 and	1	0	0.586	0.264
 now	2	0	1.274	0.435
 despise	1	0	0.561	0.000
@@ -20104,7 +20049,6 @@ sister-in-law	1	0	1.182	0.095
 of	0	1	-0.101	1.194
 the	0	0	-0.154	0.000
 card-table	2	0	2.400	0.350
- 	NA	NA	NA	NA
 but	0	2	-0.047	1.506
 in	0	0	0.002	0.129
 vain	2	1	1.775	1.000
@@ -20568,7 +20512,6 @@ chooses	1	0	1.022	0.129
 before	0	0	0.050	0.000
 it	0	1	0.045	1.138
 begins	2	2	1.814	1.950
- 	NA	NA	NA	NA
 but	0	0	0.315	0.009
 as	2	0	1.662	0.442
 for	0	0	0.051	0.000
@@ -20964,7 +20907,6 @@ his	0	0	0.048	0.115
 meaning	1	2	1.190	1.276
 ?	NA	NA	NA	NA
 ”	NA	NA	NA	NA
- 	NA	NA	NA	NA
 and	0	0	0.028	0.044
 asked	2	0	1.963	0.631
 elizabeth	1	0	0.586	0.678
@@ -21221,7 +21163,6 @@ another	1	1	0.448	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/011/011-64.txt
 tease	2	0	1.401	0.776
 him	0	0	0.011	0.174
- 	NA	NA	NA	NA
 laugh	2	0	1.483	0.000
 at	0	1	-0.062	0.817
 him	1	2	0.983	1.205
@@ -21425,7 +21366,6 @@ the	0	0	-0.056	0.452
 best	1	0	0.878	0.000
 of	0	0	0.116	0.265
 men	1	2	0.950	1.356
- 	NA	NA	NA	NA
 nay	1	0	1.135	0.000
 ,	NA	NA	NA	NA
 the	0	2	0.000	1.459
@@ -21435,7 +21375,6 @@ best	2	0	1.225	0.000
 of	0	1	-0.052	0.895
 their	0	0	-0.145	0.000
 actions	2	0	1.650	0.255
- 	NA	NA	NA	NA
 may	0	1	-0.069	0.857
 be	0	0	-0.008	0.000
 rendered	1	0	0.586	0.484
@@ -21460,7 +21399,6 @@ certainly	2	0	1.558	0.694
 ”	NA	NA	NA	NA
 replied	0	0	0.219	0.103
 elizabeth	1	2	0.792	2.147
- 	NA	NA	NA	NA
 “	NA	NA	NA	NA
 there	0	0	0.373	0.000
 are	2	1	2.330	1.133
@@ -21603,7 +21541,6 @@ indeed	2	1	1.581	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/011/011-83.txt
 but	0	0	0.076	0.637
 pride	2	2	2.186	1.670
- 	NA	NA	NA	NA
 where	2	0	1.297	0.000
 there	0	0	0.127	0.000
 is	0	0	0.000	0.000
@@ -21758,7 +21695,6 @@ believe	1	0	0.567	0.373
 too	1	0	0.490	0.000
 little	0	0	0.090	0.396
 yielding	1	1	0.740	0.924
- 	NA	NA	NA	NA
 certainly	2	2	1.414	1.583
 too	2	2	2.821	1.490
 little	0	0	0.122	0.000
@@ -21888,7 +21824,6 @@ to	0	0	0.034	0.000
 some	0	0	0.144	0.236
 particular	1	0	0.826	0.000
 evil	1	2	0.588	2.198
- 	NA	NA	NA	NA
 a	0	0	0.184	0.000
 natural	1	0	0.932	0.294
 defect	2	2	2.220	1.533
@@ -22050,7 +21985,6 @@ be	0	0	0.019	0.000
 safe	2	0	1.418	0.695
 for	0	0	-0.046	0.000
 her	1	2	0.802	1.564
- 	NA	NA	NA	NA
 that	1	0	0.497	0.053
 she	1	0	0.784	0.000
 was	0	0	0.059	0.153
@@ -22080,7 +22014,6 @@ it	0	2	0.000	1.440
 was	0	0	0.019	0.000
 welcome	1	0	0.418	0.202
 intelligence	1	2	0.809	1.746
- 	NA	NA	NA	NA
 elizabeth	2	2	2.219	1.406
 had	0	0	0.051	0.000
 been	0	0	0.148	0.000
@@ -22097,7 +22030,6 @@ more	0	0	0.294	0.000
 than	0	0	0.000	0.395
 he	0	0	-0.017	0.000
 liked	1	0	1.012	0.404
- 	NA	NA	NA	NA
 and	0	0	0.116	0.187
 miss	1	0	0.830	0.292
 bingley	2	1	1.561	1.031
@@ -22605,7 +22537,6 @@ elizabeth	1	1	0.556	0.970
 was	0	0	0.000	0.000
 positively	2	0	1.270	0.372
 resolved	1	2	1.007	2.081
- 	NA	NA	NA	NA
 nor	2	0	2.117	0.000
 did	0	0	0.081	0.437
 she	0	0	0.000	0.000
@@ -22963,7 +22894,6 @@ happen	0	1	0.112	0.815
 to	0	0	0.000	0.000
 call	0	0	0.289	0.009
 in	1	1	0.934	1.119
- 	NA	NA	NA	NA
 and	1	0	0.865	0.000
 i	0	0	0.124	0.120
 hope	1	1	0.882	0.971
@@ -23271,7 +23201,6 @@ october	1	1	1.197	1.000
 dear	2	0	1.235	0.235
 sir	1	2	0.525	1.815
 ,	NA	NA	NA	NA
-  	NA	NA	NA	NA
 “	NA	NA	NA	NA
 the	0	0	0.022	0.000
 disagreement	2	0	1.291	0.352
@@ -23353,7 +23282,6 @@ be	0	0	-0.028	0.000
 at	0	0	0.000	0.000
 variance	1	2	0.967	1.541
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 ‘	NA	NA	NA	NA
 there	2	0	1.803	0.261
 ,	NA	NA	NA	NA
@@ -23363,7 +23291,6 @@ bennet	0	1	0.357	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/013/013-34.txt
 ’	NA	NA	NA	NA
- 	NA	NA	NA	NA
 my	0	0	0.139	0.000
 mind	1	0	1.113	0.077
 ,	NA	NA	NA	NA
@@ -23581,7 +23508,6 @@ them	0	0	0.045	0.000
 every	2	2	1.783	1.444
 possible	2	0	1.594	0.365
 amends	1	0	1.007	0.338
- 	NA	NA	NA	NA
 but	2	2	1.999	1.405
 of	1	0	0.666	0.000
 this	0	0	0.295	0.258
@@ -23674,7 +23600,6 @@ of	0	0	-0.076	0.730
 the	0	0	0.008	0.000
 day	2	2	1.378	1.947
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 i	0	0	0.285	0.000
 remain	2	0	1.381	0.127
 ,	NA	NA	NA	NA
@@ -23922,7 +23847,6 @@ make	0	0	0.044	0.292
 him	0	0	0.000	0.000
 out	1	2	0.645	1.383
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 there	1	0	0.457	0.000
 is	0	0	0.051	0.193
 something	1	0	0.463	0.023
@@ -23932,7 +23856,6 @@ in	0	0	0.019	0.000
 his	0	0	-0.012	0.436
 style	2	2	1.426	1.703
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 and	1	0	0.792	0.000
 what	1	0	0.639	0.000
 can	0	0	0.121	0.027
@@ -23947,7 +23870,6 @@ in	0	0	0.294	0.000
 the	0	0	0.000	0.167
 entail	2	2	1.276	1.792
 ?	NA	NA	NA	NA
- 	NA	NA	NA	NA
 we	1	0	0.535	0.000
 cannot	2	0	1.392	0.796
 suppose	2	2	2.441	1.740
@@ -23959,7 +23881,6 @@ if	0	0	0.000	0.676
 he	0	0	-0.042	0.000
 could	2	2	1.571	1.601
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 could	2	0	1.401	0.000
 he	0	0	0.162	0.143
 be	0	0	0.271	0.000
@@ -24440,7 +24361,6 @@ indeed	2	1	1.336	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/013/013-7.txt
 but	1	1	0.591	0.812
- 	NA	NA	NA	NA
 good	2	0	1.579	0.187
 lord	1	2	0.499	1.274
 !	NA	NA	NA	NA
@@ -24573,7 +24493,6 @@ we	0	0	0.029	0.000
 are	0	0	0.198	0.241
 better	0	0	0.273	0.158
 acquainted	1	0	0.732	0.437
- 	NA	NA	NA	NA
 ”	0	1	0.000	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/013/013-76.txt
 he	1	0	0.632	0.078
@@ -24784,7 +24703,6 @@ love	1	0	0.453	0.635
 ring	1	0	0.876	0.000
 the	0	0	-0.089	0.553
 bell	1	0	0.732	0.000
- 	NA	NA	NA	NA
 i	0	0	0.000	0.330
 must	0	0	0.176	0.265
 speak	1	2	1.015	1.363
@@ -24940,7 +24858,6 @@ to	1	0	1.176	0.000
 suggest	1	1	0.411	0.855
 some	0	0	0.211	0.075
 herself	2	2	1.441	2.080
- 	NA	NA	NA	NA
 some	0	0	0.310	0.000
 shelves	2	1	1.773	0.947
 in	0	0	0.267	0.000
@@ -25907,7 +25824,6 @@ a	0	0	-0.029	0.000
 person	0	0	0.203	0.263
 of	0	0	0.000	0.000
 rank	2	2	1.215	1.593
- 	NA	NA	NA	NA
 such	2	1	1.761	1.122
 affability	2	0	1.494	0.000
 and	0	2	-0.129	1.773
@@ -26375,13 +26291,11 @@ upon	0	0	0.323	0.007
 her	0	2	0.234	1.362
 to	1	0	0.499	0.225
 say	2	2	1.757	1.754
- 	NA	NA	NA	NA
 she	0	0	0.257	0.000
 could	0	0	0.000	0.202
 not	0	0	0.267	0.269
 positively	0	0	0.090	0.230
 answer	1	2	1.112	1.648
- 	NA	NA	NA	NA
 but	0	0	0.056	0.065
 she	0	0	0.026	0.000
 did	0	0	0.055	0.055
@@ -26400,7 +26314,6 @@ she	0	0	0.000	0.000
 must	1	2	0.568	1.430
 just	2	0	1.975	0.657
 mention	2	2	1.706	1.637
- 	NA	NA	NA	NA
 she	1	0	0.992	0.000
 felt	0	0	0.371	0.000
 it	0	0	-0.066	0.638
@@ -26431,13 +26344,11 @@ from	1	0	0.650	0.379
 jane	2	2	2.738	2.217
 to	0	0	0.237	0.041
 elizabeth	2	2	1.531	2.171
- 	NA	NA	NA	NA
 and	2	0	1.214	0.000
 it	0	0	0.000	0.000
 was	0	0	0.187	0.367
 soon	2	0	2.273	0.719
 done	1	2	0.623	2.029
- 	NA	NA	NA	NA
 done	2	0	1.633	0.000
 while	0	0	0.041	0.195
 mrs	0	0	0.147	0.564
@@ -27133,7 +27044,6 @@ happy	0	0	0.235	0.025
 readiness	2	0	1.220	0.243
 of	0	2	0.010	1.289
 conversation	2	2	1.712	2.371
- 	NA	NA	NA	NA
 a	1	0	0.484	0.000
 readiness	2	0	1.271	0.000
 at	0	2	0.008	1.315
@@ -27343,7 +27253,6 @@ moments	0	0	0.047	0.248
 touched	2	0	2.042	0.000
 his	0	1	-0.134	0.902
 hat	1	2	0.931	1.957
- 	NA	NA	NA	NA
 a	0	0	0.358	0.000
 salutation	2	0	1.604	0.000
 which	0	2	-0.044	1.343
@@ -27767,7 +27676,6 @@ lieutenant’s	1	0	1.077	0.587
 commission	1	0	1.007	0.473
 in	0	0	0.161	0.273
 the	2	2	1.555	1.884
-    	NA	NA	NA	NA
 shire	1	1	0.926	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/015/015-61.txt
@@ -28187,10 +28095,8 @@ his	1	0	0.741	0.063
 plan	1	1	0.479	1.101
 of	0	0	0.000	0.000
 amends	1	1	1.196	0.884
- 	NA	NA	NA	NA
 of	0	0	0.000	0.000
 atonement	2	2	2.345	2.059
- 	NA	NA	NA	NA
 for	2	0	1.276	0.000
 inheriting	1	0	0.489	0.484
 their	0	0	-0.038	0.000
@@ -28291,7 +28197,6 @@ the	0	0	0.000	0.000
 officers	2	0	1.888	0.320
 of	1	2	0.785	1.749
 the	2	2	2.342	1.391
-    	NA	NA	NA	NA
 shire	1	0	0.934	0.000
 were	0	0	0.083	0.121
 in	0	0	0.125	0.037
@@ -28374,7 +28279,6 @@ your	0	0	-0.047	0.175
 being	1	0	0.641	0.323
 amiable	2	1	1.322	1.066
 ”	NA	NA	NA	NA
- 	NA	NA	NA	NA
 but	1	0	0.701	0.000
 she	0	0	0.198	0.216
 contented	1	0	0.915	0.107
@@ -28479,7 +28383,6 @@ so	2	0	1.270	0.630
 much	0	0	0.042	0.036
 credit	0	2	0.123	1.216
 to	2	2	2.078	1.630
- 	NA	NA	NA	NA
 but	0	0	0.398	0.000
 he	0	0	0.162	0.000
 gave	1	0	0.930	0.000
@@ -28688,7 +28591,6 @@ proud	0	0	0.262	0.000
 to	0	1	0.000	1.107
 be	0	0	-0.008	0.000
 dishonest	1	2	1.152	1.562
- 	NA	NA	NA	NA
 for	0	0	0.253	0.117
 dishonesty	2	1	1.887	1.185
 i	0	0	0.002	0.000
@@ -28825,7 +28727,6 @@ pride	1	2	0.600	1.792
 and	2	0	1.242	0.470
 filial	1	0	0.805	0.216
 pride	1	1	0.602	1.145
- 	NA	NA	NA	NA
 for	0	0	0.018	0.000
 he	0	0	0.239	0.000
 is	0	0	0.000	0.286
@@ -28836,7 +28737,6 @@ what	0	2	-0.040	1.523
 his	0	0	-0.010	0.000
 father	0	0	0.367	0.261
 was	2	2	1.432	1.395
- 	NA	NA	NA	NA
 have	1	0	0.769	0.000
 done	2	0	1.377	0.574
 this	0	1	0.097	1.000
@@ -28991,7 +28891,6 @@ much	0	2	0.041	1.537
 like	1	0	0.420	0.331
 her	0	0	0.152	0.090
 brother	1	0	0.531	0.242
- 	NA	NA	NA	NA
 very	1	0	0.937	0.021
 ,	NA	NA	NA	NA
 very	0	1	0.264	0.815
@@ -29331,7 +29230,6 @@ honourable	1	0	1.113	0.000
 and	0	0	0.189	0.000
 perhaps	0	0	0.286	0.496
 agreeable	1	2	1.109	2.139
- 	NA	NA	NA	NA
 allowing	2	0	1.927	0.532
 something	1	0	0.413	0.000
 for	0	1	-0.058	0.974
@@ -30286,7 +30184,6 @@ my	2	0	1.442	0.127
 situation	1	0	0.559	0.768
 in	0	0	0.000	0.000
 life	2	2	1.693	1.385
- 	NA	NA	NA	NA
 ”	1	0	0.623	0.169
 mrs	0	0	0.000	0.000
 .	NA	NA	NA	NA
@@ -30495,7 +30392,6 @@ hope	0	0	0.385	0.000
 to	0	2	-0.060	1.239
 be	0	0	-0.050	0.000
 told	2	2	1.943	1.404
- 	NA	NA	NA	NA
 the	0	0	0.055	0.206
 history	2	1	1.863	0.924
 of	0	0	0.000	0.000
@@ -30843,7 +30739,6 @@ would	0	0	0.009	0.318
 in	0	0	0.171	0.209
 general	1	1	1.143	0.930
 astonish	2	2	1.424	2.529
- 	NA	NA	NA	NA
 and	2	0	1.833	0.246
 perhaps	1	0	0.911	0.781
 you	0	0	-0.020	0.000
@@ -30875,7 +30770,6 @@ who	0	0	0.000	0.000
 was	2	0	1.435	0.106
 its	0	1	-0.049	1.041
 proprietor	2	2	2.158	1.602
- 	NA	NA	NA	NA
 when	2	0	2.008	0.000
 she	0	0	0.013	0.000
 had	0	1	0.000	0.815
@@ -31199,7 +31093,6 @@ in	0	0	-0.039	0.000
 favour	2	0	1.278	0.000
 of	0	2	0.000	1.262
 the	1	2	1.023	1.264
-    	NA	NA	NA	NA
 shire	2	2	1.200	2.153
 will	0	0	0.007	0.039
 not	2	0	1.979	0.000
@@ -31218,7 +31111,6 @@ neighbourhood	1	1	1.051	1.000
 oh	1	0	0.572	0.000
 !	NA	NA	NA	NA
 no	2	2	1.263	2.028
- 	NA	NA	NA	NA
 it	1	0	0.535	0.000
 is	0	0	0.000	0.002
 not	1	0	0.459	0.212
@@ -31531,7 +31423,6 @@ inducement	1	0	0.666	0.498
 to	0	0	0.267	0.217
 enter	0	0	0.122	0.078
 the	2	2	1.288	1.257
-    	NA	NA	NA	NA
 shire	2	1	1.515	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/016/016-63.txt
@@ -31639,7 +31530,6 @@ have	0	0	0.028	0.022
 been	0	0	0.366	0.000
 my	0	0	-0.015	0.379
 profession	1	2	1.034	1.356
- 	NA	NA	NA	NA
 i	1	0	0.819	0.000
 was	0	0	0.137	0.395
 brought	1	0	0.457	0.000
@@ -31731,7 +31621,6 @@ long	2	1	1.706	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/016/016-70.txt
 “	NA	NA	NA	NA
 yes	2	2	1.220	1.708
- 	NA	NA	NA	NA
 the	0	0	0.055	0.000
 late	2	0	1.326	0.369
 mr	1	0	0.444	0.000
@@ -31876,7 +31765,6 @@ chose	0	1	0.352	0.894
 to	0	0	0.000	0.000
 doubt	0	0	0.109	0.000
 it	1	2	0.643	1.894
- 	NA	NA	NA	NA
 or	2	1	3.029	1.188
 to	0	0	0.016	0.162
 treat	1	0	0.425	0.000
@@ -31902,7 +31790,6 @@ by	1	0	0.484	0.671
 extravagance	2	2	2.435	1.990
 ,	NA	NA	NA	NA
 imprudence	2	2	2.354	1.360
- 	NA	NA	NA	NA
 in	0	0	0.065	0.000
 short	0	0	0.145	0.353
 anything	2	0	1.609	0.725
@@ -32055,7 +31942,6 @@ other	0	0	0.081	0.076
 he	0	0	0.097	0.255
 will	1	1	0.647	1.021
 be	2	2	3.005	1.993
- 	NA	NA	NA	NA
 but	1	0	0.504	0.000
 it	0	0	0.230	0.212
 shall	0	0	0.306	0.000
@@ -32182,7 +32068,6 @@ determined	2	0	1.563	0.404
 dislike	1	0	0.453	0.434
 of	0	0	0.000	0.000
 me	0	2	0.353	1.872
- 	NA	NA	NA	NA
 a	2	0	1.612	0.000
 dislike	1	0	0.528	0.000
 which	0	1	-0.021	0.961
@@ -32251,7 +32136,6 @@ in	0	0	0.000	0.000
 which	0	0	0.087	0.183
 we	0	0	0.158	0.112
 stood	1	2	1.072	1.743
- 	NA	NA	NA	NA
 the	2	0	1.677	0.000
 sort	1	0	0.566	0.051
 of	0	0	0.227	0.774
@@ -32276,7 +32160,6 @@ so	0	0	-0.105	0.000
 bad	1	0	0.530	0.138
 as	0	1	-0.078	0.945
 this	2	2	2.204	1.853
- 	NA	NA	NA	NA
 though	2	0	1.439	0.000
 i	0	0	0.083	0.200
 have	1	0	0.493	0.000
@@ -32676,7 +32559,6 @@ it	0	0	0.000	0.495
 is	2	2	1.824	1.319
 difficult	1	0	0.530	0.226
 indeed	1	0	0.608	0.638
- 	NA	NA	NA	NA
 it	0	0	0.002	0.000
 is	1	0	0.442	0.040
 distressing	1	2	0.429	1.807
@@ -32716,7 +32598,6 @@ on	0	1	0.110	1.134
 only	0	0	0.343	0.043
 one	1	0	0.504	0.721
 point	2	2	2.137	1.699
- 	NA	NA	NA	NA
 that	0	0	0.195	0.000
 mr	1	0	0.872	0.303
 .	NA	NA	NA	NA
@@ -33137,7 +33018,6 @@ she	1	1	1.124	1.194
 it	2	0	1.738	0.000
 is	0	0	0.246	0.563
 enough	2	2	1.884	2.122
- 	NA	NA	NA	NA
 i	2	0	2.632	0.093
 think	0	0	0.143	0.000
 it	0	1	0.246	0.969
@@ -33799,7 +33679,6 @@ could	0	0	0.057	0.000
 be	0	0	0.041	0.000
 sought	1	0	0.814	0.150
 after	1	2	0.548	1.667
- 	NA	NA	NA	NA
 the	0	0	0.107	0.000
 very	1	0	0.558	0.216
 shoe-roses	2	2	2.508	1.679
@@ -34242,7 +34121,6 @@ sneer	2	0	1.499	0.000
 excuse	2	0	1.714	0.533
 my	0	0	0.325	0.080
 interference	1	2	0.930	1.875
- 	NA	NA	NA	NA
 it	1	0	0.801	0.000
 was	0	0	0.134	0.157
 kindly	2	0	1.555	0.208
@@ -35433,7 +35311,6 @@ rank	1	0	1.130	0.091
 in	0	0	-0.020	0.000
 the	0	0	0.000	0.653
 kingdom	1	2	0.842	1.589
- 	NA	NA	NA	NA
 provided	2	0	1.893	0.000
 that	0	0	0.010	0.561
 a	0	0	-0.008	0.089
@@ -37402,7 +37279,6 @@ room	1	1	0.874	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/018/018-224.txt
 many	1	0	0.748	0.194
 stared	2	2	1.431	1.444
- 	NA	NA	NA	NA
 many	0	0	0.341	0.052
 smiled	2	1	1.924	1.000
 ;	NA	NA	NA	NA
@@ -38489,7 +38365,6 @@ second	1	0	0.610	0.191
 time	1	0	0.622	0.340
 with	1	2	0.499	1.272
 :	NA	NA	NA	NA
- 	NA	NA	NA	NA
 “	NA	NA	NA	NA
 it	0	0	0.105	0.000
 is	1	0	0.965	0.437
@@ -39078,7 +38953,6 @@ ensure	1	0	1.140	0.140
 his	0	0	0.081	0.309
 making	1	0	0.442	0.231
 friends	1	2	0.755	1.923
- 	NA	NA	NA	NA
 whether	2	0	1.594	0.000
 he	0	0	0.133	0.000
 may	0	0	0.152	0.457
@@ -39374,7 +39248,6 @@ mr	1	0	0.441	0.452
 .	NA	NA	NA	NA
 darcy	1	2	0.680	1.694
 :	NA	NA	NA	NA
- 	NA	NA	NA	NA
 but	1	0	0.407	0.000
 let	1	0	0.878	0.188
 me	0	0	-0.020	0.000
@@ -39564,7 +39437,6 @@ smiling	1	1	0.867	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/018/018-69.txt
 “	NA	NA	NA	NA
 books	2	1	2.087	1.147
- 	NA	NA	NA	NA
 oh	1	0	0.684	0.120
 !	NA	NA	NA	NA
 no	2	1	1.842	1.000
@@ -39639,7 +39511,6 @@ opinions	2	1	1.689	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/018/018-73.txt
 “	NA	NA	NA	NA
 no	2	0	1.429	0.062
- 	NA	NA	NA	NA
 i	1	0	0.645	0.094
 cannot	1	2	0.563	1.537
 talk	0	0	0.142	0.000
@@ -39669,7 +39540,6 @@ you	0	1	0.009	1.026
 in	0	0	0.042	0.000
 such	1	0	0.472	0.632
 scenes	1	0	1.197	0.411
- 	NA	NA	NA	NA
 does	0	0	-0.059	0.000
 it	1	0	1.148	0.569
 ?	NA	NA	NA	NA
@@ -40427,7 +40297,6 @@ oppose	1	0	1.105	0.374
 such	1	0	0.570	0.527
 an	0	0	0.060	0.072
 injunction	1	2	1.149	1.781
- 	NA	NA	NA	NA
 and	0	0	0.371	0.000
 a	0	0	0.000	0.000
 moment’s	1	0	1.038	0.321
@@ -40674,7 +40543,6 @@ my	0	0	0.148	0.182
 reasons	2	1	1.279	0.856
 for	0	0	-0.016	0.129
 marrying	1	2	0.964	2.183
- 	NA	NA	NA	NA
 and	1	0	0.509	0.000
 ,	NA	NA	NA	NA
 moreover	2	1	1.906	1.076
@@ -40804,7 +40672,6 @@ happiness	2	1	1.623	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/019/019-26.txt
 and	1	2	0.779	1.486
 thirdly	2	2	1.449	1.607
- 	NA	NA	NA	NA
 which	1	0	0.587	0.000
 perhaps	2	0	1.241	0.340
 i	0	0	0.251	0.000
@@ -40869,7 +40736,6 @@ before	0	0	0.090	0.000
 i	0	0	0.188	0.000
 left	0	0	0.052	0.304
 hunsford	1	2	0.862	1.655
- 	NA	NA	NA	NA
 between	0	0	0.371	0.000
 our	2	2	1.311	1.362
 pools	2	2	2.531	1.626
@@ -41216,7 +41082,6 @@ melancholy	1	0	1.021	0.143
 event	0	2	0.119	1.235
 takes	2	0	1.260	0.234
 place	1	2	0.773	1.812
- 	NA	NA	NA	NA
 which	1	0	0.580	0.000
 ,	NA	NA	NA	NA
 however	2	0	1.305	0.007
@@ -41257,9 +41122,7 @@ instantly	1	0	1.135	0.033
 oh	1	2	0.829	2.020
 dear	1	0	0.597	0.483
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 yes	0	0	0.291	0.101
- 	NA	NA	NA	NA
 certainly	1	1	0.585	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/019/019-40.txt
@@ -41500,7 +41363,6 @@ will	0	1	0.022	1.163
 be	0	0	-0.006	0.000
 very	1	0	1.172	0.284
 happy	2	2	0.400	1.745
- 	NA	NA	NA	NA
 i	1	0	0.749	0.000
 am	0	0	-0.013	0.423
 sure	2	0	1.511	0.076
@@ -41757,7 +41619,6 @@ mr	0	0	0.013	0.000
 collins	1	0	0.456	0.000
 very	0	0	-0.006	0.384
 gravely	2	2	1.536	1.424
- 	NA	NA	NA	NA
 “	NA	NA	NA	NA
 but	2	0	1.215	0.000
 i	0	0	0.249	0.302
@@ -43181,7 +43042,6 @@ was	1	0	0.791	0.000
 “	0	2	0.000	1.319
 very	1	0	0.719	0.168
 well	2	2	1.432	1.882
- 	NA	NA	NA	NA
 and	0	0	0.057	0.000
 this	0	0	0.256	0.081
 offer	2	0	1.488	0.087
@@ -43938,7 +43798,6 @@ you	2	2	1.657	1.752
 ,	NA	NA	NA	NA
 miss	0	0	0.293	0.027
 lizzy	2	2	1.282	2.265
- 	NA	NA	NA	NA
 if	2	0	1.388	0.536
 you	2	1	1.642	0.801
 take	1	0	0.840	0.000
@@ -43966,7 +43825,6 @@ a	0	0	0.006	0.635
 husband	1	1	0.797	0.934
 at	0	0	-0.004	0.000
 all	2	2	1.491	2.229
- 	NA	NA	NA	NA
 and	1	0	0.933	0.029
 i	0	0	0.207	0.000
 am	0	0	0.136	0.047
@@ -43995,7 +43853,6 @@ able	0	0	0.146	0.143
 to	0	0	-0.034	0.000
 keep	1	0	0.779	0.172
 you	1	1	0.466	1.045
- 	NA	NA	NA	NA
 and	2	0	1.516	0.556
 so	1	0	0.746	0.161
 i	0	0	0.240	0.205
@@ -45384,7 +45241,6 @@ their	0	0	0.049	0.000
 way	0	2	-0.008	1.230
 to	0	0	-0.046	0.000
 town	2	2	2.235	2.262
- 	NA	NA	NA	NA
 and	1	0	0.892	0.000
 without	0	0	0.360	0.421
 any	2	0	1.951	0.533
@@ -45878,7 +45734,6 @@ one	1	0	0.471	0.000
 of	0	2	0.032	1.346
 the	0	0	-0.017	0.099
 crowd	2	2	2.016	2.053
- 	NA	NA	NA	NA
 but	1	0	1.053	0.000
 of	0	0	0.163	0.079
 that	0	0	0.317	0.000
@@ -48565,7 +48420,6 @@ collins	2	0	1.782	0.055
 my	0	2	0.337	1.534
 dear	1	0	0.729	0.034
 charlotte	2	2	1.213	1.381
- 	NA	NA	NA	NA
 impossible	1	1	1.046	1.000
 !	NA	NA	NA	NA
 ”	NA	NA	NA	NA
@@ -48765,7 +48619,6 @@ surprised	1	0	1.195	0.435
 very	0	0	0.092	0.000
 much	0	1	0.352	1.193
 surprised	2	2	1.418	1.773
- 	NA	NA	NA	NA
 so	0	0	0.289	0.000
 lately	2	1	1.716	1.013
 as	0	0	0.326	0.340
@@ -49215,7 +49068,6 @@ he	2	0	1.655	0.000
 unfolded	0	0	0.295	0.730
 the	0	0	0.000	0.005
 matter	1	2	0.914	1.869
- 	NA	NA	NA	NA
 to	1	0	1.068	0.000
 an	0	0	0.063	0.000
 audience	1	1	0.935	0.927
@@ -50242,13 +50094,11 @@ elizabeth	0	0	0.159	0.224
 began	0	2	0.366	1.305
 to	0	0	-0.049	0.000
 fear	2	1	1.343	0.838
- 	NA	NA	NA	NA
 not	1	0	1.172	0.000
 that	0	0	0.291	0.328
 bingley	1	0	0.978	0.000
 was	0	2	0.000	1.346
 indifferent	2	2	1.911	1.720
- 	NA	NA	NA	NA
 but	1	0	0.431	0.000
 that	2	0	1.351	0.094
 his	0	0	0.208	0.247
@@ -51549,7 +51399,6 @@ the	0	0	0.000	0.000
 possibility	1	0	0.815	0.000
 of	0	0	0.000	0.510
 mistakes	2	2	1.454	1.304
- 	NA	NA	NA	NA
 but	2	0	1.223	0.037
 by	1	0	0.523	0.047
 everybody	0	0	0.046	0.370
@@ -51918,7 +51767,6 @@ little	1	0	0.824	0.118
 time	1	0	0.947	0.692
 ,	NA	NA	NA	NA
 therefore	2	0	1.341	0.559
- 	NA	NA	NA	NA
 i	1	0	1.164	0.000
 shall	0	2	-0.079	1.878
 certainly	2	0	1.801	0.169
@@ -53243,7 +53091,6 @@ of	0	0	-0.016	0.006
 having	0	0	0.255	0.000
 been	0	0	-0.040	0.769
 mistaken	2	2	2.055	1.834
- 	NA	NA	NA	NA
 or	2	0	1.584	0.000
 ,	NA	NA	NA	NA
 at	0	0	0.000	0.776
@@ -54264,7 +54111,6 @@ oh	2	0	1.825	0.615
 ,	NA	NA	NA	NA
 yes	1	2	0.581	2.122
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 of	2	0	1.288	0.035
 that	1	0	0.433	0.210
 kind	1	0	0.993	0.000
@@ -54348,7 +54194,6 @@ might	0	1	-0.001	1.124
 be	0	0	-0.018	0.000
 of	0	0	0.000	0.067
 service	1	2	1.195	1.298
- 	NA	NA	NA	NA
 and	2	0	1.220	0.000
 perhaps	1	0	0.818	0.551
 a	0	0	0.069	0.000
@@ -54892,7 +54737,6 @@ made	0	0	0.087	0.083
 part	1	0	0.537	0.318
 of	0	0	-0.047	0.000
 it	1	2	0.677	1.404
- 	NA	NA	NA	NA
 of	1	0	0.989	0.054
 which	1	0	0.464	0.255
 officers	2	0	1.292	0.237
@@ -55590,7 +55434,6 @@ will	0	0	-0.017	0.000
 make	1	0	0.608	0.459
 me	0	0	0.279	0.000
 happy	1	2	1.109	1.931
- 	NA	NA	NA	NA
 your	1	0	1.099	0.190
 affection	2	2	1.471	1.843
 ,	NA	NA	NA	NA
@@ -55697,7 +55540,6 @@ very	1	0	0.715	0.161
 comfortable	1	0	0.902	0.370
 there	1	2	0.752	1.481
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 yours	2	0	1.758	0.370
 ,	NA	NA	NA	NA
 etc	0	1	0.242	1.000
@@ -56392,7 +56234,6 @@ man	0	0	0.057	0.167
 i	0	0	0.169	0.034
 ever	1	0	0.727	0.253
 saw	1	2	0.743	1.577
- 	NA	NA	NA	NA
 and	1	0	0.866	0.000
 if	0	0	0.039	0.086
 he	1	0	0.507	0.249
@@ -56401,7 +56242,6 @@ really	2	2	2.086	1.944
 attached	1	0	0.905	0.780
 to	0	0	0.121	0.000
 me	1	2	0.981	1.381
- 	NA	NA	NA	NA
 i	2	0	1.277	0.000
 believe	1	0	0.513	0.000
 it	0	0	0.000	0.615
@@ -58370,12 +58210,10 @@ their	0	0	0.101	0.000
 opinion	0	1	0.206	0.953
 of	0	0	0.000	0.000
 her	2	2	1.740	1.326
- 	NA	NA	NA	NA
 their	0	0	0.328	0.018
 opinion	2	1	1.273	1.041
 of	0	0	0.000	0.000
 everybody	2	2	1.878	1.824
- 	NA	NA	NA	NA
 would	0	0	0.027	0.000
 always	2	0	1.412	0.570
 coincide	2	2	1.754	2.236
@@ -59071,7 +58909,6 @@ fortune	2	1	1.482	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/027/027-41.txt
 “	NA	NA	NA	NA
 no	1	2	0.410	1.583
- 	NA	NA	NA	NA
 why	2	0	2.108	0.429
 should	0	0	0.310	0.000
 he	0	1	0.120	1.000
@@ -59194,7 +59031,6 @@ deficient	2	0	1.953	0.084
 in	0	0	0.000	0.685
 something	0	0	0.123	0.057
 herself	1	2	0.787	1.781
- 	NA	NA	NA	NA
 sense	2	0	2.303	0.081
 or	0	1	0.000	0.892
 feeling	2	1	1.346	1.000
@@ -59603,7 +59439,6 @@ where	0	0	0.004	0.000
 we	0	0	0.327	0.000
 have	0	0	0.027	0.339
 gone	0	0	0.253	0.706
- 	NA	NA	NA	NA
 we	1	0	0.656	0.077
 will	1	0	1.163	0.424
 recollect	0	0	0.018	0.122
@@ -60944,7 +60779,6 @@ agitation	1	0	0.987	0.185
 ,	NA	NA	NA	NA
 cried	0	0	0.202	0.077
 out	0	1	0.131	1.000
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/028/028-52.txt
 “	NA	NA	NA	NA
 oh	1	0	0.424	0.106
@@ -61771,7 +61605,6 @@ he	0	0	-0.102	0.000
 said	1	1	1.153	0.821
 to	0	0	0.103	0.000
 elizabeth	1	1	0.984	1.000
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/029/029-110.txt
 lady	2	0	1.957	0.178
 catherine	1	0	0.746	0.160
@@ -61985,7 +61818,6 @@ catherine	2	1	1.753	0.989
 was	0	0	-0.039	0.000
 generally	2	2	1.999	1.337
 speaking	2	0	1.218	0.016
- 	NA	NA	NA	NA
 stating	0	0	0.248	0.000
 the	0	0	0.000	0.596
 mistakes	1	0	1.085	0.010
@@ -62267,7 +62099,6 @@ superior	2	0	1.212	0.088
 to	0	0	-0.059	0.705
 the	0	0	0.000	0.000
 rest	1	2	0.655	1.372
- 	NA	NA	NA	NA
 there	1	0	0.793	0.000
 is	0	0	0.000	0.243
 no	1	0	0.983	0.731
@@ -63302,7 +63133,6 @@ and	1	0	0.866	0.011
 miss	0	1	0.143	0.903
 de	0	0	0.000	0.000
 bourgh	2	2	1.871	1.669
- 	NA	NA	NA	NA
 the	1	0	0.430	0.013
 former	2	0	1.412	0.000
 of	0	0	0.096	0.798
@@ -63777,7 +63607,6 @@ little	2	1	1.599	1.000
 oh	0	0	0.000	0.103
 !	NA	NA	NA	NA
 then	1	2	0.961	1.939
- 	NA	NA	NA	NA
 some	2	0	1.297	0.228
 time	1	0	0.468	0.481
 or	0	0	0.000	0.000
@@ -63801,7 +63630,6 @@ one	0	0	0.010	0.000
 probably	1	0	0.664	0.516
 superior	1	0	0.489	0.340
 to	2	2	1.707	1.594
-   	NA	NA	NA	NA
 you	2	0	1.690	0.000
 shall	0	0	0.343	0.000
 try	0	0	0.177	0.000
@@ -65262,7 +65090,6 @@ of	0	0	0.000	0.000
 his	0	0	0.169	0.305
 uncle	0	0	0.175	0.383
 lord	2	2	1.475	2.152
-    	NA	NA	NA	NA
 ,	NA	NA	NA	NA
 and	2	0	1.356	0.000
 ,	NA	NA	NA	NA
@@ -65423,7 +65250,6 @@ to	0	0	0.000	0.000
 look	0	0	0.167	0.059
 in	0	0	0.000	0.000
 hertfordshire	1	2	0.851	1.667
- 	NA	NA	NA	NA
 paid	2	0	1.325	0.075
 his	0	0	0.148	0.166
 compliments	1	0	1.012	0.571
@@ -65870,7 +65696,6 @@ received	1	1	1.093	0.835
 any	2	0	1.453	0.743
 invitation	0	0	0.367	0.048
 thither	1	2	0.925	1.693
- 	NA	NA	NA	NA
 for	1	0	0.978	0.247
 while	2	0	1.922	0.148
 there	0	2	-0.114	1.443
@@ -66868,7 +66693,6 @@ my	0	0	0.074	0.173
 disadvantage	2	0	1.278	0.666
 in	0	0	0.000	0.000
 hertfordshire	1	2	0.969	1.766
- 	NA	NA	NA	NA
 and	2	0	1.456	0.000
 ,	NA	NA	NA	NA
 give	0	0	0.175	0.195
@@ -66880,7 +66704,6 @@ say	0	0	-0.049	0.188
 very	2	0	1.617	0.666
 impolitic	0	0	0.185	0.385
 too	2	2	1.589	1.483
- 	NA	NA	NA	NA
 for	1	0	0.760	0.000
 it	0	0	0.181	0.000
 is	0	0	0.042	0.602
@@ -66958,7 +66781,6 @@ you	1	0	1.126	0.000
 shall	0	0	0.029	0.311
 hear	2	0	1.500	0.000
 then	1	2	0.610	2.190
- 	NA	NA	NA	NA
 but	1	0	0.700	0.062
 prepare	0	0	0.287	0.129
 yourself	2	2	1.327	1.546
@@ -66987,7 +66809,6 @@ was	1	0	0.715	0.100
 at	1	0	0.528	0.000
 a	0	0	-0.053	0.472
 ball	2	2	1.208	1.661
- 	NA	NA	NA	NA
 and	1	0	0.447	0.026
 at	1	0	0.918	0.047
 this	0	0	0.313	0.428
@@ -67392,7 +67213,6 @@ be	0	0	0.000	0.000
 my	0	0	0.196	0.000
 own	2	0	1.606	0.589
 fault	1	2	0.589	2.222
- 	NA	NA	NA	NA
 because	2	0	1.399	0.431
 i	1	0	0.428	0.174
 will	0	0	0.199	0.000
@@ -68172,7 +67992,6 @@ i	0	0	0.338	0.000
 believe	2	1	1.776	0.850
 she	0	0	0.351	0.000
 did	1	2	0.800	2.022
- 	NA	NA	NA	NA
 and	2	0	1.270	0.000
 i	0	0	0.000	0.392
 am	0	0	-0.003	0.000
@@ -68254,7 +68073,6 @@ has	0	0	0.026	0.000
 an	0	0	-0.017	0.083
 excellent	1	0	0.698	0.331
 understanding	1	2	0.947	2.196
- 	NA	NA	NA	NA
 though	2	0	1.630	0.000
 i	0	0	0.255	0.287
 am	0	0	0.112	0.000
@@ -68638,7 +68456,6 @@ allow	2	0	1.682	0.000
 of	0	1	0.000	1.190
 frequent	2	0	1.441	0.517
 journeys	2	2	1.568	1.766
- 	NA	NA	NA	NA
 and	0	0	0.234	0.000
 i	1	0	0.998	0.000
 am	0	0	-0.021	0.263
@@ -68765,7 +68582,6 @@ side	0	0	0.355	0.479
 calm	1	0	0.979	0.000
 and	0	1	0.018	0.904
 concise	1	2	1.177	2.314
- 	NA	NA	NA	NA
 and	2	0	1.514	0.143
 soon	2	0	1.216	0.000
 put	0	1	-0.019	0.901
@@ -69220,7 +69036,6 @@ rather	2	0	1.698	0.293
 than	0	1	0.023	0.981
 of	0	0	0.000	0.000
 choice	2	2	1.815	1.518
- 	NA	NA	NA	NA
 a	0	0	0.226	0.000
 sacrifice	2	1	1.326	0.920
 to	0	0	0.080	0.141
@@ -70016,7 +69831,6 @@ she	0	1	0.196	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/033/033-18.txt
 “	NA	NA	NA	NA
 yes	2	0	1.514	0.000
- 	NA	NA	NA	NA
 if	0	1	-0.045	0.870
 darcy	1	0	1.037	0.451
 does	0	0	0.002	0.000
@@ -70255,7 +70069,6 @@ these	2	0	1.359	0.000
 are	1	1	0.615	1.042
 home	2	0	1.313	0.565
 questions	1	0	0.627	0.000
- 	NA	NA	NA	NA
 and	0	1	-0.042	1.036
 perhaps	1	0	0.670	0.387
 i	0	0	0.141	0.123
@@ -70762,7 +70575,6 @@ some	1	2	0.442	1.611
 odd	2	0	2.243	0.509
 unconnected	0	0	0.209	0.620
 questions	1	2	0.976	1.792
- 	NA	NA	NA	NA
 about	2	0	1.373	0.001
 her	0	0	0.251	0.297
 pleasure	0	0	0.222	0.000
@@ -70873,7 +70685,6 @@ a	0	0	0.087	0.077
 pleasant	1	0	0.963	0.671
 gentlemanlike	2	0	1.457	0.709
 man	1	2	0.973	1.827
- 	NA	NA	NA	NA
 he	2	0	1.374	0.000
 is	0	0	0.000	0.000
 a	0	0	-0.011	0.349
@@ -71834,7 +71645,6 @@ as	1	0	0.481	0.391
 she	0	0	0.064	0.000
 is	1	2	1.067	2.029
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 her	1	0	0.797	0.000
 understanding	2	1	1.447	1.037
 excellent	1	0	0.726	0.000
@@ -72117,7 +71927,6 @@ in	0	1	0.000	1.062
 his	0	0	0.007	0.000
 own	0	0	0.340	0.100
 case	1	2	1.079	1.665
- 	NA	NA	NA	NA
 was	1	0	0.921	0.037
 almost	2	2	1.867	1.323
 incredible	2	1	1.880	1.000
@@ -72143,7 +71952,6 @@ pride	2	2	2.302	1.692
 his	1	0	1.163	0.725
 abominable	2	2	2.342	1.858
 pride	2	2	3.321	2.086
- 	NA	NA	NA	NA
 his	1	0	0.480	0.223
 shameless	2	1	1.885	0.988
 avowal	0	0	0.143	0.000
@@ -72156,7 +71964,6 @@ with	0	0	0.039	0.097
 respect	0	0	0.337	0.000
 to	0	0	-0.058	0.522
 jane	2	1	1.464	1.157
- 	NA	NA	NA	NA
 his	1	0	0.703	0.313
 unpardonable	2	0	1.377	0.604
 assurance	1	0	0.801	0.000
@@ -72481,13 +72288,11 @@ sense	2	0	1.350	0.000
 of	0	1	-0.076	0.992
 her	1	0	0.844	0.177
 inferiority	1	2	0.974	1.390
- 	NA	NA	NA	NA
 of	1	0	0.677	0.000
 its	0	0	0.000	0.184
 being	1	0	1.186	0.000
 a	0	0	0.061	0.366
 degradation	2	2	1.643	1.619
- 	NA	NA	NA	NA
 of	0	0	0.350	0.000
 the	0	0	0.038	0.098
 family	1	0	1.165	0.260
@@ -72803,7 +72608,6 @@ you	0	1	0.068	1.000
 but	0	0	0.000	0.000
 i	0	0	0.251	0.076
 cannot	2	2	1.481	2.127
- 	NA	NA	NA	NA
 i	1	0	0.732	0.000
 have	0	0	0.000	0.054
 never	0	0	0.383	0.028
@@ -73139,7 +72943,6 @@ feelings	0	2	0.123	1.237
 decided	1	0	0.723	0.227
 against	1	0	0.483	0.230
 you	1	2	0.616	1.381
- 	NA	NA	NA	NA
 had	2	0	1.670	0.074
 they	0	0	0.189	0.348
 been	0	0	0.381	0.624
@@ -73207,7 +73010,6 @@ day	0	0	0.367	0.000
 after	0	0	0.059	0.462
 the	0	0	0.000	0.000
 next	1	2	0.928	1.417
- 	NA	NA	NA	NA
 and	1	0	0.915	0.000
 ,	NA	NA	NA	NA
 a	0	0	0.000	0.221
@@ -73334,7 +73136,6 @@ them	0	0	-0.004	0.051
 from	0	0	0.037	0.000
 each	0	0	0.215	0.000
 other	2	2	1.256	1.985
- 	NA	NA	NA	NA
 of	1	0	0.775	0.379
 exposing	2	0	1.617	0.343
 one	1	0	0.777	0.000
@@ -73744,7 +73545,6 @@ present	2	0	2.077	0.326
 state	0	1	0.010	1.074
 of	0	0	-0.024	0.059
 poverty	2	1	1.211	1.141
- 	NA	NA	NA	NA
 comparative	2	0	1.268	0.643
 poverty	1	1	0.580	1.000
 .	NA	NA	NA	NA
@@ -74060,7 +73860,6 @@ of	0	0	0.000	0.172
 your	0	0	0.175	0.248
 connections	2	2	1.920	1.764
 ?	NA	NA	NA	NA
- 	NA	NA	NA	NA
 to	2	0	1.834	0.488
 congratulate	1	0	1.078	0.371
 myself	1	0	0.850	0.000
@@ -74268,7 +74067,6 @@ from	2	0	1.395	0.000
 the	0	0	0.000	0.023
 very	1	0	0.469	0.000
 beginning	0	2	0.317	1.766
- 	NA	NA	NA	NA
 from	1	0	0.756	0.000
 the	0	0	0.000	0.366
 first	2	0	1.454	0.495
@@ -74278,7 +74076,6 @@ i	0	0	0.215	0.024
 may	0	0	0.178	0.000
 almost	1	0	0.401	0.606
 say	2	0	1.256	0.000
- 	NA	NA	NA	NA
 of	0	0	0.000	0.390
 my	1	0	0.403	0.091
 acquaintance	0	0	0.353	0.220
@@ -74653,7 +74450,6 @@ the	0	0	0.000	0.093
 living	0	0	0.256	0.000
 in	0	0	-0.016	0.292
 question	2	2	1.329	1.581
- 	NA	NA	NA	NA
 of	2	0	1.320	0.000
 which	1	0	0.513	0.395
 he	0	0	0.068	0.101
@@ -74724,7 +74520,6 @@ distress	2	0	1.690	0.000
 of	0	0	0.000	0.000
 his	0	1	0.072	1.094
 circumstances	1	2	0.900	1.611
- 	NA	NA	NA	NA
 and	2	0	1.448	0.000
 he	0	0	0.012	0.000
 was	0	0	0.012	0.510
@@ -75668,7 +75463,6 @@ was	0	0	0.174	0.041
 as	0	0	0.270	0.648
 follows	1	1	1.032	1.000
 :	NA	NA	NA	NA
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/035/035-21.txt
 “	NA	NA	NA	NA
 be	2	0	1.758	0.000
@@ -76472,7 +76266,6 @@ her	0	0	-0.009	0.000
 indifferent	0	0	0.175	0.348
 is	0	0	0.000	0.000
 certain	2	2	1.308	1.965
- 	NA	NA	NA	NA
 but	1	0	1.119	0.000
 i	0	0	0.000	0.006
 will	0	0	0.396	0.098
@@ -76952,7 +76745,6 @@ london	2	1	1.262	1.000
 we	0	0	0.054	0.065
 accordingly	0	0	0.333	0.069
 went	1	2	1.148	1.679
- 	NA	NA	NA	NA
 and	0	0	0.304	0.000
 there	1	0	0.859	0.000
 i	0	0	0.004	0.167
@@ -77520,7 +77312,6 @@ and	0	1	0.000	1.113
 afterwards	0	0	0.382	0.338
 at	0	0	0.000	0.075
 cambridge	1	2	0.966	1.972
- 	NA	NA	NA	NA
 most	2	0	1.839	0.266
 important	1	0	0.659	0.491
 assistance	2	2	2.063	1.616
@@ -77625,7 +77416,6 @@ manner	1	1	0.474	1.000
 the	0	0	0.013	0.061
 vicious	2	0	1.394	0.536
 propensities	1	2	0.570	1.767
- 	NA	NA	NA	NA
 the	1	0	0.524	0.042
 want	2	1	1.738	0.919
 of	0	0	-0.125	0.515
@@ -77689,7 +77479,6 @@ shall	0	0	0.146	0.000
 give	0	1	0.070	1.098
 you	0	0	-0.054	0.000
 pain	2	2	1.608	1.792
- 	NA	NA	NA	NA
 to	1	0	0.690	0.000
 what	2	0	1.411	0.591
 degree	2	1	1.588	0.858
@@ -77733,7 +77522,6 @@ unfolding	1	0	0.972	0.748
 his	0	0	0.023	0.000
 real	0	0	0.081	0.123
 character	1	2	0.966	1.632
- 	NA	NA	NA	NA
 it	0	0	0.102	0.145
 adds	2	0	2.011	0.000
 even	0	1	0.010	0.869
@@ -77790,7 +77578,6 @@ his	0	0	0.071	0.005
 profession	0	0	0.194	0.006
 might	0	0	0.064	0.698
 allow	2	2	1.968	1.701
- 	NA	NA	NA	NA
 and	0	0	0.223	0.000
 if	1	0	0.953	0.000
 he	0	0	0.072	0.684
@@ -77973,7 +77760,6 @@ was	0	0	-0.033	0.000
 therefore	1	0	0.408	0.261
 soon	0	0	0.129	0.000
 settled	1	2	1.039	2.047
- 	NA	NA	NA	NA
 he	1	0	0.432	0.000
 resigned	2	0	1.389	0.334
 all	1	0	1.101	0.670
@@ -78102,7 +77888,6 @@ of	0	1	0.000	1.014
 mr	1	0	0.667	0.076
 .	NA	NA	NA	NA
 wickham	1	2	1.052	1.675
- 	NA	NA	NA	NA
 when	2	0	1.422	0.000
 she	0	0	0.042	0.004
 read	1	1	1.005	0.901
@@ -78141,7 +77926,6 @@ own	0	0	0.307	0.009
 history	1	0	0.787	0.000
 of	0	1	0.000	1.154
 himself	2	2	1.941	1.775
- 	NA	NA	NA	NA
 her	1	0	0.555	0.000
 feelings	2	1	1.971	1.017
 were	0	0	0.200	0.000
@@ -78197,7 +77981,6 @@ grossest	2	0	1.869	0.512
 falsehood	1	1	0.653	1.025
 !	NA	NA	NA	NA
 ”	NA	NA	NA	NA
- 	NA	NA	NA	NA
 and	2	0	1.411	0.270
 when	0	0	0.388	0.000
 she	0	0	0.029	0.000
@@ -78517,7 +78300,6 @@ meant	1	0	0.778	0.000
 to	0	0	-0.021	0.618
 be	0	0	0.106	0.059
 impartiality	2	2	1.278	1.808
- 	NA	NA	NA	NA
 deliberated	2	0	1.767	0.139
 on	0	0	0.011	0.000
 the	0	1	0.011	0.955
@@ -78525,7 +78307,6 @@ probability	1	0	0.864	0.030
 of	0	0	0.000	0.000
 each	0	1	0.034	0.914
 statement	2	2	1.735	1.436
- 	NA	NA	NA	NA
 but	2	0	1.599	0.000
 with	0	0	0.024	0.260
 little	0	0	0.146	0.486
@@ -78664,7 +78445,6 @@ his	0	0	0.019	0.538
 entrance	2	0	1.428	0.235
 into	2	2	1.341	2.254
 the	2	1	1.834	1.185
-    	NA	NA	NA	NA
 shire	1	0	0.448	0.352
 militia	2	2	1.719	1.550
 ,	NA	NA	NA	NA
@@ -78979,7 +78759,6 @@ to	2	0	1.211	0.000
 colonel	0	0	0.072	0.770
 fitzwilliam	0	0	0.199	0.062
 himself	1	2	0.758	1.836
- 	NA	NA	NA	NA
 from	1	0	0.428	0.052
 whom	2	0	2.452	0.236
 she	0	2	0.051	1.280
@@ -79164,7 +78943,6 @@ seeing	1	0	0.414	0.000
 mr	0	0	0.000	0.564
 .	NA	NA	NA	NA
 darcy	2	2	1.779	1.272
- 	NA	NA	NA	NA
 that	0	0	0.128	0.000
 mr	1	0	0.840	0.196
 .	NA	NA	NA	NA
@@ -79496,7 +79274,6 @@ course	2	0	1.356	0.000
 of	0	0	0.014	0.000
 their	0	0	-0.057	0.729
 acquaintance	2	2	1.268	1.786
- 	NA	NA	NA	NA
 an	2	0	1.513	0.277
 acquaintance	2	1	1.235	0.973
 which	0	0	0.034	0.000
@@ -79517,7 +79294,6 @@ intimacy	2	0	1.412	0.060
 with	0	1	0.000	1.136
 his	0	0	-0.118	0.000
 ways	2	2	2.211	1.946
- 	NA	NA	NA	NA
 seen	2	0	1.714	0.110
 anything	1	0	1.071	0.069
 that	0	0	0.000	0.570
@@ -79528,7 +79304,6 @@ be	0	0	0.035	0.000
 unprincipled	1	0	0.615	0.272
 or	0	0	-0.019	0.000
 unjust	1	2	1.083	1.949
- 	NA	NA	NA	NA
 anything	2	2	2.939	1.805
 that	1	0	0.451	0.019
 spoke	2	0	1.202	0.087
@@ -79550,7 +79325,6 @@ was	0	0	-0.014	0.073
 esteemed	2	1	1.363	0.901
 and	0	0	0.028	0.000
 valued	1	2	1.080	1.992
- 	NA	NA	NA	NA
 that	0	0	0.065	0.000
 even	1	0	0.570	0.000
 wickham	2	0	1.494	0.137
@@ -79837,7 +79611,6 @@ from	1	0	1.149	0.054
 herself	1	0	0.554	0.402
 to	0	0	0.223	0.131
 jane	1	0	0.800	0.000
- 	NA	NA	NA	NA
 from	0	1	0.000	0.908
 jane	1	0	0.411	0.000
 to	0	0	-0.013	0.266
@@ -80194,7 +79967,6 @@ every	0	0	0.075	0.000
 variety	1	0	0.860	0.587
 of	0	0	0.000	0.000
 thought	1	2	0.930	1.866
- 	NA	NA	NA	NA
 re-considering	2	0	1.726	0.332
 events	0	1	0.354	0.891
 ,	NA	NA	NA	NA
@@ -80313,7 +80085,6 @@ minutes	1	0	0.889	0.203
 to	0	0	-0.017	0.000
 take	0	1	0.106	1.032
 leave	2	2	1.898	1.551
- 	NA	NA	NA	NA
 but	2	0	1.286	0.052
 that	1	0	0.490	0.234
 colonel	1	0	0.678	0.541
@@ -80894,7 +80665,6 @@ for	0	0	0.051	0.000
 one	0	1	0.164	1.082
 of	0	0	0.000	0.000
 you	2	0	1.364	0.310
- 	NA	NA	NA	NA
 and	0	0	0.308	0.792
 indeed	2	0	2.516	0.140
 ,	NA	NA	NA	NA
@@ -82437,7 +82207,6 @@ has	0	2	0.113	1.343
 drawn	2	0	1.489	0.000
 an	0	2	-0.008	1.207
 unfortunate	1	0	1.026	0.541
- 	NA	NA	NA	NA
 but	2	2	1.269	2.386
 on	2	2	2.790	1.279
 this	2	0	1.759	0.642
@@ -83333,7 +83102,6 @@ for	0	0	0.103	0.000
 the	1	0	0.608	0.100
 town	1	0	0.663	0.373
 of	1	2	1.193	2.521
-    	NA	NA	NA	NA
 ,	NA	NA	NA	NA
 in	2	0	2.114	0.470
 hertfordshire	2	1	1.323	1.000
@@ -83464,7 +83232,6 @@ summer	0	0	0.337	0.000
 ,	NA	NA	NA	NA
 after	1	2	0.804	1.968
 the	2	1	2.930	1.016
-    	NA	NA	NA	NA
 shire	1	0	0.445	0.000
 have	0	0	0.047	0.137
 left	0	0	0.249	0.508
@@ -83693,10 +83460,8 @@ it	0	0	0.085	0.075
 is	1	1	0.949	0.907
 excellent	1	0	0.719	0.000
 news	0	2	-0.104	1.240
- 	NA	NA	NA	NA
 capital	1	0	0.504	0.293
 news	2	1	1.986	1.001
- 	NA	NA	NA	NA
 and	0	0	0.296	0.000
 about	1	0	0.475	0.000
 a	0	0	-0.029	0.271
@@ -83980,7 +83745,6 @@ three	1	0	0.509	0.158
 straws	1	0	0.490	0.086
 about	0	0	-0.028	0.709
 her	2	2	1.541	1.839
- 	NA	NA	NA	NA
 who	2	1	2.590	1.028
 could	1	0	1.091	0.000
 about	0	0	-0.029	0.350
@@ -84434,7 +84198,6 @@ then	0	0	0.173	0.040
 showing	2	0	1.401	0.152
 her	0	1	-0.108	0.967
 purchases	1	2	1.151	2.044
- 	NA	NA	NA	NA
 “	NA	NA	NA	NA
 look	0	0	0.251	0.041
 here	2	0	1.694	0.000
@@ -85092,7 +84855,6 @@ no	0	0	0.173	0.180
 charms	1	1	0.646	1.186
 for	0	0	0.245	0.000
 me	1	2	1.121	1.949
- 	NA	NA	NA	NA
 i	2	0	1.364	0.000
 should	0	0	0.099	0.501
 infinitely	2	2	1.741	1.323
@@ -85267,7 +85029,6 @@ they	1	0	0.429	0.072
 were	0	0	0.037	0.000
 to	0	0	0.154	0.268
 go	2	2	1.249	1.628
- 	NA	NA	NA	NA
 and	0	0	0.314	0.416
 once	2	0	1.272	0.538
 gone	2	2	1.632	2.189
@@ -85613,7 +85374,6 @@ wickham	2	1	1.648	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/040/040-13.txt
 “	NA	NA	NA	NA
 no	1	2	1.161	1.453
- 	NA	NA	NA	NA
 i	0	0	0.303	0.327
 do	0	0	-0.014	0.000
 not	1	1	0.555	0.841
@@ -87160,7 +86920,6 @@ very	0	0	0.262	0.000
 undeserving	1	0	0.696	0.502
 young	0	0	-0.018	0.000
 man	1	2	0.686	1.492
- 	NA	NA	NA	NA
 and	1	0	0.779	0.000
 i	0	0	0.000	0.310
 do	0	0	0.000	0.000
@@ -87521,7 +87280,6 @@ may	1	0	0.607	0.000
 i	0	0	0.165	0.270
 ask	2	1	2.152	0.818
 ?	NA	NA	NA	NA
- 	NA	NA	NA	NA
 ”	0	1	0.000	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/041/041-102.txt
 but	1	0	0.403	0.243
@@ -87559,7 +87317,6 @@ his	0	0	0.000	0.660
 ordinary	0	0	0.205	0.442
 style	2	2	1.940	1.851
 ?	NA	NA	NA	NA
- 	NA	NA	NA	NA
 for	1	0	0.587	0.000
 i	0	0	0.000	0.037
 dare	1	0	0.766	0.000
@@ -88134,7 +87891,6 @@ as	0	0	0.000	0.000
 much	0	0	0.144	0.226
 as	0	0	0.000	0.000
 possible	1	2	0.756	1.824
- 	NA	NA	NA	NA
 advice	2	2	2.504	2.017
 which	1	0	1.124	0.461
 there	0	0	0.013	0.000
@@ -88197,7 +87953,6 @@ oh	1	0	0.630	0.294
 ,	NA	NA	NA	NA
 yes	2	1	1.283	1.094
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 if	1	0	0.617	0.138
 one	0	0	0.334	0.223
 could	2	0	1.765	0.000
@@ -88809,7 +88564,6 @@ unguarded	1	0	1.047	0.158
 and	0	1	0.034	1.112
 imprudent	1	0	1.108	0.347
 manner	1	2	0.876	2.397
- 	NA	NA	NA	NA
 nay	2	2	3.029	1.558
 ,	NA	NA	NA	NA
 which	0	0	-0.005	0.149
@@ -89285,14 +89039,12 @@ having	0	0	0.287	0.000
 a	0	0	0.045	0.182
 couple	1	0	0.434	0.053
 of	1	2	0.905	1.783
- 	NA	NA	NA	NA
 or	2	0	2.176	0.000
 i	0	0	0.021	0.707
 may	0	0	0.158	0.000
 say	0	0	0.062	0.224
 ,	NA	NA	NA	NA
 three	1	0	1.001	0.189
- 	NA	NA	NA	NA
 very	0	0	0.337	0.147
 silly	0	0	0.112	0.584
 sisters	1	1	0.582	1.000
@@ -89630,7 +89382,6 @@ glories	1	0	0.697	0.000
 of	0	0	-0.021	0.550
 the	0	0	-0.006	0.000
 camp	1	2	0.896	1.836
- 	NA	NA	NA	NA
 its	1	0	1.027	0.175
 tents	1	1	1.118	1.127
 stretched	1	0	0.957	0.200
@@ -90642,7 +90393,6 @@ commencement	1	2	0.765	1.344
 of	1	0	0.511	0.056
 actual	2	0	1.990	0.488
 felicity	1	2	0.797	1.982
- 	NA	NA	NA	NA
 to	0	0	0.000	0.000
 have	2	0	1.251	0.274
 some	1	0	0.780	0.246
@@ -90994,7 +90744,6 @@ less	0	0	0.275	0.770
 to	0	0	0.000	0.000
 be	0	0	0.050	0.000
 learnt	2	1	1.375	1.197
- 	NA	NA	NA	NA
 for	1	0	0.641	0.000
 her	0	0	-0.028	0.054
 letters	1	1	0.959	1.175
@@ -91472,7 +91221,6 @@ business	0	2	0.265	1.349
 to	0	0	-0.009	0.000
 be	0	0	0.004	0.200
 satisfied	1	0	1.098	0.052
- 	NA	NA	NA	NA
 and	0	1	-0.010	0.828
 certainly	2	1	1.808	1.018
 her	0	0	-0.051	0.000
@@ -91667,7 +91415,6 @@ them	0	0	0.241	0.042
 in	0	0	0.000	0.000
 every	1	0	0.481	0.250
 way	1	2	1.032	2.055
- 	NA	NA	NA	NA
 teaching	2	0	2.129	0.380
 them	0	0	0.360	0.140
 ,	NA	NA	NA	NA
@@ -91709,7 +91456,6 @@ one	2	0	1.254	0.000
 enjoyment	0	1	0.249	0.960
 was	0	0	0.000	0.000
 certain	2	2	1.206	1.803
- 	NA	NA	NA	NA
 that	2	0	1.359	0.000
 of	0	0	0.000	0.624
 suitableness	2	1	1.838	1.101
@@ -91727,13 +91473,11 @@ temper	1	0	1.194	0.000
 to	0	1	-0.026	1.037
 bear	0	0	0.212	0.096
 inconveniences	2	2	1.627	2.126
- 	NA	NA	NA	NA
 cheerfulness	2	2	2.931	1.312
 to	0	0	0.000	0.000
 enhance	2	0	1.246	0.030
 every	1	0	0.447	0.443
 pleasure	2	2	1.543	1.958
- 	NA	NA	NA	NA
 and	2	0	1.805	0.325
 affection	1	0	0.770	0.000
 and	0	0	-0.095	0.558
@@ -92136,7 +91880,6 @@ elizabeth	2	0	1.560	0.001
 said	0	0	0.093	0.533
 no	0	0	0.008	0.000
 more	1	0	0.588	0.000
- 	NA	NA	NA	NA
 but	0	2	0.000	1.535
 her	0	0	0.048	0.000
 mind	2	2	1.636	1.498
@@ -92307,7 +92050,6 @@ followed	1	0	0.668	0.000
 the	0	0	0.028	0.743
 last	0	0	0.072	0.248
 question	2	2	1.514	2.164
- 	NA	NA	NA	NA
 and	2	0	1.622	0.101
 her	1	0	0.453	0.051
 alarms	1	0	0.827	0.000
@@ -92883,7 +92625,6 @@ last	2	0	1.555	0.217
 it	0	0	0.048	0.000
 arrested	0	0	0.291	0.211
 her	1	2	0.580	1.519
- 	NA	NA	NA	NA
 and	1	0	0.893	0.000
 she	0	0	0.009	0.030
 beheld	1	0	0.504	0.000
@@ -93038,7 +92779,6 @@ in	0	0	-0.020	0.000
 his	0	0	0.096	0.141
 guardianship	1	2	0.649	1.760
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 how	0	0	0.168	0.000
 much	2	0	1.742	0.250
 of	0	0	0.050	0.589
@@ -93053,7 +92793,6 @@ power	1	0	0.715	0.000
 to	0	0	-0.042	0.754
 bestow	2	2	2.027	1.745
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 how	2	0	1.451	0.000
 much	2	0	1.451	0.000
 of	0	1	0.174	0.825
@@ -93796,7 +93535,6 @@ was	0	0	0.052	0.102
 that	0	0	0.319	0.237
 moment	1	0	0.921	0.422
 arrived	1	2	0.975	1.828
- 	NA	NA	NA	NA
 that	1	0	0.721	0.353
 moment	2	0	1.745	0.547
 alighted	0	1	0.078	1.068
@@ -93828,7 +93566,6 @@ behaviour	1	0	0.992	0.000
 so	0	1	-0.000	1.008
 strikingly	0	0	0.243	0.013
 altered	1	2	1.040	2.088
- 	NA	NA	NA	NA
 what	1	0	0.640	0.000
 could	0	0	0.071	0.000
 it	0	0	0.056	0.471
@@ -93845,7 +93582,6 @@ her	0	2	-0.025	1.564
 was	0	0	0.000	0.000
 amazing	2	2	1.888	1.509
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 but	1	0	0.933	0.023
 to	0	0	0.108	0.053
 speak	2	0	1.250	0.000
@@ -94081,7 +93817,6 @@ passing	1	0	1.000	0.000
 in	0	0	0.000	0.726
 his	0	0	-0.016	0.052
 mind	2	2	1.582	2.444
- 	NA	NA	NA	NA
 in	1	0	1.146	0.000
 what	0	0	0.357	0.198
 manner	2	2	1.404	1.319
@@ -95286,7 +95021,6 @@ cannot	2	0	2.026	0.247
 be	0	0	0.134	0.000
 for	0	2	0.000	1.377
 me	2	2	2.681	1.611
- 	NA	NA	NA	NA
 it	0	0	0.361	0.174
 cannot	2	0	1.581	0.149
 be	0	0	0.106	0.000
@@ -95495,7 +95229,6 @@ had	0	0	0.029	0.085
 been	0	0	0.188	0.040
 very	0	0	0.288	0.152
 unexpected	1	2	0.584	1.622
- 	NA	NA	NA	NA
 “	NA	NA	NA	NA
 for	1	0	0.748	0.000
 your	0	0	0.036	0.347
@@ -95603,7 +95336,6 @@ an	0	2	0.000	1.541
 acquaintance	2	1	1.599	1.026
 with	0	0	0.084	0.086
 you	1	0	1.107	0.450
- 	NA	NA	NA	NA
 mr	1	1	0.446	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/043/043-225.txt
@@ -95900,7 +95632,6 @@ walk	0	0	0.124	0.000
 into	0	1	0.005	0.864
 the	0	0	-0.018	0.000
 house	1	2	1.179	1.694
- 	NA	NA	NA	NA
 but	1	0	0.959	0.000
 she	0	0	0.383	0.057
 declared	1	0	0.712	0.105
@@ -96017,7 +95748,6 @@ her	0	0	0.082	0.000
 aunt	0	0	0.309	0.449
 moved	2	0	1.394	0.530
 slowly	1	2	0.854	2.013
- 	NA	NA	NA	NA
 and	1	0	0.465	0.000
 her	0	0	0.121	0.256
 patience	1	1	1.196	1.131
@@ -97021,10 +96751,8 @@ but	0	0	0.325	0.082
 no	2	2	1.557	1.646
 ,	NA	NA	NA	NA
 ”	NA	NA	NA	NA
- 	NA	NA	NA	NA
 recollecting	1	0	1.174	0.164
 herself	0	2	0.363	1.478
- 	NA	NA	NA	NA
 “	NA	NA	NA	NA
 that	2	0	1.524	0.047
 could	0	0	0.165	0.000
@@ -97060,7 +96788,6 @@ was	0	0	0.015	0.000
 a	0	0	0.288	0.000
 lucky	1	0	0.463	0.413
 recollection	1	2	0.617	2.144
- 	NA	NA	NA	NA
 it	2	0	1.299	0.417
 saved	2	0	2.507	0.000
 her	0	2	-0.021	1.677
@@ -97335,7 +97062,6 @@ miniatures	2	2	1.394	1.551
 is	1	0	0.496	0.105
 my	2	0	1.579	0.276
 master	0	2	0.253	1.966
- 	NA	NA	NA	NA
 and	1	0	0.820	0.160
 very	2	0	1.413	0.582
 like	0	0	-0.026	0.127
@@ -97352,7 +97078,6 @@ time	0	2	0.156	1.333
 as	0	0	-0.050	0.000
 the	0	0	0.263	0.168
 other	2	2	1.201	1.529
- 	NA	NA	NA	NA
 about	2	0	1.417	0.147
 eight	0	1	0.211	0.848
 years	0	0	0.149	0.162
@@ -97673,7 +97398,6 @@ gardiner	1	1	1.129	1.000
 oh	1	0	1.145	0.328
 !	NA	NA	NA	NA
 yes	1	2	0.687	2.137
- 	NA	NA	NA	NA
 the	0	0	0.177	0.085
 handsomest	2	0	1.365	0.615
 young	0	0	0.298	0.000
@@ -97688,7 +97412,6 @@ and	0	0	-0.040	0.769
 so	2	0	1.872	0.563
 accomplished	1	2	0.489	1.302
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 she	0	0	0.387	0.508
 plays	2	0	2.031	0.000
 and	0	0	-0.027	0.748
@@ -97711,7 +97434,6 @@ come	2	0	1.259	0.000
 down	0	1	0.289	0.878
 for	0	0	0.161	0.000
 her	2	2	1.223	1.853
- 	NA	NA	NA	NA
 a	1	0	0.626	0.003
 present	2	2	1.390	1.267
 from	0	0	-0.017	0.096
@@ -98258,7 +97980,6 @@ be	0	0	-0.113	0.000
 just	2	0	2.024	0.292
 like	0	0	0.079	0.032
 him	0	2	0.058	1.769
- 	NA	NA	NA	NA
 just	2	1	2.081	0.867
 as	0	0	0.000	0.000
 affable	2	0	1.311	0.143
@@ -99861,7 +99582,6 @@ have	0	0	0.000	0.273
 been	0	0	0.353	0.000
 a	0	2	0.000	1.353
 disgrace	2	2	1.814	1.771
- 	NA	NA	NA	NA
 when	2	0	1.590	0.000
 she	0	0	0.135	0.124
 saw	0	0	0.386	0.000
@@ -99894,7 +99614,6 @@ scene	2	0	2.753	0.000
 in	0	2	-0.084	1.753
 hunsford	1	0	0.968	0.757
 parsonage	2	2	1.736	1.594
- 	NA	NA	NA	NA
 the	1	0	0.480	0.033
 difference	2	2	2.380	1.244
 ,	NA	NA	NA	NA
@@ -101100,7 +100819,6 @@ only	1	1	0.567	1.160
 astonishment	2	2	2.707	1.592
 but	0	0	-0.059	0.000
 gratitude	2	2	1.361	1.535
- 	NA	NA	NA	NA
 for	1	0	0.673	0.283
 to	0	0	-0.074	0.000
 love	2	1	1.962	1.177
@@ -101568,7 +101286,6 @@ for	0	0	0.009	0.000
 the	0	0	-0.034	0.097
 whole	1	0	1.033	0.334
 party	1	2	1.009	1.573
- 	NA	NA	NA	NA
 for	1	0	1.181	0.000
 though	1	0	0.540	0.431
 they	0	0	0.064	0.000
@@ -101958,7 +101675,6 @@ eliza	1	2	1.071	1.852
 are	2	0	1.409	0.000
 not	0	0	0.384	0.064
 the	1	2	0.804	1.388
-    	NA	NA	NA	NA
 shire	1	0	0.933	0.000
 militia	1	2	0.916	1.815
 removed	2	0	1.626	0.758
@@ -102725,7 +102441,6 @@ her	0	0	0.000	0.000
 nose	2	1	1.661	1.067
 wants	0	0	0.239	0.381
 character	1	2	0.826	1.504
- 	NA	NA	NA	NA
 there	1	0	0.758	0.000
 is	0	0	0.097	0.108
 nothing	0	0	0.163	0.000
@@ -102952,7 +102667,6 @@ she	2	0	2.592	0.000
 a	0	2	0.000	1.996
 beauty	1	1	0.792	1.103
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 i	2	0	1.578	0.000
 should	0	0	0.030	0.000
 as	0	0	0.214	0.311
@@ -103168,7 +102882,6 @@ house	2	0	1.255	0.000
 ,	NA	NA	NA	NA
 his	0	1	-0.003	0.970
 fruit	2	2	1.410	1.858
- 	NA	NA	NA	NA
 of	1	0	0.789	0.000
 everything	2	0	1.228	0.000
 but	0	0	-0.076	0.556
@@ -103301,7 +103014,6 @@ darcy	1	2	0.850	1.861
 ;	NA	NA	NA	NA
 “	0	0	0.000	0.000
 grieved	2	2	2.877	1.522
- 	NA	NA	NA	NA
 shocked	2	1	1.457	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/046/046-101.txt
@@ -103309,7 +103021,6 @@ but	1	0	0.859	0.000
 is	0	0	0.085	0.000
 it	0	0	0.281	0.793
 certain	1	0	1.185	0.205
- 	NA	NA	NA	NA
 absolutely	2	2	1.283	1.359
 certain	0	1	0.250	1.000
 ?	NA	NA	NA	NA
@@ -103407,7 +103118,6 @@ nothing	2	0	1.498	0.362
 can	0	0	0.294	0.000
 be	0	0	0.294	0.000
 done	0	2	-0.034	1.428
- 	NA	NA	NA	NA
 i	0	0	0.000	0.000
 know	0	0	0.000	0.000
 very	1	0	1.156	0.000
@@ -103437,7 +103147,6 @@ afraid	1	0	0.529	0.000
 of	0	0	-0.052	0.711
 alarming	1	0	0.941	0.071
 you	0	2	0.396	2.136
- 	NA	NA	NA	NA
 be	1	0	0.913	0.296
 assured	2	2	2.248	1.444
 that	1	0	0.403	0.241
@@ -103490,7 +103199,6 @@ to	0	0	0.014	0.000
 his	0	0	0.167	0.031
 real	0	0	0.041	0.116
 character	1	1	0.585	1.059
- 	NA	NA	NA	NA
 oh	2	2	2.422	2.085
 !	NA	NA	NA	NA
 had	1	0	1.098	0.000
@@ -103511,7 +103219,6 @@ but	0	0	0.044	0.000
 i	1	0	0.684	0.468
 knew	0	0	0.000	0.000
 not	1	0	0.956	0.661
- 	NA	NA	NA	NA
 i	0	0	0.024	0.000
 was	0	0	0.000	0.022
 afraid	1	0	0.866	0.000
@@ -103693,7 +103400,6 @@ her	0	1	0.057	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/046/046-123.txt
 lydia	2	2	2.397	1.583
- 	NA	NA	NA	NA
 the	0	0	-0.041	0.000
 humiliation	2	2	2.034	1.233
 ,	NA	NA	NA	NA
@@ -104116,7 +103822,6 @@ faulty	1	1	0.582	1.000
 but	1	0	0.431	0.000
 if	0	0	0.078	0.082
 otherwise	1	0	0.910	0.148
- 	NA	NA	NA	NA
 if	0	1	0.024	0.864
 regard	1	0	1.184	0.421
 springing	1	0	0.422	0.200
@@ -104321,7 +104026,6 @@ she	0	0	0.131	0.118
 was	0	0	0.000	0.000
 all	1	0	0.460	0.054
 surprise	1	0	0.865	0.469
- 	NA	NA	NA	NA
 all	0	0	0.116	0.183
 astonishment	1	1	1.015	1.143
 that	0	0	0.079	0.078
@@ -104523,7 +104227,6 @@ towards	1	0	0.441	0.293
 such	0	0	0.255	0.000
 a	0	0	0.000	0.007
 girl	1	0	0.743	0.325
- 	NA	NA	NA	NA
 oh	0	1	0.046	1.000
 !	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/046/046-153.txt
@@ -104543,7 +104246,6 @@ to	0	0	0.000	0.000
 be	0	0	0.271	0.000
 at	0	0	0.000	0.171
 home	1	2	1.096	2.120
- 	NA	NA	NA	NA
 to	1	0	0.516	0.027
 hear	2	0	2.192	0.000
 ,	NA	NA	NA	NA
@@ -104686,7 +104388,6 @@ with	0	0	0.306	0.141
 trembling	2	0	1.762	0.408
 energy	0	1	0.186	1.000
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/046/046-158.txt
 though	1	0	0.532	0.000
 lydia	2	0	1.721	0.009
@@ -105723,7 +105424,6 @@ but	0	0	0.158	0.000
 without	2	0	1.358	0.190
 any	1	0	0.822	0.503
 success	1	2	0.787	1.749
- 	NA	NA	NA	NA
 no	2	0	2.457	0.000
 such	0	0	0.236	0.761
 people	0	0	0.180	0.131
@@ -106793,7 +106493,6 @@ left	0	0	0.096	0.249
 all	1	0	1.011	0.000
 her	0	0	-0.005	0.384
 friends	0	0	0.258	0.271
- 	NA	NA	NA	NA
 has	1	0	0.508	0.581
 eloped	2	1	2.283	1.000
 ;	NA	NA	NA	NA
@@ -106805,7 +106504,6 @@ into	0	1	0.003	0.894
 the	0	0	0.019	0.000
 power	2	0	1.861	0.518
 of	1	2	0.936	1.407
- 	NA	NA	NA	NA
 of	1	0	0.648	0.148
 mr	1	0	0.835	0.182
 .	NA	NA	NA	NA
@@ -106845,7 +106543,6 @@ can	0	0	0.128	0.000
 tempt	2	0	1.233	0.291
 him	0	0	0.013	0.000
 to	1	2	0.838	1.347
- 	NA	NA	NA	NA
 she	2	0	2.115	0.000
 is	0	0	-0.143	0.509
 lost	2	1	1.207	0.895
@@ -106902,7 +106599,6 @@ part	1	0	1.017	0.000
 of	0	1	-0.009	1.108
 it	0	0	0.000	0.000
 only	0	0	0.274	0.110
- 	NA	NA	NA	NA
 some	1	2	0.975	1.743
 part	2	0	1.757	0.000
 of	0	0	0.000	0.563
@@ -106932,7 +106628,6 @@ but	1	0	0.598	0.000
 it	0	0	0.157	0.088
 is	0	0	0.068	0.131
 all	2	0	1.400	0.316
- 	NA	NA	NA	NA
 all	1	0	0.488	0.226
 too	0	0	0.063	0.000
 late	0	1	0.121	0.851
@@ -107017,7 +106712,6 @@ it	0	1	0.000	1.000
 “	NA	NA	NA	NA
 but	2	2	1.987	1.698
 you	0	0	-0.058	0.000
- 	NA	NA	NA	NA
 how	2	0	2.884	0.000
 are	0	2	0.000	1.363
 you	1	0	0.967	0.404
@@ -107857,7 +107551,6 @@ out	0	0	0.000	0.000
 of	0	0	0.033	0.704
 my	0	0	-0.006	0.180
 wits	2	2	1.216	1.340
- 	NA	NA	NA	NA
 and	1	0	1.153	0.025
 have	0	0	0.382	0.101
 such	1	0	0.469	0.468
@@ -107869,7 +107562,6 @@ flutterings	1	0	0.713	0.094
 all	1	0	1.074	0.286
 over	0	0	-0.004	0.000
 me	1	1	0.569	0.830
- 	NA	NA	NA	NA
 such	1	2	0.747	1.876
 spasms	2	0	1.463	0.000
 in	0	1	0.023	1.163
@@ -108769,7 +108461,6 @@ of	0	0	0.028	0.776
 their	0	0	0.008	0.000
 not	1	0	0.627	0.308
 marrying	1	2	1.189	1.711
- 	NA	NA	NA	NA
 and	1	0	1.156	0.205
 from	0	0	-0.014	0.793
 that	2	0	1.677	0.092
@@ -108820,7 +108511,6 @@ married	1	1	0.463	1.000
 well	1	2	0.532	1.245
 ,	NA	NA	NA	NA
 then	1	0	1.054	0.332
- 	NA	NA	NA	NA
 supposing	2	0	2.080	0.085
 them	0	0	0.111	0.000
 to	0	2	0.000	1.427
@@ -108849,7 +108539,6 @@ felt	1	0	0.462	0.000
 a	0	0	0.028	0.764
 little	1	0	0.679	0.192
 uneasy	0	0	0.366	0.737
- 	NA	NA	NA	NA
 a	0	0	0.000	0.000
 little	1	0	0.982	0.045
 fearful	0	0	0.348	0.705
@@ -109900,7 +109589,6 @@ oh	2	0	1.699	0.191
 no	1	0	0.430	0.230
 ,	NA	NA	NA	NA
 no	1	0	0.818	0.000
- 	NA	NA	NA	NA
 this	0	1	0.034	0.806
 is	0	0	0.004	0.132
 not	0	0	0.347	0.000
@@ -110332,7 +110020,6 @@ what	1	0	0.698	0.425
 claims	2	0	1.202	0.000
 has	0	0	-0.032	0.713
 lydia	1	0	0.778	0.000
- 	NA	NA	NA	NA
 what	0	1	0.016	0.955
 attraction	2	0	1.319	0.736
 has	0	0	0.226	0.328
@@ -110628,7 +110315,6 @@ nay	2	2	2.646	1.288
 for	0	0	0.120	0.000
 a	0	0	0.000	0.412
 twelvemonth	2	2	1.531	1.528
- 	NA	NA	NA	NA
 she	0	0	0.000	0.000
 has	1	0	0.744	0.303
 been	1	0	0.905	0.148
@@ -110673,7 +110359,6 @@ way	2	1	1.323	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/047/047-39.txt
 since	1	0	0.917	0.200
 the	1	2	1.179	1.513
-    	NA	NA	NA	NA
 shire	1	1	1.113	0.950
 were	0	0	0.280	0.000
 first	1	0	0.892	0.293
@@ -110735,7 +110420,6 @@ subject	1	2	1.068	1.275
 to	0	0	0.344	0.000
 give	1	1	0.876	0.943
 greater	2	2	1.767	1.754
- 	NA	NA	NA	NA
 what	1	0	1.029	0.082
 shall	0	0	0.025	0.245
 i	0	0	0.000	0.000
@@ -111016,7 +110700,6 @@ am	0	0	0.000	0.612
 not	1	0	0.475	0.000
 at	0	0	-0.013	0.628
 liberty	2	2	1.274	1.910
- 	NA	NA	NA	NA
 which	1	0	1.051	0.057
 it	0	0	0.139	0.000
 is	0	0	0.205	0.434
@@ -111138,7 +110821,6 @@ oh	1	0	0.577	0.237
 ,	NA	NA	NA	NA
 yes	2	2	1.352	1.928
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 that	2	0	1.820	0.745
 ,	NA	NA	NA	NA
 that	1	0	1.190	0.000
@@ -111186,7 +110868,6 @@ returned	1	0	0.701	0.527
 home	2	2	1.954	2.499
 ,	NA	NA	NA	NA
 the	2	2	2.205	1.974
-    	NA	NA	NA	NA
 shire	2	0	1.434	0.000
 was	0	0	0.077	0.712
 to	0	0	0.271	0.074
@@ -111948,7 +111629,6 @@ mention	0	1	0.104	1.000
 and	2	0	1.277	0.447
 my	0	0	-0.006	0.452
 mother	2	2	1.690	1.460
- 	NA	NA	NA	NA
 how	0	0	0.068	0.000
 is	1	0	0.531	0.408
 she	2	2	2.257	2.015
@@ -112992,7 +112672,6 @@ his	0	2	0.115	1.614
 companions	2	0	1.304	0.093
 in	0	2	0.040	1.253
 the	2	1	2.135	1.024
-    	NA	NA	NA	NA
 shire	2	2	1.468	1.738
 might	2	0	2.044	0.145
 be	0	0	0.269	0.365
@@ -113301,7 +112980,6 @@ so	0	0	0.065	0.024
 severe	2	0	1.361	0.000
 a	0	1	0.000	0.884
 misfortune	1	2	1.135	1.710
- 	NA	NA	NA	NA
 or	1	0	0.943	0.000
 that	0	0	0.000	0.069
 may	1	0	0.445	0.630
@@ -114576,7 +114254,6 @@ and	0	0	0.003	0.595
 heartening	1	0	0.727	0.474
 them	0	0	0.000	0.000
 up	2	2	1.715	2.296
- 	NA	NA	NA	NA
 though	2	0	2.772	0.000
 ,	NA	NA	NA	NA
 as	0	1	0.188	1.138
@@ -115259,7 +114936,6 @@ papa	2	0	1.859	0.240
 ,	NA	NA	NA	NA
 what	0	2	0.117	1.442
 news	2	0	1.405	0.191
- 	NA	NA	NA	NA
 what	0	1	0.164	1.185
 news	2	0	1.860	0.135
 ?	NA	NA	NA	NA
@@ -115684,7 +115360,6 @@ news	1	0	1.043	0.153
 does	0	0	0.033	0.000
 it	0	1	0.010	1.051
 bring	2	0	2.233	0.000
- 	NA	NA	NA	NA
 good	0	0	-0.006	0.492
 or	0	0	-0.051	0.000
 bad	1	1	0.692	1.000
@@ -116078,7 +115753,6 @@ have	0	0	-0.016	0.575
 seen	1	0	0.463	0.352
 them	0	0	0.054	0.182
 both	1	2	0.959	1.495
- 	NA	NA	NA	NA
 ”	0	0	0.144	0.000
 “	NA	NA	NA	NA
 then	1	0	0.966	0.000
@@ -116750,7 +116424,6 @@ and	1	0	0.771	0.160
 may	1	0	0.833	0.000
 i	0	0	0.027	0.096
 ask	0	2	0.227	1.514
- 	NA	NA	NA	NA
 ”	0	0	0.000	0.000
 said	0	0	0.309	0.196
 elizabeth	1	2	1.078	1.695
@@ -117771,7 +117444,6 @@ so	0	0	0.079	0.169
 pleasant	1	0	1.078	0.586
 in	1	0	0.882	0.560
 general	2	0	1.691	0.110
-    	NA	NA	NA	NA
 ’s	0	0	0.000	0.000
 regiment	1	1	0.918	1.000
 .	NA	NA	NA	NA
@@ -118676,7 +118348,6 @@ gouldings	2	0	1.210	0.000
 could	0	2	0.064	1.586
 quit	0	0	0.165	0.000
 it	0	0	0.000	0.238
- 	NA	NA	NA	NA
 or	2	0	1.633	0.000
 the	0	1	-0.008	1.049
 great	1	0	0.422	0.036
@@ -119165,7 +118836,6 @@ mortified	1	1	0.727	0.832
 her	0	0	0.084	0.000
 so	0	0	-0.012	0.068
 much	1	2	1.102	2.122
- 	NA	NA	NA	NA
 not	2	0	2.403	0.223
 ,	NA	NA	NA	NA
 however	1	1	0.404	0.826
@@ -119882,7 +119552,6 @@ an	0	0	0.078	0.000
 ensigncy	1	0	0.882	0.780
 in	0	0	-0.006	0.031
 general	1	0	0.994	0.000
-    	NA	NA	NA	NA
 ’s	0	2	0.000	1.546
 regiment	2	2	1.819	2.078
 ,	NA	NA	NA	NA
@@ -120129,7 +119798,6 @@ and	1	0	0.449	0.418
 her	0	0	-0.050	0.000
 mother	1	2	1.050	2.144
 .	NA	NA	NA	NA
- 	NA	NA	NA	NA
 yours	2	0	1.674	0.434
 ,	NA	NA	NA	NA
 etc	1	1	0.443	1.000
@@ -120158,7 +119826,6 @@ wickham’s	1	0	0.502	0.421
 removal	2	0	2.041	0.745
 from	0	0	0.178	0.089
 the	1	2	0.689	1.542
-    	NA	NA	NA	NA
 shire	2	2	1.358	1.422
 as	2	0	1.633	0.268
 clearly	2	0	1.335	0.000
@@ -120432,7 +120099,6 @@ oh	0	1	0.000	0.820
 ,	NA	NA	NA	NA
 yes	2	2	1.240	1.664
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 he	2	0	1.398	0.000
 was	0	0	0.087	0.387
 to	0	0	0.155	0.098
@@ -120848,7 +120514,6 @@ let	0	0	0.146	0.000
 me	0	0	0.008	0.561
 understand	1	0	0.885	0.000
 it	0	2	0.327	1.755
- 	NA	NA	NA	NA
 unless	2	0	1.789	0.000
 it	0	0	-0.017	0.472
 is	1	1	0.962	1.050
@@ -120966,7 +120631,6 @@ glad	2	0	1.228	0.000
 of	0	0	-0.103	0.322
 it	1	2	0.722	1.977
 ;	NA	NA	NA	NA
- 	NA	NA	NA	NA
 till	1	0	1.184	0.000
 it	0	0	0.000	0.335
 appeared	2	0	1.781	0.418
@@ -121113,7 +120777,6 @@ to	0	0	0.037	0.000
 meet	0	1	0.355	0.931
 them	1	0	0.667	0.000
 at	0	2	0.257	1.393
-    	NA	NA	NA	NA
 ,	NA	NA	NA	NA
 and	1	0	0.969	0.000
 they	0	0	0.000	0.037
@@ -121961,7 +121624,6 @@ lord	0	0	0.218	0.241
 !	NA	NA	NA	NA
 yes	1	2	1.091	1.758
 ;	NA	NA	NA	NA
- 	NA	NA	NA	NA
 there	0	0	0.289	0.000
 is	0	0	0.089	0.494
 nothing	2	0	1.948	0.124
@@ -122988,7 +122650,6 @@ surprised	0	0	0.397	0.556
 as	0	0	-0.042	0.000
 i	2	0	1.241	0.008
 am	0	2	0.123	1.700
- 	NA	NA	NA	NA
 and	0	0	0.175	0.009
 nothing	2	0	1.285	0.000
 but	0	0	-0.001	0.791
@@ -123225,7 +122886,6 @@ his	0	0	0.019	0.092
 affection	2	0	1.344	0.037
 for	0	0	-0.010	0.500
 her	1	2	0.760	1.606
- 	NA	NA	NA	NA
 for	1	0	0.820	0.000
 a	0	0	0.000	0.168
 woman	2	2	2.319	1.213
@@ -123234,7 +122894,6 @@ had	0	0	0.000	0.000
 already	1	0	0.753	0.432
 refused	2	0	1.448	0.345
 him	1	2	0.801	1.834
- 	NA	NA	NA	NA
 as	1	0	0.913	0.000
 able	2	0	1.599	0.257
 to	0	0	0.374	0.309
@@ -123867,7 +123526,6 @@ she	0	0	0.042	0.000
 was	0	0	0.009	0.073
 afraid	1	0	0.870	0.027
 had	0	2	0.359	1.389
- 	NA	NA	NA	NA
 not	2	2	1.793	1.293
 turned	1	1	1.133	1.010
 out	1	0	0.798	0.307
@@ -124176,7 +123834,6 @@ most	1	0	0.731	0.116
 delightful	2	2	2.113	1.349
 place	0	0	-0.020	0.153
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 excellent	2	0	1.747	0.180
 parsonage	0	0	0.375	0.782
 house	1	1	1.146	1.000
@@ -124269,7 +123926,6 @@ not	1	0	1.144	0.000
 to	0	2	-0.008	1.284
 repine	1	2	0.957	1.464
 ;	NA	NA	NA	NA
- 	NA	NA	NA	NA
 but	2	1	2.249	1.192
 ,	NA	NA	NA	NA
 to	0	0	0.399	0.000
@@ -125021,7 +124677,6 @@ direction	1	1	0.833	1.000
 they	0	0	0.167	0.619
 were	0	0	-0.094	0.000
 in	2	2	2.152	1.941
-     	NA	NA	NA	NA
 street	1	1	0.926	1.099
 .	NA	NA	NA	NA
 he	1	0	0.444	0.000
@@ -126530,7 +126185,6 @@ him	0	0	-0.004	0.000
 very	1	0	0.402	0.113
 sly	1	2	1.035	1.520
 ;	NA	NA	NA	NA
- 	NA	NA	NA	NA
 he	0	0	0.384	0.029
 hardly	2	0	2.454	0.000
 ever	0	1	-0.018	1.094
@@ -126854,7 +126508,6 @@ astonishment	2	2	1.879	1.392
 at	0	0	0.000	0.000
 his	0	0	0.033	0.079
 coming	1	2	1.120	1.550
- 	NA	NA	NA	NA
 at	1	0	0.563	0.000
 his	0	0	0.217	0.208
 coming	2	0	1.991	0.000
@@ -127928,7 +127581,6 @@ of	0	0	-0.054	0.000
 his	0	2	-0.010	1.517
 leaving	2	1	1.719	0.906
 the	0	0	0.145	0.138
-    	NA	NA	NA	NA
 shire	1	2	0.938	1.305
 ,	NA	NA	NA	NA
 and	1	0	0.929	0.000
@@ -129815,7 +129467,6 @@ arrival	2	1	1.219	1.029
 drew	0	0	-0.114	0.206
 near	2	1	1.461	1.000
 ,	NA	NA	NA	NA
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/053/053-73.txt
 “	NA	NA	NA	NA
 i	1	0	0.565	0.054
@@ -130109,11 +129760,9 @@ went	2	0	2.314	0.000
 to	0	2	0.052	1.409
 the	0	0	-0.090	0.111
 window	2	2	2.080	1.775
- 	NA	NA	NA	NA
 she	1	0	0.745	0.118
 looked	2	2	1.665	1.635
 ,	NA	NA	NA	NA
- 	NA	NA	NA	NA
 she	1	0	1.149	0.000
 saw	0	1	0.092	0.848
 mr	0	0	0.228	0.000
@@ -130231,7 +129880,6 @@ mr	2	2	1.385	1.614
 .	NA	NA	NA	NA
 darcy	2	2	1.849	1.478
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 and	1	0	0.874	0.121
 so	2	0	1.403	0.000
 it	0	0	-0.056	0.732
@@ -131869,7 +131517,6 @@ roasted	1	0	0.718	0.027
 to	0	1	0.082	1.141
 a	0	0	0.000	0.000
 turn	2	2	1.274	1.474
- 	NA	NA	NA	NA
 and	0	0	0.026	0.000
 everybody	2	0	1.328	0.107
 said	0	2	0.300	1.366
@@ -132026,7 +131673,6 @@ creature	1	0	0.412	0.000
 as	0	0	0.000	0.000
 ever	0	0	0.349	0.152
 lived	1	2	0.461	1.824
- 	NA	NA	NA	NA
 and	1	0	0.708	0.000
 her	0	0	0.000	0.082
 nieces	2	0	1.275	0.189
@@ -132858,7 +132504,6 @@ down	2	0	1.602	0.244
 he	0	0	-0.018	0.000
 is	0	1	-0.045	1.173
 come	2	2	2.146	1.502
- 	NA	NA	NA	NA
 mr	1	1	1.133	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/055/055-120.txt
@@ -135781,10 +135426,8 @@ honourable	0	0	0.002	0.080
 ,	NA	NA	NA	NA
 and	0	2	0.155	1.643
 ancient	2	2	1.768	2.056
- 	NA	NA	NA	NA
 though	2	0	1.590	0.057
 untitled	0	0	0.092	0.108
- 	NA	NA	NA	NA
 families	1	1	0.498	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/056/056-118.txt
@@ -136501,7 +136144,6 @@ heaven	2	0	1.393	0.179
 and	0	1	0.372	0.850
 earth	2	1	1.295	1.157
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 of	0	0	0.383	0.138
 what	2	0	1.794	0.000
 are	0	0	-0.052	0.595
@@ -136859,7 +136501,6 @@ me	0	0	0.248	0.333
 one	2	0	1.353	0.000
 moment’s	0	1	0.076	0.968
 concern	2	2	1.228	1.726
- 	NA	NA	NA	NA
 and	1	0	0.577	0.000
 the	0	0	0.000	0.052
 world	1	0	0.994	0.000
@@ -137763,7 +137404,6 @@ the	0	0	-0.034	0.000
 following	1	0	0.551	0.022
 manner	1	1	0.655	1.000
 :	NA	NA	NA	NA
- 	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/056/056-45.txt
 “	NA	NA	NA	NA
 you	0	0	0.201	0.046
@@ -139895,7 +139535,6 @@ can	0	0	0.147	0.000
 most	0	0	0.083	0.737
 desire	2	2	1.839	2.065
 ,	NA	NA	NA	NA
- 	NA	NA	NA	NA
 splendid	2	0	2.283	0.000
 property	0	1	0.072	1.152
 ,	NA	NA	NA	NA
@@ -140610,7 +140249,6 @@ strange	2	1	1.588	1.000
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/057/057-79.txt
 “	NA	NA	NA	NA
 yes	2	0	1.456	0.792
- 	NA	NA	NA	NA
 that	1	0	0.704	0.079
 is	0	0	0.272	0.005
 what	1	0	0.497	0.000
@@ -143053,7 +142691,6 @@ have	0	0	0.029	0.036
 tortured	0	0	0.194	0.026
 me	1	1	0.468	1.035
 ;	NA	NA	NA	NA
- 	NA	NA	NA	NA
 though	1	0	0.929	0.000
 it	0	0	0.000	0.144
 was	1	0	0.732	0.144
@@ -144717,7 +144354,6 @@ at	0	0	0.000	0.000
 last	2	0	1.370	0.000
 to	0	2	-0.044	1.261
 go	1	0	0.894	0.000
- 	NA	NA	NA	NA
 saying	0	0	0.368	0.000
 ,	NA	NA	NA	NA
 as	0	1	0.000	1.007
@@ -145008,7 +144644,6 @@ this	0	0	0.205	0.000
 cannot	0	0	0.023	0.425
 be	2	2	1.765	1.742
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 engaged	2	0	1.899	0.366
 to	1	0	0.462	0.556
 mr	0	0	-0.059	0.000
@@ -145056,7 +144691,6 @@ is	0	0	0.185	0.428
 nothing	1	0	0.952	0.000
 to	0	0	0.263	0.000
 it	0	1	0.000	0.831
- 	NA	NA	NA	NA
 nothing	0	0	0.267	0.042
 at	0	0	0.000	0.000
 all	0	1	0.316	1.000
@@ -145066,7 +144700,6 @@ i	0	0	0.000	0.000
 am	1	0	0.412	0.000
 so	1	0	0.976	0.061
 pleased	0	0	0.127	0.650
- 	NA	NA	NA	NA
 so	1	0	0.741	0.000
 happy	0	0	0.231	0.000
 .	NA	NA	NA	NA
@@ -145075,7 +144708,6 @@ a	2	2	1.402	2.109
 charming	2	0	2.359	0.697
 man	0	0	-0.004	0.146
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 so	0	0	0.150	0.000
 handsome	1	1	0.486	1.000
 !	NA	NA	NA	NA
@@ -145083,7 +144715,6 @@ handsome	1	1	0.486	1.000
 so	0	0	0.074	0.282
 tall	1	2	0.638	1.547
 !	NA	NA	NA	NA
- 	NA	NA	NA	NA
 oh	2	0	1.655	0.649
 ,	NA	NA	NA	NA
 my	1	0	0.635	0.309
@@ -145714,12 +145345,10 @@ lizzy	0	0	0.265	0.000
 ,	NA	NA	NA	NA
 i	0	0	0.000	0.062
 would	1	2	0.587	1.464
- 	NA	NA	NA	NA
 i	2	2	1.970	1.218
 do	2	0	1.676	0.299
 congratulate	0	0	0.267	0.171
 you	0	1	0.326	1.076
- 	NA	NA	NA	NA
 but	1	0	0.785	0.000
 are	0	0	0.000	0.071
 you	0	0	0.020	0.431
@@ -145729,7 +145358,6 @@ certain	2	1	1.427	1.000
 forgive	1	1	0.765	0.963
 the	0	0	-0.122	0.000
 question	2	0	2.107	0.000
- 	NA	NA	NA	NA
 are	0	2	0.000	1.224
 you	0	0	0.219	0.186
 quite	0	0	0.328	0.582
@@ -146913,7 +146541,6 @@ be	0	0	0.051	0.000
 through	0	0	0.072	0.385
 her	1	0	0.897	0.183
 means	1	0	0.641	0.000
- 	NA	NA	NA	NA
 that	0	2	0.341	1.207
 she	2	2	2.021	2.119
 ,	NA	NA	NA	NA
@@ -146941,7 +146568,6 @@ in	0	0	0.140	0.051
 disposing	1	0	0.853	0.474
 of	0	0	0.000	0.000
 her	1	2	0.888	1.337
- 	NA	NA	NA	NA
 was	1	0	1.056	0.000
 a	0	0	0.149	0.000
 wretched	0	0	0.303	0.112
@@ -147314,7 +146940,6 @@ you	0	1	0.173	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/060/060-18.txt
 there	0	2	0.275	1.859
- 	NA	NA	NA	NA
 i	2	0	1.836	0.000
 have	0	1	0.096	1.020
 saved	2	0	1.470	0.580
@@ -147375,7 +147000,6 @@ actual	1	0	0.734	0.225
 good	0	1	0.139	0.897
 of	0	0	-0.092	0.000
 me	2	2	1.407	1.224
- 	NA	NA	NA	NA
 but	0	0	0.231	0.228
 nobody	2	0	1.832	0.362
 thinks	0	1	-0.070	1.167
@@ -148419,7 +148043,6 @@ as	1	0	0.733	0.141
 for	0	0	0.000	0.000
 my	0	0	0.136	0.268
 manners	2	1	1.238	1.068
- 	NA	NA	NA	NA
 my	0	0	0.070	0.038
 behaviour	1	0	0.625	0.157
 to	0	1	0.144	0.836

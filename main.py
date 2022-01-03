@@ -289,7 +289,7 @@ def train(model, iterator, optimizer, criterion, device, config):
     model.train()
     for i, batch in enumerate(iterator):
         #words, x, is_main_piece, tags, y, seqlens, _, _,  = batch
-        words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps = batch
+        words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords = batch
 
         if config.model == 'WordMajority':
             model.collect_stats(x, y)
@@ -337,7 +337,7 @@ def valid(model, iterator, criterion, index_to_tag, device, config, best_dev_acc
     with torch.no_grad():
         for i, batch in enumerate(iterator):
             #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
-            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps = batch
+            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords = batch
             x = x.to(device)
             y = y.to(device)
 
