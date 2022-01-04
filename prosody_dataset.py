@@ -57,7 +57,7 @@ class Dataset(data.Dataset):
                 values_li.append(values)
 
 
-        self.sents, self.tags_li, self.values_li, self.prevSents, self.prevTags, self.prevValues = sents, tags_li, values_li, prevSents, prevTags, prevValues
+        self.sents, self.tags_li, self.values_li, self.prevSents, self.prevTags, self.prevValues, self.file_ids = sents, tags_li, values_li, prevSents, prevTags, prevValues, file_ids
         if self.config.model == 'BertUncased' or self.config.model == 'Transformer':
             if config.gpt != 0:
                 self.tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
@@ -78,7 +78,7 @@ class Dataset(data.Dataset):
         return [self.word_to_embid.get(token, UNK_id) for token in tokens]
 
     def __getitem__(self, id):
-        words, tags, values_li, prevSents, prevTags, prevValues = self.sents[id], self.tags_li[id], self.values_li[id], self.prevSents[id], self.prevTags[id], self.prevValues[id] # words, tags, values: string list
+        words, tags, values_li, prevSents, prevTags, prevValues, file_id = self.sents[id], self.tags_li[id], self.values_li[id], self.prevSents[id], self.prevTags[id], self.prevValues[id], self.file_ids[id] # words, tags, values: string list
 
         x, y, values, px, pt, pv = [], [], [], [], [], [] # list of ids
         is_main_piece = [] # only score the main piece of each word
@@ -145,7 +145,7 @@ class Dataset(data.Dataset):
             pv = [float(v) if v not in ['<pad>', 'NA', 'NA\n'] else self.config.invalid_set_to for v in prevValues]
 
 
-        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen, pt, pv, is_main_piece_prev, prevWords
+        return words, x, is_main_piece, tags, y, seqlen, values, self.config.invalid_set_to, px, prvSeqLen, pt, pv, is_main_piece_prev, prevWords, file_id
 
 
 def load_dataset(config):
@@ -245,6 +245,7 @@ def pad(batch):
     prevSeq = f(8)
     prvSeqLen = f(9)
     prevWords = f(13)
+    file_id = f(14)
     #print('prevlen', prvSeqLen)
     pTags = f(10)
     #print("ptags", [len(p) for p in pTags])
@@ -267,7 +268,7 @@ def pad(batch):
     values = f(6, maxlen)
 
     f = torch.LongTensor
-    return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to , prevSeq, prvSeqLen, prevWords
+    return words, f(x), is_main_piece, tags, f(y), seqlens, torch.FloatTensor(values), invalid_set_to , prevSeq, prvSeqLen, prevWords, file_id
 
 
 

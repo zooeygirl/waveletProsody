@@ -289,7 +289,7 @@ def train(model, iterator, optimizer, criterion, device, config):
     model.train()
     for i, batch in enumerate(iterator):
         #words, x, is_main_piece, tags, y, seqlens, _, _,  = batch
-        words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords = batch
+        words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords, file_id  = batch
 
         if config.model == 'WordMajority':
             model.collect_stats(x, y)
@@ -337,7 +337,7 @@ def valid(model, iterator, criterion, index_to_tag, device, config, best_dev_acc
     with torch.no_grad():
         for i, batch in enumerate(iterator):
             #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
-            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords = batch
+            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords, file_id  = batch
             x = x.to(device)
             y = y.to(device)
 
@@ -409,11 +409,11 @@ def test(model, iterator, criterion, index_to_tag, device, config):
     model.eval()
     test_losses = []
 
-    Words, Is_main_piece, Tags, Y, Y_hat, prevSeqs = [], [], [], [], [], []
+    Words, Is_main_piece, Tags, Y, Y_hat, prevSeqs, file_ids = [], [], [], [], [], [], []
     with torch.no_grad():
         for i, batch in enumerate(iterator):
             #words, x, is_main_piece, tags, y, seqlens, _, _ = batch
-            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords = batch
+            words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords, file_id = batch
             if x.shape[1] >511:
                 print(x.shape)
                 x = torch.cat((x[:, 0:1], x[:, -511:]), 1)
@@ -443,12 +443,28 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             Y.extend(y.cpu().numpy().tolist())
             Y_hat.extend(y_hat.cpu().numpy().tolist())
             prevSeqs.extend(prevWords)
+            file_ids.extend(file_id)
+
 
     true = []
     predictions = []
+
+    contrastTrue = []
+    contrastPred = []
+    contrastFiles = ['023-65', '015-13', '012-14', '046-70', '046-48', '041-28', '041-16',
+    '013-71', '022-54', '025-57', '040-102', '047-31', '047-68', '047-100',
+    '038-10', '036-49', '031-87', '052-15', '052-121', '052-104', '052-7',
+    '001-30', '055-32', '037-39', '001-40', '039-96', '006-59', '006-7',
+    '006-71', '045-75', '020-38', '027-45', '027-68', '027-48', '018-253',
+    '018-45', '018-233', '011-71', '011-21', '016-53', '016-52', '044-64',
+    '043-228', '043-87', '043-192', '017-52', '017-50', '028-16', '026-126',
+    '021-81', '021-50', '021-1', '035-35', '059-90', '057-41', '057-66',
+    '057-5', '057-80', '034-76', '033-78', '002-27', '056-125', '056-168',
+    '056-54', '058-106', '058-42', '058-92']
+
     # gets results and save
     with open(config.save_path, 'w') as results:
-        for words, is_main_piece, tags, y_hat, prevSeq in zip(Words, Is_main_piece, Tags, Y_hat, prevSeqs):
+        for words, is_main_piece, tags, y_hat, prevSeq, file_id in zip(Words, Is_main_piece, Tags, Y_hat, prevSeqs, file_ids):
             y_hat = [hat for head, hat in zip(is_main_piece, y_hat) if head == 1]
             preds = [index_to_tag[hat] for hat in y_hat]
             if config.model != 'LSTM' and config.model != 'BiLSTM':
@@ -467,7 +483,11 @@ def test(model, iterator, criterion, index_to_tag, device, config):
                 tagslice = tags.split()
                 predsslice = preds
                 wordslice = words.split()
+
             for w, t, p in zip(wordslice, tagslice, predsslice):
+
+                if file_id[1] in contrastFiles:
+                    results.write('contrast')
                 results.write("{}\t{}\t{}\n".format(w, t, p))
                 if config.ignore_punctuation:
                     if t != 'NA':
