@@ -145,6 +145,7 @@ def weighted_mse_loss(input,target):
 
 def main():
 
+    np.set_printoptions(suppress=True)
     config = parser.parse_args()
 
     np.random.seed(config.seed)
@@ -444,7 +445,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             Y_hat.extend(y_hat.cpu().numpy().tolist())
             prevSeqs.extend(prevWords)
             file_ids.extend(file_id)
-            allLogits.extend(torch.nn.functional.softmax(logits, dim=1).detach().cpu().numpy())
+            allLogits.extend(torch.nn.functional.softmax(logits, dim=1).detach().cpu().numpy().tolist())
 
 
     true = []
@@ -465,7 +466,9 @@ def test(model, iterator, criterion, index_to_tag, device, config):
 
     # gets results and save
     with open(config.save_path, 'w') as results:
+        results.write(str(index_to_tag)+'\n')
         for words, is_main_piece, tags, y_hat, prevSeq, file_id, logits in zip(Words, Is_main_piece, Tags, Y_hat, prevSeqs, file_ids, allLogits):
+            print(logits)
             y_hat = [hat for head, hat in zip(is_main_piece, y_hat) if head == 1]
             preds = [index_to_tag[hat] for hat in y_hat]
             if config.model != 'LSTM' and config.model != 'BiLSTM':
@@ -489,8 +492,8 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             if file_id[1] in contrastFiles:
                 results.write('contrast\n')
 
-            for w, t, p, l in zip(wordslice, tagslice, predsslice, logits):
-                results.write("{}\t{}\t{}\t{}\n".format(w, t, p, l))
+            for w, t, p in zip(wordslice, tagslice, predsslice):
+                results.write("{}\t{}\t{}\t{}\n".format(w, t, p, logits))
                 if config.ignore_punctuation:
                     if t != 'NA':
                         true.append(t)
