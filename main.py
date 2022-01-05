@@ -432,7 +432,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
                 labels = labels.view(-1, labels.shape[-1])  # also (N*T, VOCAB)
                 loss = criterion(logits.to(device), labels.to(device))
             else:
-                logits = logits.view(-1, logits.shape[-1])  # (N*T, VOCAB)
+                logits = logitsO.view(-1, logitsO.shape[-1])  # (N*T, VOCAB)
                 labels = labels.view(-1)  # (N*T,)
                 loss = criterion(logits, labels)
 
@@ -462,13 +462,13 @@ def test(model, iterator, criterion, index_to_tag, device, config):
     '043-228', '043-87', '043-192', '017-52', '017-50', '028-16', '026-126',
     '021-81', '021-50', '021-1', '035-35', '059-90', '057-41', '057-66',
     '057-5', '057-80', '034-76', '033-78', '002-27', '056-125', '056-168',
-    '056-54', '058-106', '058-42', '058-92']
+    '056-54', '058-106', '058-42', '058-92', '003-99']
 
     # gets results and save
     with open(config.save_path, 'w') as results:
         results.write(str(index_to_tag)+'\n')
         for words, is_main_piece, tags, y_hat, prevSeq, file_id, logits in zip(Words, Is_main_piece, Tags, Y_hat, prevSeqs, file_ids, allLogits):
-            #print(logits)
+            print(logits.shape)
             y_hat = [hat for head, hat in zip(is_main_piece, y_hat) if head == 1]
             logits = [hat for head, hat in zip(is_main_piece, logits) if head == 1]
             preds = [index_to_tag[hat] for hat in y_hat]
