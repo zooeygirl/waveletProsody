@@ -425,10 +425,10 @@ def test(model, iterator, criterion, index_to_tag, device, config):
                 x = x.to(device)
                 y = y.to(device)
 
-            logits, labels, y_hat = model(x, y)  # y_hat: (N, T)
+            logitsO, labels, y_hat = model(x, y)  # y_hat: (N, T)
 
             if config.model == 'ClassEncodings':
-                logits = logits.view(-1, logits.shape[-1])  # (N*T, VOCAB)
+                logits = logitsO.view(-1, logitsO.shape[-1])  # (N*T, VOCAB)
                 labels = labels.view(-1, labels.shape[-1])  # also (N*T, VOCAB)
                 loss = criterion(logits.to(device), labels.to(device))
             else:
@@ -445,7 +445,7 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             Y_hat.extend(y_hat.cpu().numpy().tolist())
             prevSeqs.extend(prevWords)
             file_ids.extend(file_id)
-            allLogits.extend(torch.nn.functional.softmax(logits, dim=1).detach().cpu().numpy().tolist())
+            allLogits.extend(torch.nn.functional.softmax(logitsO, dim=1).detach().cpu().numpy().tolist())
 
 
     true = []
@@ -468,8 +468,9 @@ def test(model, iterator, criterion, index_to_tag, device, config):
     with open(config.save_path, 'w') as results:
         results.write(str(index_to_tag)+'\n')
         for words, is_main_piece, tags, y_hat, prevSeq, file_id, logits in zip(Words, Is_main_piece, Tags, Y_hat, prevSeqs, file_ids, allLogits):
-            print(logits)
+            #print(logits)
             y_hat = [hat for head, hat in zip(is_main_piece, y_hat) if head == 1]
+            logits = [hat for head, hat in zip(is_main_piece, logits) if head == 1]
             preds = [index_to_tag[hat] for hat in y_hat]
             if config.model != 'LSTM' and config.model != 'BiLSTM':
                 tagslice = tags.split()[1:-1]
@@ -492,8 +493,9 @@ def test(model, iterator, criterion, index_to_tag, device, config):
             if file_id[1] in contrastFiles:
                 results.write('contrast\n')
 
-            for w, t, p in zip(wordslice, tagslice, predsslice):
-                results.write("{}\t{}\t{}\t{}\n".format(w, t, p, logits))
+
+            for i, w, t, p in enumerate(zip(wordslice, tagslice, predsslice)):
+                results.write("{}\t{}\t{}\t{}\n".format(w, t, p, logits[i]))
                 if config.ignore_punctuation:
                     if t != 'NA':
                         true.append(t)
