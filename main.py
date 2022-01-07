@@ -16,6 +16,7 @@ from transformer import TransformerModel
 from argparse import ArgumentParser
 from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
+from scipy.special import softmax
 
 parser = ArgumentParser(description='Prosody prediction')
 
@@ -309,6 +310,13 @@ def train(model, iterator, optimizer, criterion, device, config):
 
         logits, y, _ = model(x, y) # logits: (N, T, VOCAB), y: (N, T)
 
+        mask_slice = torch.zeros(logits.shape, dtype=bool)
+        for i, row in enumerate(mask_slice):
+            row[lps[i]:] = 1
+        mask_slice[:,0] = 1
+
+        logits = logits*mask_slice
+
         if config.model == 'ClassEncodings':
             logits = logits.view(-1, logits.shape[-1])  # (N*T, VOCAB)
             y = y.view(-1, y.shape[-1])  # also (N*T, VOCAB)
@@ -453,22 +461,12 @@ def test(model, iterator, criterion, index_to_tag, device, config):
 
     contrastTrue = []
     contrastPred = []
-    contrastFiles = ['023-65', '015-13', '012-14', '046-70', '046-48', '041-28', '041-16',
-    '013-71', '022-54', '025-57', '040-102', '047-31', '047-68', '047-100',
-    '038-10', '036-49', '031-87', '052-15', '052-121', '052-104', '052-7',
-    '001-30', '055-32', '037-39', '001-40', '039-96', '006-59', '006-7',
-    '006-71', '045-75', '020-38', '027-45', '027-68', '027-48', '018-253',
-    '018-45', '018-233', '011-71', '011-21', '016-53', '016-52', '044-64',
-    '043-228', '043-87', '043-192', '017-52', '017-50', '028-16', '026-126',
-    '021-81', '021-50', '021-1', '035-35', '059-90', '057-41', '057-66',
-    '057-5', '057-80', '034-76', '033-78', '002-27', '056-125', '056-168',
-    '056-54', '058-106', '058-42', '058-92', '003-99']
+    contrastFiles = ['023-65', '015-13', '012-14', '046-70', '046-48', '041-28', '041-16', '013-71', '022-54', '025-57', '040-102', '047-31', '047-68', '047-100','038-10', '036-49', '031-87', '052-15', '052-121', '052-104', '052-7', '001-30', '055-32', '037-39', '001-40', '039-96', '006-59', '006-7','006-71', '045-75', '020-38', '027-45', '027-68', '027-48', '018-253','018-45', '018-233', '011-71', '011-21', '016-53', '016-52', '044-64', '043-228', '043-87', '043-192', '017-52', '017-50', '028-16', '026-126','021-81', '021-50', '021-1', '035-35', '059-90', '057-41', '057-66','057-5', '057-80', '034-76', '033-78', '002-27', '056-125', '056-168','056-54', '058-106', '058-42', '058-92', '003-99', '004-20', '005-33','005-39', '005-44', '006-2', '008-72', '009-67', '010-39', '011-99', '013-2', '061-8', '060-50', '059-112', '057-39', '056-87', '056-51', '055-63', '052-75', '052-73', '052-54', '048-108', '048-107', '047-204', '046-97', '045-36', '043-214','041-12', '040-99', '039-37', '035-136', '035-41', '033-91', '026-102', '027-46','024-37', '024-36', '023-75', '020-18', '019-56', '018-52', '018-29', '018-30','016-107', '016-45', '003-60', '014-8', '047-76', '054-75', '009-58', '009-55', '052-71', '001-20', '020-58', '016-44', '016-11', '044-43', '035-49', '061-51', '057-56', '057-11', '051-71', '004-8', '005-24','005-41', '006-21', '008-20', '008-29', '009-106', '009-109', '061-40', '060-14', '060-13', '059-175', '059-119', '058-27', '057-57', '056-156', '056-113', '056-81', '056-77', '055-137','054-101', '053-71', '052-83', '052-84', '052-41', '052-25', '051-3', '047-167', '046-114', '046-96', '039-88', '034-60', '023-67', '021-48', '020-66', '019-30', '018-82', '018-44', '017-11', '016-105', '016-101', '016-47', '016-38']
 
     # gets results and save
     with open(config.save_path, 'w') as results:
         results.write(str(index_to_tag)+'\n')
         for words, is_main_piece, tags, y_hat, prevSeq, file_id, logits in zip(Words, Is_main_piece, Tags, Y_hat, prevSeqs, file_ids, allLogits):
-            print(logits.shape)
             y_hat = [hat for head, hat in zip(is_main_piece, y_hat) if head == 1]
             logits = [hat for head, hat in zip(is_main_piece, logits) if head == 1]
             preds = [index_to_tag[hat] for hat in y_hat]
@@ -477,6 +475,8 @@ def test(model, iterator, criterion, index_to_tag, device, config):
                 tagslice = tagslice[len(prevSeq.split()):]
                 predsslice = preds[1:-1]
                 predsslice = predsslice[len(prevSeq.split()):]
+                logitslice = logits[1:-1]
+                logitslice = logitslice[len(prevSeq.split()):]
                 wordslice = words.split()[1:-1]
                 wordslice = wordslice[len(prevSeq.split()):]
 
@@ -494,8 +494,8 @@ def test(model, iterator, criterion, index_to_tag, device, config):
                 results.write('contrast\n')
 
 
-            for i, w, t, p in enumerate(zip(wordslice, tagslice, predsslice)):
-                results.write("{}\t{}\t{}\t{}\n".format(w, t, p, logits[i]))
+            for w, t, p, l in zip(wordslice, tagslice, predsslice, logitslice):
+                results.write("{}\t{}\t{}\t{}\n".format(w, t, p, softmax(np.array(l))))
                 if config.ignore_punctuation:
                     if t != 'NA':
                         true.append(t)
