@@ -315,7 +315,7 @@ def train(model, iterator, optimizer, criterion, device, config):
             row[lps[i]:] = 1
         mask_slice[:,0] = 1
 
-        logits = logits*mask_slice
+        logits = logits.to(device)*mask_slice.to(device)
 
         if config.model == 'ClassEncodings':
             logits = logits.view(-1, logits.shape[-1])  # (N*T, VOCAB)
