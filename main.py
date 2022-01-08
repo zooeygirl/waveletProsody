@@ -520,14 +520,15 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
                         predictions.append(p)
                         if file_id[1] in dictionary:
                             contrastFile = open('contrast.txt', "a")
-                            contrastFile.write("{}\t{}\t{}\t{}\n".format(w, t, p, softmax(np.array(l))))
-                            contrastFile.close()
                             if counter in dictionary[file_id[1]]:
                                 contrastTrue.append(t)
                                 contrastPred.append(p)
                                 contrastProb.append(softmax(np.array(l)))
-                        counter +=1
-                else:
+                                contrastFile.write("<b>{}\t{}\t{}\t{}\t{}</b>\n".format(counter, w, t, p, softmax(np.array(l))))
+                            else:
+                                contrastFile.write("{}\t{}\t{}\t{}\t{}\n".format(counter, w, t, p, softmax(np.array(l))))
+                            contrastFile.close()
+                 else:
                     true.append(t)
                     predictions.append(p)
                     if file_id[1] in dictionary:
@@ -538,7 +539,7 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
                             contrastTrue.append(t)
                             contrastPred.append(p)
                             contrastProb.append(softmax(np.array(l)))
-                    counter +=1
+                counter +=1
             results.write("\n")
 
     # calc metric
