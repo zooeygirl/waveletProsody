@@ -486,7 +486,7 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
             y_hat = [hat for head, hat in zip(is_main_piece, y_hat) if head == 1]
             logits = [hat for head, hat in zip(is_main_piece, logits) if head == 1]
             preds = [index_to_tag[hat] for hat in y_hat]
-            if config.model != 'LSTM' and config.model != 'BiLSTM':
+            if config.model != 'LSTM' and config.model != 'BiLSTM' and config.gpt == 0:
                 tagslice = tags.split()[1:-1]
                 tagslice = tagslice[len(prevSeq.split()):]
                 predsslice = preds[1:-1]
@@ -502,8 +502,12 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
                 #wordslice = np.array(words.split())[np.where(np.array(is_main_piece)==1)[0]]
             else:
                 tagslice = tags.split()
+                tagslice = tagslice[len(prevSeq.split()):]
                 predsslice = preds
+                predsslice = predsslice[len(prevSeq.split()):]
+                logitslice = logits[len(prevSeq.split()):]
                 wordslice = words.split()
+                wordslice = wordslice[len(prevSeq.split()):]
 
             results.write(file_id[1] +'\n')
             if file_id[1] in dictionary:
@@ -521,14 +525,15 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
                         if file_id[1] in dictionary:
                             contrastFile = open('contrast.txt', "a")
                             if counter in dictionary[file_id[1]]:
-                                contrastTrue.append(t)
-                                contrastPred.append(p)
-                                contrastProb.append(softmax(np.array(l)))
+                                if t == '2':
+                                    contrastTrue.append(t)
+                                    contrastPred.append(p)
+                                    contrastProb.append(softmax(np.array(l)))
                                 contrastFile.write("<b>{}\t{}\t{}\t{}\t{}</b>\n".format(counter, w, t, p, softmax(np.array(l))))
                             else:
                                 contrastFile.write("{}\t{}\t{}\t{}\t{}\n".format(counter, w, t, p, softmax(np.array(l))))
                             contrastFile.close()
-                 else:
+                else:
                     true.append(t)
                     predictions.append(p)
                     if file_id[1] in dictionary:
@@ -557,6 +562,7 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
 
     acc = 100. * (y_true == y_pred).astype(np.int32).sum() / len(y_true)
     accC = 100. * (yc_true == yc_pred).astype(np.int32).sum() / len(yc_true)
+    print("num emp", len(yc_true))
 
     print('Test accuracy: {:<5.2f}%, Test loss: {:<.4f} after {} epochs.\n'.format(round(acc, 2), np.mean(test_losses),
                                                                                    config.epochs))
