@@ -190,11 +190,12 @@ def load_dataset(config):
                       sent = []
                     if i+1 != len(lines):
                       utt = split_line[1].split('/')[-1][:-4]
-                      spk = split_line[1].split('/')[-3]
                       try:
                         book = split_line[1].split('/')[-4]
+                        spk = split_line[1].split('/')[-3]
                       except:
                         book = split_line[1]
+                        spk = 'speaker'
                       file_ids.append((book, utt, spk))
 
 
