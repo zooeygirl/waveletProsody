@@ -68,6 +68,8 @@ class TransformerModel(nn.Module):
         self.d_model = d_model
         self.decoder = nn.Linear(d_model, ntoken)
 
+        self.lstm = torch.nn.LSTM(input_size=768, hidden_size=768, num_layers=1, batch_first=True)
+
         self.init_weights()
 
     def init_weights(self) -> None:
@@ -75,6 +77,15 @@ class TransformerModel(nn.Module):
         #self.encoder.weight.data.uniform_(-initrange, initrange)
         self.decoder.bias.data.zero_()
         self.decoder.weight.data.uniform_(-initrange, initrange)
+
+    def reshapeTensor(ten):
+        seqlen = ten.shape[1]
+        hdim = ten.shape[2]
+        ten = ten.repeat(1,1,2)
+        ten = ten.reshape(ten.shape[0], ten.shape[1]*2, hdim)
+        ten = ten[:, 1:]
+        ten = torch.cat((ten, torch.zeros(ten.shape[0], 1, ten.shape[2])), axis=1)
+        ten = ten.reshape(ten.shape[0]*int(ten.shape[1]/2), 2,  ten.shape[2])
 
     def forward(self, x, y):
 
@@ -99,6 +110,14 @@ class TransformerModel(nn.Module):
                 enc.to("cuda")
             else:
                 enc = self.bert(x)[0]
+
+        #LSTM
+        """
+        enc = self.reshapeTensor(enc)
+        lstm = self.lstm(enc)[1][0]
+        lstm = lstm.reshape(x.shape[0], x.shape[1], x.shape[2])
+        """
+        ####
 
 
         #print(enc.size())

@@ -16,6 +16,7 @@ class Dataset(data.Dataset):
 
         for j, sent in enumerate(tagged_sents):
             book = file_ids[j][0]
+            spk = file_ids[j][2]
             prevWord = []
             prevTag = []
             prevVal = []
@@ -27,10 +28,10 @@ class Dataset(data.Dataset):
                 if not int(ut) < 0:
                   if book =='PrideAndPrejudice':
                     if ch+'-'+ut =='001-0' or ch+'-'+ut =='001-1' or ch+'-'+ut =='001-2':
-                      print(ch+'-'+ut)
-                      prev = file_ids.index((book, ch+'-'+ut ))
+                      print(ch+'-'+ut+" "+ spk)
+                      prev = file_ids.index((book, ch+'-'+ut, spk ))
                       print([word_tag[0] for word_tag in tagged_sents[prev]])
-                  prev = file_ids.index((book, ch+'-'+ut ))
+                  prev = file_ids.index((book, ch+'-'+ut, spk))
                   prevWord = [word_tag[0] for word_tag in tagged_sents[prev]] + prevWord
                   prevTag = [word_tag[1] for word_tag in tagged_sents[prev]] + prevTag
                   prevVal = [word_tag[3] for word_tag in tagged_sents[prev]] + prevVal
@@ -189,11 +190,12 @@ def load_dataset(config):
                       sent = []
                     if i+1 != len(lines):
                       utt = split_line[1].split('/')[-1][:-4]
+                      spk = split_line[1].split('/')[-3]
                       try:
                         book = split_line[1].split('/')[-4]
                       except:
                         book = split_line[1]
-                      file_ids.append((book, utt))
+                      file_ids.append((book, utt, spk))
 
 
 
