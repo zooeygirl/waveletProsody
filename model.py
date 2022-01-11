@@ -40,6 +40,7 @@ class Bert(nn.Module):
         #self.fc = nn.Linear(2048, labels).to(device)
         self.device = device
 
+
     def forward(self, x, y):
         #print(self.training)
         x = x.to(self.device)
@@ -55,7 +56,19 @@ class Bert(nn.Module):
             with torch.no_grad():
                 enc = self.bert(x)[0]
 
-        logits = self.fc(enc).to(self.device)
+        lookahead=2
+        hdim=768
+        for i in range(1, lookahead):
+            a = enc.clone()
+            a = a[:, i:, :]
+            a = torch.cat((a, torch.zeros(config.batch_size, i, hdim)), axis=1)
+            if i == 1:
+                b = torch.cat((enc,a), axis=2)
+            else:
+                b = torch.cat((b,a), axis=2)
+
+        logits = self.fc(b).to(self.device)
+        #logits = self.fc(enc).to(self.device)
         y_hat = logits.argmax(-1)
         return logits, y, y_hat
 
