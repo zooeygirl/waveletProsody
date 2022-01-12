@@ -39,6 +39,7 @@ class Bert(nn.Module):
         self.fc = nn.Linear(768, labels).to(device)
         #self.fc = nn.Linear(2048, labels).to(device)
         self.device = device
+        self.lstm = torch.nn.LSTM(input_size=768, hidden_size=768, num_layers=1, batch_first=True)
 
 
     def forward(self, x, y):
@@ -56,18 +57,28 @@ class Bert(nn.Module):
             with torch.no_grad():
                 enc = self.bert(x)[0]
 
-        lookahead=2
+        lookahead=30
         hdim=768
-        for i in range(1, lookahead):
+        batch=x.shape[0]
+        seq=x.shape[1]
+        if seq < lookahead:
+          lookahead=seq-1
+          print('lookahead', lookahead)
+        for i in range(0, lookahead):
             a = enc.clone()
             a = a[:, i:, :]
-            a = torch.cat((a, torch.zeros(config.batch_size, i, hdim)), axis=1)
-            if i == 1:
+            if i==0:
+                b = a
+            elif i == 1:
+                a = torch.cat((a.to(self.device), torch.zeros(batch, i, hdim).to(self.device)), axis=1)
                 b = torch.cat((enc,a), axis=2)
             else:
+                a = torch.cat((a.to(self.device), torch.zeros(batch, i, hdim).to(self.device)), axis=1)
                 b = torch.cat((b,a), axis=2)
+        c = torch.flip(b.reshape(batch*seq,lookahead,hdim), dims=(1, 2))
+        c = self.lstm(c)[1][0].reshape(batch, seq, hdim)
 
-        logits = self.fc(b).to(self.device)
+        logits = self.fc(c).to(self.device)
         #logits = self.fc(enc).to(self.device)
         y_hat = logits.argmax(-1)
         return logits, y, y_hat
