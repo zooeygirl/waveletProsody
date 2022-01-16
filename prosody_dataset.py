@@ -20,7 +20,7 @@ class Dataset(data.Dataset):
             prevWord = []
             prevTag = []
             prevVal = []
-            if book in ["Emma",'SenseAndSensibility', 'PrideAndPrejudice', 'Persuasion', 'MansfieldPark']:
+            if book in ["Emma",'SenseAndSensibility', 'PrideAndPrejudice', 'Persuasion', 'MansfieldPark', 'JaneEyre']:
               ch = file_ids[j][1].split('-')[0]
               numPrev = 2
               for k in range(1, numPrev):
@@ -31,10 +31,13 @@ class Dataset(data.Dataset):
                       print(ch+'-'+ut+" "+ spk)
                       prev = file_ids.index((book, ch+'-'+ut, spk ))
                       print([word_tag[0] for word_tag in tagged_sents[prev]])
-                  prev = file_ids.index((book, ch+'-'+ut, spk))
-                  prevWord = [word_tag[0] for word_tag in tagged_sents[prev]] + prevWord
-                  prevTag = [word_tag[1] for word_tag in tagged_sents[prev]] + prevTag
-                  prevVal = [word_tag[3] for word_tag in tagged_sents[prev]] + prevVal
+                  try:
+                      prev = file_ids.index((book, ch+'-'+ut, spk))
+                      prevWord = [word_tag[0] for word_tag in tagged_sents[prev]] + prevWord
+                      prevTag = [word_tag[1] for word_tag in tagged_sents[prev]] + prevTag
+                      prevVal = [word_tag[3] for word_tag in tagged_sents[prev]] + prevVal
+                  except:
+                      print((book, ch+'-'+ut, spk))
 
             prevSents.append(prevWord)
             prevTags.append(prevTag)
