@@ -346,6 +346,60 @@ def train(model, iterator, optimizer, criterion, device, config):
     if config.model == 'WordMajority':
         model.save_stats()
 
+def trainPronoun(model, iterator, optimizer, criterion, device, config):
+    model.train()
+    for i, batch in enumerate(iterator):
+        #words, x, is_main_piece, tags, y, seqlens, _, _,  = batch
+        words, x, is_main_piece, tags, y, seqlens, _, _ , prevSeq, lps, prevWords, file_id  = batch
+
+        if config.model == 'WordMajority':
+            model.collect_stats(x, y)
+            continue
+
+        optimizer.zero_grad()
+        if x.shape[1] >511:
+            print(x.shape)
+            x = torch.cat((x[:, 0:1], x[:, -511:]), 1)
+            y = torch.cat((y[:, 0:1], y[:, -511:]), 1)
+            x = x.to(device)
+            y = y.to(device)
+        else:
+            x = x.to(device)
+            y = y.to(device)
+
+        logits, y, _ = model(x, y) # logits: (N, T, VOCAB), y: (N, T)
+
+        mask_slice = torch.zeros(logits.shape, dtype=bool)
+        mask_sliceY = torch.zeros(y.shape, dtype=bool)
+        for i, row in enumerate(mask_slice):
+            row[lps[i]+1:, :] = 1
+        mask_slice[:,0, :] = 1
+
+        for i, row in enumerate(mask_sliceY):
+            row[lps[i]+1:] = 1
+        mask_sliceY[:,0] = 1
+
+        logits = torch.masked_select(logits.to(device), mask_slice.to(device)).view(-1, logits.shape[-1])
+        y = torch.masked_select(y.to(device), mask_sliceY.to(device))
+
+        if config.model == 'ClassEncodings':
+            logits = logits.view(-1, logits.shape[-1])  # (N*T, VOCAB)
+            y = y.view(-1, y.shape[-1])  # also (N*T, VOCAB)
+            loss = criterion(logits.to(device), y.to(device))
+        else:
+            logits = logits.view(-1, logits.shape[-1]) # (N*T, VOCAB)
+            y = y.view(-1)  # (N*T,)
+            loss = criterion(logits.to(device), y.to(device))
+
+        loss.backward()
+        optimizer.step()
+
+        if i % config.log_every == 0 or i+1 == len(iterator):
+            print("Training step: {}/{}, loss: {:<.4f}".format(i+1, len(iterator), loss.item()))
+
+    if config.model == 'WordMajority':
+        model.save_stats()
+
 
 def valid(model, iterator, criterion, index_to_tag, device, config, best_dev_acc, best_dev_epoch, epoch):
     if config.model == 'WordMajority':
