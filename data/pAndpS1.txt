@@ -11629,7 +11629,7 @@ me	1	2	0.586	1.010
 .	NA	NA	NA	NA
 yours	1	0	1.171	0.000
 ,	NA	NA	NA	NA
-c	NA	NA	NA	NA
+c	2	2	1.492	1.000
 .	NA	NA	NA	NA
 ”	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/007/007-73.txt
@@ -117446,8 +117446,8 @@ so	0	0	0.092	0.000
 pleasant	1	0	0.823	0.000
 in	0	0	0.300	0.369
 general	1	0	0.981	0.391
-’s	NA	NA	NA	NA
-regiment	NA	NA	NA	NA
+’s	0	0	-0.087	0.000
+regiment	2	2	1.944	1.000
 .	NA	NA	NA	NA
 ”	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/050/050-101.txt
@@ -119554,14 +119554,14 @@ an	0	0	0.069	0.000
 ensigncy	1	1	0.780	0.593
 in	0	0	-0.007	0.000
 general	1	0	0.668	0.376
-’s	NA	NA	NA	NA
-regiment	NA	NA	NA	NA
+’s	0	0	0.000	0.000
+regiment	1	0	0.623	0.098
 ,	NA	NA	NA	NA
-now	NA	NA	NA	NA
-quartered	NA	NA	NA	NA
-in	NA	NA	NA	NA
-the	NA	NA	NA	NA
-north	NA	NA	NA	NA
+now	0	0	0.032	0.000
+quartered	1	2	0.456	0.919
+in	0	0	-0.041	0.000
+the	2	0	1.860	0.365
+north	0	2	0.338	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/050/050-83.txt
 it	0	0	0.383	0.000
@@ -129269,27 +129269,27 @@ netherfield	1	2	0.834	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/053/053-63.txt
 “	NA	NA	NA	NA
-’tis	NA	NA	NA	NA
-an	NA	NA	NA	NA
-etiquette	NA	NA	NA	NA
-i	NA	NA	NA	NA
-despise	NA	NA	NA	NA
+’tis	0	0	0.186	0.000
+an	0	0	0.073	0.000
+etiquette	1	0	1.085	0.000
+i	0	0	0.052	0.026
+despise	2	1	1.577	0.751
 ,	NA	NA	NA	NA
 ”	NA	NA	NA	NA
-said	NA	NA	NA	NA
-he	NA	NA	NA	NA
+said	1	0	0.434	0.000
+he	1	1	0.908	0.709
 .	NA	NA	NA	NA
 “	NA	NA	NA	NA
-if	NA	NA	NA	NA
-he	NA	NA	NA	NA
-wants	NA	NA	NA	NA
-our	NA	NA	NA	NA
-society	NA	NA	NA	NA
+if	1	0	0.668	0.000
+he	0	0	0.127	0.000
+wants	1	0	1.199	0.000
+our	1	0	0.608	0.058
+society	1	0	0.752	0.343
 ,	NA	NA	NA	NA
-let	NA	NA	NA	NA
-him	NA	NA	NA	NA
-seek	NA	NA	NA	NA
-it	NA	NA	NA	NA
+let	0	0	0.158	0.000
+him	0	0	0.201	0.000
+seek	1	0	0.689	0.191
+it	0	2	0.033	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/053/053-64.txt
 he	2	0	1.453	0.000
@@ -134309,19 +134309,19 @@ world	1	2	0.803	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/055/055-67.txt
 “	NA	NA	NA	NA
-’tis	NA	NA	NA	NA
-too	NA	NA	NA	NA
-much	NA	NA	NA	NA
+’tis	2	0	1.830	0.000
+too	0	0	-0.029	0.000
+much	2	1	1.722	0.732
 !	NA	NA	NA	NA
 ”	NA	NA	NA	NA
-she	NA	NA	NA	NA
-added	NA	NA	NA	NA
+she	1	0	0.597	0.000
+added	0	1	0.349	0.614
 ,	NA	NA	NA	NA
 “	NA	NA	NA	NA
-by	NA	NA	NA	NA
-far	NA	NA	NA	NA
-too	NA	NA	NA	NA
-much	NA	NA	NA	NA
+by	1	0	0.868	0.004
+far	2	0	1.660	0.000
+too	0	0	0.054	0.325
+much	0	2	0.000	1.000
 .	NA	NA	NA	NA
 <file>	/Users/stephenb/Documents/inOrder/PrideAndPrejudice/blizsegmented/055/055-68.txt
 i	0	0	0.000	0.000
