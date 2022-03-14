@@ -30,8 +30,12 @@ parser.add_argument('--gpt',
 parser.add_argument('--train_set',
                     type=str,
                     choices=['train_100',
-                             'train_360', 'emma'],
+                             'train_360', 'TrainAll', 'TrainS1', 'TrainS3'],
                     default='train_360')
+parser.add_argument('--test_set',
+                    type=str,
+                    choices=['test', 'pAndpAll', 'pAndpS1', 'pAndpS2', 'pAndpS3'],
+                    default='test')
 parser.add_argument('--batch_size',
                     type=int,
                     default=32)
@@ -147,7 +151,8 @@ def weighted_mse_loss(input,target):
 
 def main():
 
-    with open('/content/waveletProsody/contrastDict.txt', 'r') as file:
+    #with open('/content/waveletProsody/contrastDict.txt', 'r') as file:
+    with open('/content/waveletProsody/pronoun.txt', 'r') as file:
         contents = file.read()
         dictionary = ast.literal_eval(contents)
 

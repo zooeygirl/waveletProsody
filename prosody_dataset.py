@@ -157,10 +157,15 @@ def load_dataset(config):
     fileDict = dict()
     words = []
     all_sents = []
-    for split in ['train', 'dev', 'pAndp']:
+    for split in ['train', 'dev', 'test']:
         tagged_sents = []
         file_ids = []
-        filename = config.train_set if split == 'train' else split
+        if split == 'train':
+            filename = config.train_set
+        elif split == 'test':
+            filename = config.test_set
+        else:
+            filename = split
         with open(config.datadir+'/'+filename+'.txt') as f:
             lines = f.readlines()
             if config.fraction_of_train_data < 1 and split == 'train':

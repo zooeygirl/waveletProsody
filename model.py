@@ -57,6 +57,7 @@ class Bert(nn.Module):
             with torch.no_grad():
                 enc = self.bert(x)[0]
 
+        """
         lookahead=30
         hdim=768
         batch=x.shape[0]
@@ -77,9 +78,10 @@ class Bert(nn.Module):
                 b = torch.cat((b,a), axis=2)
         c = torch.flip(b.reshape(batch*seq,lookahead,hdim), dims=(1, 2))
         c = self.lstm(c)[1][0].reshape(batch, seq, hdim)
+        """
 
-        logits = self.fc(c).to(self.device)
-        #logits = self.fc(enc).to(self.device)
+        #logits = self.fc(c).to(self.device)
+        logits = self.fc(enc).to(self.device)
         y_hat = logits.argmax(-1)
         return logits, y, y_hat
 
