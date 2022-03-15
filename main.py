@@ -571,7 +571,8 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
             results.write(file_id[1] +'\n')
             if file_id[1] in dictionary:
                 contrastFile = open('contrast.txt', "a")
-                contrastFile.write(file_id[1] +'\n')
+                #contrastFile.write(file_id[1] +'\n')
+                contrastFile.write(file_id[2]+file_id[1] +'\n')
                 contrastFile.close()
 
             counter = 0
@@ -588,9 +589,9 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
                                     contrastTrue.append(t)
                                     contrastPred.append(p)
                                     contrastProb.append(softmax(np.array(l)))
-                                contrastFile.write("<b>{}\t{}\t{}\t{}\t{}</b>\n".format(counter, w, t, p, softmax(np.array(l))))
+                                contrastFile.write("<b>{}\t{}\t{}\t{}\t{}</b>\n".format(counter, w, t, p, list(softmax(np.array(l)))))
                             else:
-                                contrastFile.write("{}\t{}\t{}\t{}\t{}\n".format(counter, w, t, p, softmax(np.array(l))))
+                                contrastFile.write("{}\t{}\t{}\t{}\t{}\n".format(counter, w, t, p, list(softmax(np.array(l)))))
                             contrastFile.close()
                 else:
                     true.append(t)

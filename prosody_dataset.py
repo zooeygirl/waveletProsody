@@ -236,7 +236,7 @@ def load_dataset(config):
 
     print('Training sentences: {}'.format(len(splits["train"])))
     print('Dev sentences: {}'.format(len(splits["dev"])))
-    print('Test sentences: {}'.format(len(splits["pAndp"])))
+    print('Test sentences: {}'.format(len(splits["test"])))
 
     if config.sorted_batches:
         random.shuffle(splits["train"])
