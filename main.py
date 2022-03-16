@@ -54,7 +54,8 @@ parser.add_argument('--model',
                              'WordMajority',
                              'ClassEncodings',
                              'BertAllLayers',
-                             'Transformer'],
+                             'Transformer',
+                             'Pretrained'],
                     default='BertUncased')
 parser.add_argument('--nclasses',
                     type=int,
@@ -65,6 +66,9 @@ parser.add_argument('--hidden_dim',
 parser.add_argument('--embedding_file',
                     type=str,
                     default='embeddings/glove.840B.300d.txt')
+parser.add_argument('--pretrained_file',
+                    type=str,
+                    default='/content/waveletProsody/final_model_BertCased_testacc_67.64_epoch_3.pt')
 parser.add_argument('--layers',
                     type=int,
                     default=1)
@@ -194,6 +198,8 @@ def main():
         raise Exception('Unknown optimization optimizer: "%s"' % config.optimizer)
 
     splits, tag_to_index, index_to_tag, vocab, fileDict = prosody_dataset.load_dataset(config)
+    index_to_tag = {0: '<pad>', 1: '1', 2: 'NA', 3: '0', 4: '2'}
+    tag_to_index = {'<pad>':0,'1':1, 'NA':2, '0':3, '2':4}
 
     if config.model == "BertUncased" or config.model == "BertCased":
         model = Bert(device, config, labels=len(tag_to_index))
@@ -217,6 +223,10 @@ def main():
         model = TransformerModel(device, 5, 768, 2, 150, 2, config)
         #model = TransformerModel(device, 5, 4096, 2, 150, 2, config)
         #model = TransformerModel(device, config, labels=len(tag_to_index))
+    elif config.model == 'Pretrained':
+        model = torch.load(config.pretrained_file)
+        print('loaded')
+        model.eval()
     else:
         raise NotImplementedError("Model option not supported.")
 
@@ -287,7 +297,8 @@ def main():
             train_cont(model, train_iter, optimizer, criterion, device, config)
             valid_cont(model, dev_iter, criterion, index_to_tag, device, config, best_dev_acc, best_dev_epoch, epoch + 1)
         test_cont(model, test_iter, criterion, index_to_tag, device, config)
-
+    elif config.model == 'Pretrained':
+        test(model, test_iter, criterion, index_to_tag, device, config, dictionary)
     else:
         for epoch in range(config.epochs):
             print("Epoch: {}".format(epoch+1))
@@ -534,7 +545,8 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
     contrastProb = []
     contrastFiles = ['023-65', '015-13', '012-14', '046-70', '046-48', '041-28', '041-16', '013-71', '022-54', '025-57', '040-102', '047-31', '047-68', '047-100','038-10', '036-49', '031-87', '052-15', '052-121', '052-104', '052-7', '001-30', '055-32', '037-39', '001-40', '039-96', '006-59', '006-7','006-71', '045-75', '020-38', '027-45', '027-68', '027-48', '018-253','018-45', '018-233', '011-71', '011-21', '016-53', '016-52', '044-64', '043-228', '043-87', '043-192', '017-52', '017-50', '028-16', '026-126','021-81', '021-50', '021-1', '035-35', '059-90', '057-41', '057-66','057-5', '057-80', '034-76', '033-78', '002-27', '056-125', '056-168','056-54', '058-106', '058-42', '058-92', '003-99', '004-20', '005-33','005-39', '005-44', '006-2', '008-72', '009-67', '010-39', '011-99', '013-2', '061-8', '060-50', '059-112', '057-39', '056-87', '056-51', '055-63', '052-75', '052-73', '052-54', '048-108', '048-107', '047-204', '046-97', '045-36', '043-214','041-12', '040-99', '039-37', '035-136', '035-41', '033-91', '026-102', '027-46','024-37', '024-36', '023-75', '020-18', '019-56', '018-52', '018-29', '018-30','016-107', '016-45', '003-60', '014-8', '047-76', '054-75', '009-58', '009-55', '052-71', '001-20', '020-58', '016-44', '016-11', '044-43', '035-49', '061-51', '057-56', '057-11', '051-71', '004-8', '005-24','005-41', '006-21', '008-20', '008-29', '009-106', '009-109', '061-40', '060-14', '060-13', '059-175', '059-119', '058-27', '057-57', '056-156', '056-113', '056-81', '056-77', '055-137','054-101', '053-71', '052-83', '052-84', '052-41', '052-25', '051-3', '047-167', '046-114', '046-96', '039-88', '034-60', '023-67', '021-48', '020-66', '019-30', '018-82', '018-44', '017-11', '016-105', '016-101', '016-47', '016-38']
 
-    contrastFile = open('contrast.txt', "w")
+    conPath = 'pronounMajMin.txt'
+    contrastFile = open(conPath, "w")
     contrastFile.write(str(index_to_tag)+'\n')
     contrastFile.close()
 
@@ -570,7 +582,7 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
 
             results.write(file_id[1] +'\n')
             if file_id[1] in dictionary:
-                contrastFile = open('contrast.txt', "a")
+                contrastFile = open(conPath, "a")
                 #contrastFile.write(file_id[1] +'\n')
                 contrastFile.write(file_id[2]+file_id[1] +'\n')
                 contrastFile.close()
@@ -583,7 +595,7 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
                         true.append(t)
                         predictions.append(p)
                         if file_id[1] in dictionary:
-                            contrastFile = open('contrast.txt', "a")
+                            contrastFile = open(conPath, "a")
                             if counter in dictionary[file_id[1]]:
                                 if t == '2':
                                     contrastTrue.append(t)
@@ -597,7 +609,7 @@ def test(model, iterator, criterion, index_to_tag, device, config, dictionary):
                     true.append(t)
                     predictions.append(p)
                     if file_id[1] in dictionary:
-                        contrastFile = open('contrast.txt', "a")
+                        contrastFile = open(conPath, "a")
                         contrastFile.write("{}\t{}\t{}\t{}\n".format(w, t, p, softmax(np.array(l))))
                         contrastFile.close()
                         if counter in dictionary[file_id[1]]:
